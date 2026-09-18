@@ -204,16 +204,17 @@ Legend: [x] done · [~] in progress · [ ] pending
 - [x] P2 Engine: i18n (Loc), map loader (multi-material tiles, occluders), doors, exits
 - [x] P3 Engine: flashlight cone + shadows, fog shader, particles, ambient life
 - [x] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap (needs data)
-- [~] P5 Engine: HUD meters (hp, battery, sanity, stamina), pause menu, options — blink meter pending (173)
+- [x] P5 Engine: HUD meters (hp, battery, sanity, stamina, blink), pause menu, options
 - [x] P6 SCP behaviours: 173, 131, 999, 049, 096, 106, chaser, 939, 529, 682 (HCl special), tesla gates.
 - [x] P7 Maps content: 65 maps A-G, all bot-tested (tests/routes/sector_a.json, sector_b.json, b02_contain.json, sector_cd.json, sector_efg.json).
 - [x] P8 Story data EN+ES: Acts I-VI + 3 endings (tools/story/sector_a..d.py, sector_efg.py). Build: python3 tools/build_story.py
-- [ ] P9 Audio expansion
-- [ ] P10 Full playthrough bot + screenshots of every area; polish pass
-- [ ] P10b README with good screenshots (players must find and play it)
-- [ ] P11 CREDITS.md, README, final push
+- [x] P9 Audio: 102 procedural sounds (sfx, loops, 13 ambiences, 7 music tracks)
+- [x] P10 Full playthrough: tests/run_all.sh (5 routes, A01 to ending) all pass; screenshots of every E-G map reviewed
+- [x] P10b README with screenshots (docs/screenshots)
+- [x] P11 CREDITS.md, LICENSE, README, export presets (Linux/Windows builds in build/, not committed), final push
 
 ### Log
+- 2026-09-18 07:00 All routes pass; README/CREDITS/LICENSE/screenshots pushed; builds exported locally. DONE.
 - 2026-09-18 ~08:00 Sectors E-G + endings committed (bcaa244); sector_efg route passes to ending. Next: regression all routes, README/CREDITS.
 - 2026-09-18 05:30 Sectors C+D done; death-loop protection (respawn hp>=60), chaser grace, bot combat.
 - 2026-09-18 04:40 Sector B + SCP actors + battle. Tests: tests/routes/*.json run with tools/playtest.gd (SCP_MAP, SCP_FLAGS, SCP_SAVE env). b02_contain.json validates 173 recontainment.
