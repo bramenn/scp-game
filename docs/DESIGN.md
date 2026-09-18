@@ -19,7 +19,7 @@ our 173 sprite is original.
 2. **Each SCP is its own mechanic**, faithful to its article (173 moves when unseen,
    096 hunts whoever sees its face, 106 walks through walls and is repelled by light,
    049 talks, 939 hunts by sound and speaks with the voices of the dead).
-3. **A place that feels real and big.** 9 maps, dozens of named rooms, every room has
+3. **A place that feels real and big.** ~60 individual maps in 7 sectors, every room has
    a purpose, props that tell what happened there, documents, bodies, traces.
 4. **A story that hooks.** A personal mystery (your sister), a manipulator (SCP-079),
    moral choices (femur breaker), three endings.
@@ -46,8 +46,9 @@ pragmatic, increasingly cold.
   deletes) and to get a network bridge out of the site. Elena is locked in the 079 Core.
 
 **Acts**
-- **Prologue — Gate B (surface).** Night, rain, fog. Truck drops Vega. Dead guards,
-  searchlights, rats. Elevator down. Tutorial (move, light, interact).
+- **Prologue — Elevator B.** The service elevator creaks down 300 m. Power dies half
+  way; emergency lights. Vega forces the doors into a dead reception. Tutorial (move,
+  light, interact).
 - **Act I — Entrance Zone.** Sgt. **Ortega** (wounded) gives Level-1 card and radio.
   First contact with **SCP-079** on a terminal ("HELLO, AGENT."). D-class **Nico
   (D-4417)** hiding in the cafeteria with rats → escort quest. Elena's office: first
@@ -77,21 +78,63 @@ pragmatic, increasingly cold.
   Epilogue lines vary with: Nico's fate, Ortega, Reyes, Josie (SCP-529), 131 bond,
   documents found.
 
-## 3. Maps (zones)
+## 3. Maps
 
-| id | Name | Size | Key places |
-|----|------|------|------------|
-| `surface` | Gate B (surface) | 60×44 | truck, guard booth, fence, searchlights, elevator house, rain |
-| `ez` | Entrance Zone | 96×64 | lobby, security checkpoint, offices (Elena's), cafeteria, break room + SCP-294, server room (079 terminal), staff dorms, infirmary, Gate A (sealed), LCZ checkpoint |
-| `lcz` | Light Containment | 104×72 | 173 chamber, 914 lab, 012 room, 131 den, 999 cell, 500 vault, D-class block, toilets, armory, labs, vents |
-| `maint` | Maintenance & Sewers | 88×60 | water channels, substation (3 breakers), Tomás' den, pump room, 087 door, rat nests |
-| `med` | Medical Wing | 84×60 | morgue, operating theatre, 049 cell, pharmacy (Lin), cold storage, greenhouse (lavender), wards |
-| `hcz` | Heavy Containment | 112×84 | 939 dark sector, 096 chamber, 106 chamber + femur breaker, 682 acid chamber, tesla gates, NTF last stand, armory L4 |
-| `pocket` | Pocket Dimension | 52×52 | trench, rotting corridors, pillars, the throne, exits |
-| `stair087` | SCP-087 | procedural | the stairwell |
-| `core` | 079 Core & Gate A | 64×56 | core chamber, warhead control, Gate A helipad |
+Everything happens **inside Site-19, underground** (arrival is the elevator going down).
+The site is **many individual hand-designed maps** (≈60) connected by doors, corridors,
+elevators, stairs, ladders and vents — never one giant map. Each map has one purpose, its
+own props, lighting, fog, sound bed and, near anomalies, the **traces that SCP leaves**.
+Maps are authored in `tools/build_maps.py` (Python DSL → `data/maps/<id>.json`).
 
-Zones are authored in `tools/build_zones.py` (Python DSL → `data/zones/*.json`).
+**Sector A — Entrance Zone (Level -1)**
+A01 Elevator B arrival · A02 Reception lobby · A03 Security checkpoint (CCTV wall, Ortega) ·
+A04 East corridor · A05 Administrative offices · A06 Elena's office · A07 Cafeteria (Nico) ·
+A08 Kitchen & pantry · A09 Break room (SCP-294) · A10 Server room (079 terminal) ·
+A11 Staff dormitories · A12 Infirmary · A13 Gate A hall (sealed) · A14 LCZ checkpoint
+
+**Sector B — Light Containment (Level -2)**
+B01 Decontamination airlock · B02 LCZ junction · B03 SCP-173 chamber · B04 173 observation ·
+B05 Research corridor · B06 SCP-914 lab (Dr. Adebayo) · B07 SCP-012 room · B08 SCP-131 den ·
+B09 SCP-999 cell · B10 SCP-500 vault · B11 D-class block · B12 D-class showers ·
+B13 LCZ armory · B14 Vent crawlspace · B15 Maintenance access
+
+**Sector C — Maintenance & Sewers (Level -3)**
+C01 Maintenance stairs · C02 Pump room · C03 West sewer channel · C04 East sewer (spiders) ·
+C05 Tomás' den · C06 Electrical substation (breakers) · C07 Boiler room · C08 SCP-087 access ·
+C09 SCP-087 stairwell (repeating descent)
+
+**Sector D — Medical Wing (Level -3 East)**
+D01 Medical reception · D02 Wards · D03 Operating theatre · D04 Morgue · D05 Cold storage ·
+D06 Pharmacy (Dr. Lin) · D07 Greenhouse (lavender) · D08 SCP-049 cell
+
+**Sector E — Heavy Containment (Level -4)**
+E01 HCZ elevator lobby · E02 939 dark sector A · E03 939 dark sector B · E04 939 containment
+(Bio-Containment Area-14) · E05 NTF last stand (Reyes) · E06 HCZ armory · E07 SCP-096
+chamber · E08 096 observation · E09 SCP-106 containment · E10 Femur breaker room ·
+E11 Tesla gate corridor · E12 SCP-682 acid chamber · E13 682 control room · E14 Generator room
+
+**Sector F — Pocket Dimension (106)**
+F01 Rotting corridors · F02 The trench · F03 Pillar room · F04 The throne (exit)
+
+**Sector G — SCP-079 Core & Gate A (Level -5)**
+G01 Core access · G02 Server farm · G03 079 core (Elena) · G04 Warhead control · G05 Gate A lift
+
+## 3b. What each anomaly does to its surroundings (always shown)
+
+| SCP | Environmental traces |
+|-----|---------------------|
+| 173 | feces and blood stains on the cell floor (article), scrape grooves along its paths, cracked concrete, broken necks; scraping-stone sound when unseen |
+| 106 | black mucus-like corrosion on floors/walls that keeps spreading, rust, rotting and cracking metal, decay smell (green haze); victims aged; lights fail near it |
+| 096 | deep claw scratches on the 5 m steel cube, torn pressure sensors, smashed cameras, blood trails, distant crying |
+| 049 | surgical trays, bloody instruments, bodies with stitched incisions (049-2), lavender, "cured" corpses sitting upright |
+| 939 | 100 % humidity: condensation drips, standing water, cold fog; translucent red residue; amnestic haze; bite marks |
+| 682 | hydrochloric acid puddles (green-yellow glow, fumes), torn 25 cm steel plates, gouges, dissolved remains |
+| 012 | the room is kept dark; blood-written music on the walls, the iron box, victims |
+| 999 | orange slime trails, candy wrappers (M&M's, Necco) |
+| 131 | wheel tracks, toys, curious noises |
+| 914 | brass gears, copper tubing, oil stains, refined junk |
+| 079 | CRT glow, cables everywhere, overheated racks, text on every screen |
+| 087 | light is swallowed (flashlight shortened), damp concrete, a child's crying far below |
 
 ## 4. Systems
 
@@ -163,10 +206,11 @@ Legend: [x] done · [~] in progress · [ ] pending
 - [ ] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap
 - [ ] P5 Engine: HUD meters (hp, battery, sanity, stamina, blink), pause menu, options
 - [ ] P6 SCP behaviours: 173, 131, 096, 106 (+pocket), 049 (+049-2), 939, 682, 999, 529
-- [ ] P7 Zones content: surface, ez, lcz, maint, med, hcz, pocket, stair087, core
+- [ ] P7 Maps content (≈60 maps, sectors A-G)
 - [ ] P8 Story data EN+ES: dialogues, docs, quests, events, endings
 - [ ] P9 Audio expansion
 - [ ] P10 Full playthrough bot + screenshots of every area; polish pass
+- [ ] P10b README with good screenshots (players must find and play it)
 - [ ] P11 CREDITS.md, README, final push
 
 ### Log
