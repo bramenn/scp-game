@@ -33,6 +33,7 @@ find out who opened the cells, and decide what happens to the people still alive
 | ![Title](docs/screenshots/title.png) | ![SCP-173](docs/screenshots/173.png) |
 | ![Maintenance](docs/screenshots/maintenance.png) | ![SCP-096](docs/screenshots/096.png) |
 | ![Pocket dimension](docs/screenshots/pocket.png) | ![SCP-079 core](docs/screenshots/core.png) |
+| ![Nine-Tailed Fox last stand](docs/screenshots/hcz.png) | ![SCP-087 stairwell](docs/screenshots/sewer.png) |
 
 ## Play
 
