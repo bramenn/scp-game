@@ -8,6 +8,6 @@
 - Resolución 480×270
 - Animaciones: importa los sprite sheets en un AnimatedSprite2D con SpriteFrames. Si trabajas en Aseprite, hay plugins como Aseprite Wizard que importan las animaciones directamente.
 - Escenarios: usa TileMapLayer con tilesets de tamaño fijo (16×16 o 32×32).
-- claude mcp add pixellab https://api.pixellab.ai/mcp -t http -H "Authorization: Bearer 5068f236-8b85-4b3e-ad99-4899b82d6226" pero para opencode
+- claude mcp add pixellab https://api.pixellab.ai/mcp -t http -H "Authorization: Bearer $PIXELLAB_TOKEN" pero para opencode
 - https://api.pixellab.ai/mcp/docs
 
