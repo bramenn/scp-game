@@ -240,5 +240,68 @@
 "es": "Bajé a buscarla. No había ella. Solo hay abajo. - Dr. [nombre tachado]"
 },
 "sanity": -6
+},
+"doc_049_notice": {
+"title": {
+"en": "Staff notice - SCP-049",
+"es": "Aviso al personal - SCP-049"
+},
+"body": {
+"en": "SCP-049 is a humanoid, 1.9 m, resembling a medieval plague doctor. Its robes and mask appear to grow from its body. Direct skin contact is lethal. It believes it is curing a disease it calls 'the Pestilence', and becomes hostile to anyone it thinks is infected.\n\nLavender has proven effective at calming its outbursts. Keep sprigs at every post. Do NOT argue with it about medicine.",
+"es": "SCP-049 es un humanoide de 1,9 m que se parece a un médico de la peste medieval. Su túnica y su máscara parecen crecerle del cuerpo. El contacto directo con la piel es letal. Cree estar curando una enfermedad que llama 'la Pestilencia' y se vuelve hostil con quien cree infectado.\n\nLa lavanda ha resultado eficaz para calmar sus arrebatos. Tengan ramitas en cada puesto. NO discutan de medicina con él."
+},
+"source": "SCP-049 by Gabriel Jade & djkaktus · scp-wiki.wikidot.com/scp-049 · CC BY-SA 3.0"
+},
+"doc_049_interview": {
+"title": {
+"en": "Interview 049-B (excerpt)",
+"es": "Entrevista 049-B (extracto)"
+},
+"body": {
+"en": "Dr. Hamm: What do you call yourself?\nSCP-049: A medical man, such as myself. Wonders abound!\nDr. Hamm: The subjects you operate on die.\nSCP-049: They are cured. I am the only one who can do this. My work must continue.\n\n[Note: SCP-049 speaks English and medieval French fluently. It remains cordial throughout.]",
+"es": "Dr. Hamm: ¿Cómo se llama a sí mismo?\nSCP-049: Un hombre de medicina, como yo. ¡Abundan las maravillas!\nDr. Hamm: Los sujetos que opera mueren.\nSCP-049: Están curados. Soy el único que puede hacer esto. Mi trabajo debe continuar.\n\n[Nota: SCP-049 habla inglés y francés medieval con fluidez. Se mantiene cordial en todo momento.]"
+},
+"source": "SCP-049 by Gabriel Jade & djkaktus · scp-wiki.wikidot.com/scp-049 · CC BY-SA 3.0"
+},
+"doc_ward_chart": {
+"title": {
+"en": "Patient chart, ward 3",
+"es": "Historia clínica, sala 3"
+},
+"body": {
+"en": "Patient: D-3312. Admitted 02:50 for 'pre-transfer health check' (HCZ, Tuesday).\nNote in a different hand, 04:10: 'Cured.' The handwriting is beautiful, old-fashioned, with long loops.",
+"es": "Paciente: D-3312. Ingresa a las 02:50 para 'revisión previa al traslado' (ZCP, martes).\nNota con otra letra, 04:10: 'Curado.' La letra es preciosa, anticuada, con largos bucles."
+}
+},
+"doc_morgue_tag": {
+"title": {
+"en": "Toe tag",
+"es": "Etiqueta de pie"
+},
+"body": {
+"en": "NAME: [blank]. NUMBER: D-4417-B. CAUSE: [blank]. RELEASE TO: Black Tide / HCZ.\n\n4417. That's Nico's number, with a B. Someone was already filling in the paperwork for his body.",
+"es": "NOMBRE: [en blanco]. NÚMERO: D-4417-B. CAUSA: [en blanco]. ENTREGAR A: Marea Negra / ZCP.\n\n4417. Es el número de Nico, con una B. Alguien ya estaba rellenando los papeles de su cadáver."
+},
+"sanity": -4
+},
+"doc_cold_storage": {
+"title": {
+"en": "Inventory, cold storage",
+"es": "Inventario, cámara frigorífica"
+},
+"body": {
+"en": "Bodies from 682 trial #29 to #33: returned 'incomplete'. Stored pending amnestic sign-off. Do not show to D-class.",
+"es": "Cadáveres de la prueba 682 n.º 29 a n.º 33: devueltos 'incompletos'. Almacenados hasta la firma de amnésicos. No mostrar a los Clase-D."
+}
+},
+"doc_049_journal": {
+"title": {
+"en": "A journal in French",
+"es": "Un diario en francés"
+},
+"body": {
+"en": "Pages of elegant handwriting in old French. You understand one line, underlined twice: 'La Pestilence est dans les murs de ce lieu, et ceux qui le gouvernent en sont la source.'\n(The Pestilence is in the walls of this place, and those who govern it are its source.)",
+"es": "Páginas de letra elegante en francés antiguo. Entiendes una línea, subrayada dos veces: 'La Pestilence est dans les murs de ce lieu, et ceux qui le gouvernent en sont la source.'\n(La Pestilencia está en los muros de este lugar, y quienes lo gobiernan son su origen.)"
+}
 }
 }

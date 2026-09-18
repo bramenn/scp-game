@@ -452,6 +452,34 @@
 "pump": {
 "en": "The pump hums. Water still rises around your boots.",
 "es": "La bomba zumba. El agua sigue subiendo alrededor de tus botas."
+},
+"operating_lamp": {
+"en": "The lamp is still on. Someone was operating a few minutes ago.",
+"es": "La lámpara sigue encendida. Alguien estaba operando hace unos minutos."
+},
+"morgue_drawers": {
+"en": "Steel drawers. One of them is warm.",
+"es": "Cajones de acero. Uno de ellos está tibio."
+},
+"cryo_tank": {
+"en": "Frost on the glass. Something inside, curled up.",
+"es": "Escarcha en el cristal. Algo dentro, encogido."
+},
+"lavender_bed": {
+"en": "Lavender. The smell cuts through the rot.",
+"es": "Lavanda. El olor atraviesa la podredumbre."
+},
+"grow_rack": {
+"en": "Hydroponic racks under purple lights.",
+"es": "Estanterías hidropónicas bajo luces moradas."
+},
+"med_bed": {
+"en": "The sheets are folded back neatly. The patient was 'cured'.",
+"es": "Las sábanas están dobladas con esmero. El paciente fue 'curado'."
+},
+"body_cured": {
+"en": "A long, neat Y-incision, stitched with care. The eyes are open.",
+"es": "Una larga incisión en Y, cosida con cuidado. Los ojos están abiertos."
 }
 }
 }

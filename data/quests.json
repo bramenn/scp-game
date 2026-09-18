@@ -185,5 +185,34 @@
 "es": "Algo llora al fondo de la escalera. Baja, o no."
 }
 ]
+},
+"main_049": {
+"main": true,
+"name": {
+"en": "The Plague Doctor",
+"es": "El Doctor de la Peste"
+},
+"stages": [
+{
+"en": "Someone is barricaded in the pharmacy. Find out who.",
+"es": "Alguien se ha atrincherado en la farmacia. Averigua quién."
+},
+{
+"en": "Dr. Lin: lavender calms SCP-049. Get some from the greenhouse.",
+"es": "Dra. Lin: la lavanda calma a SCP-049. Consigue un poco en el invernadero."
+},
+{
+"en": "Find SCP-049 in the wards. Carry the lavender. Talk to it.",
+"es": "Encuentra a SCP-049 en las salas. Lleva la lavanda. Habla con él."
+},
+{
+"en": "SCP-049 is following you. Lead it to its cell, south of the wards.",
+"es": "SCP-049 te sigue. Llévalo a su celda, al sur de las salas."
+},
+{
+"en": "Return to Dr. Lin in the pharmacy.",
+"es": "Vuelve con la Dra. Lin en la farmacia."
+}
+]
 }
 }

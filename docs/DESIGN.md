@@ -206,13 +206,14 @@ Legend: [x] done · [~] in progress · [ ] pending
 - [x] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap (needs data)
 - [~] P5 Engine: HUD meters (hp, battery, sanity, stamina), pause menu, options — blink meter pending (173)
 - [~] P6 SCP behaviours: done 173 (blink/creep/lunge/seal), 131 (follow/watch/stay), 999, 049 (talk/follow), 096 (face/bag), 106 (walls/light/pocket), chaser (049-2), 939 (sound/voices). Battle system done. Pending: 682 boss data, 529.
-- [~] P7 Maps content: A (14 maps) + B (12 maps) done and bot-tested. Next: C (maintenance/sewers/087), D (medical/049), E (HCZ), F (pocket), G (079 core/Gate A).
-- [~] P8 Story data EN+ES: Acts I-II done (tools/story/sector_a.py, sector_b.py). Build: python3 tools/build_story.py
+- [~] P7 Maps content: A (14), B (12), C (9), D (8) done and bot-tested (tests/routes/sector_a.json, sector_b.json, b02_contain.json, sector_cd.json). Next: E (HCZ), F (pocket), G (079 core/Gate A).
+- [~] P8 Story data EN+ES: Acts I-IV done (tools/story/sector_a..d.py, world_data.py). Next: Acts V-VI + endings. Build: python3 tools/build_story.py
 - [ ] P9 Audio expansion
 - [ ] P10 Full playthrough bot + screenshots of every area; polish pass
 - [ ] P10b README with good screenshots (players must find and play it)
 - [ ] P11 CREDITS.md, README, final push
 
 ### Log
+- 2026-09-18 05:30 Sectors C+D done; death-loop protection (respawn hp>=60), chaser grace, bot combat.
 - 2026-09-18 04:40 Sector B + SCP actors + battle. Tests: tests/routes/*.json run with tools/playtest.gd (SCP_MAP, SCP_FLAGS, SCP_SAVE env). b02_contain.json validates 173 recontainment.
 - 2026-09-18 00:00-01:30 research, design, git, asset pipeline, new engine core (commit 82ab3b7). Tools: tools/shot.gd (SCP_MAP=<id> in-game screenshot), tools/render_map.gd (full map PNG), tools/build_maps.py. Tests must use SCP_SAVE=user://test_save.json.

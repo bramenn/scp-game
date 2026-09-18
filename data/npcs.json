@@ -70,7 +70,16 @@
 "sprite": "lin",
 "portrait": "res://art/portraits/p_lin.png",
 "voice": 1.05,
-"talk": []
+"talk": [
+[
+"met_lin",
+"lin_again"
+],
+[
+"",
+"lin_first"
+]
+]
 },
 "reyes": {
 "name": {

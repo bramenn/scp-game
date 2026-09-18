@@ -654,6 +654,8 @@ func die(cause: String) -> void:
 	await hud.death_screen(cause)
 	var saved := GameState.load_saved() if GameState.exists() else GameState.new()
 	saved.deaths = st.deaths
+	saved.hp = maxf(saved.hp, 60.0)          # you come to, patched up: never reload into a death loop
+	saved.sanity = maxf(saved.sanity, 50.0)
 	st = saved
 	player.st = st
 	hud.bind(st)

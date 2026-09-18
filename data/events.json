@@ -4497,5 +4497,704 @@
 }
 ]
 }
+],
+"enter:D01": [
+{
+"if": "!d01_seen",
+"then": [
+{
+"mark": "d01_seen"
+},
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "The medical wing. Two patients sit upright on the waiting bench, perfectly still. Their chests are stitched shut.",
+"es": "El ala médica. Dos pacientes están sentados en el banco de espera, completamente quietos. Tienen el pecho cosido."
+}
+],
+"who": ""
+},
+{
+"sfx": "049_hum",
+"db": -10
+},
+{
+"quest": [
+"main_049",
+1
+]
+},
+{
+"objective": {
+"en": "Someone is in the pharmacy (south door).",
+"es": "Hay alguien en la farmacia (puerta sur)."
+}
+}
+]
+}
+],
+"d01_pharmacy_door": [
+{
+"if": "lin_opened",
+"then": [
+{
+"say": [
+{
+"en": "The door is open.",
+"es": "La puerta está abierta."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"sfx": "hit",
+"db": -6
+},
+{
+"say": [
+{
+"en": "Go away! Go away, I'm not sick, I'm not—",
+"es": "¡Vete! ¡Vete, no estoy enferma, no estoy...!"
+},
+{
+"en": "...You knocked. They don't knock. Prove you're not one of his. What does 049 call the disease?",
+"es": "...Has llamado. Ellos no llaman. Demuestra que no eres uno de los suyos. ¿Cómo llama 049 a la enfermedad?"
+}
+],
+"who": "lin"
+},
+{
+"choice": [
+{
+"text": {
+"en": "The Plague",
+"es": "La Plaga"
+},
+"do": [
+{
+"say": [
+{
+"en": "No. Go away.",
+"es": "No. Vete."
+}
+],
+"who": "lin"
+}
+]
+},
+{
+"text": {
+"en": "The Pestilence",
+"es": "La Pestilencia"
+},
+"do": [
+{
+"sfx": "lock_click"
+},
+{
+"mark": "lin_opened"
+},
+{
+"call": "refresh_doors"
+},
+{
+"door": "D01_pharmacy",
+"open": true
+},
+{
+"say": [
+{
+"en": "...Come in. Quickly.",
+"es": "...Pasa. Rápido."
+}
+],
+"who": "lin"
+}
+]
+},
+{
+"text": {
+"en": "The Rot",
+"es": "La Podredumbre"
+},
+"do": [
+{
+"say": [
+{
+"en": "No. You'd know if you'd read the notice. Go away.",
+"es": "No. Lo sabrías si hubieras leído el aviso. Vete."
+}
+],
+"who": "lin"
+}
+]
+}
+],
+"who": "lin",
+"prompt": ""
+}
+]
+}
+],
+"lin_first": [
+{
+"mark": "met_lin"
+},
+{
+"say": [
+{
+"en": "Lin. Medical director of this wing. Former. Everyone I directed is on those benches now.",
+"es": "Lin. Directora médica de esta ala. Antigua. Todos a los que dirigía están ahora en esos bancos."
+},
+{
+"en": "049 walked out of its cell at 03:12 and started 'treating' the night shift. It's very polite about it.",
+"es": "049 salió de su celda a las 03:12 y empezó a 'tratar' al turno de noche. Es muy educado."
+}
+],
+"who": "lin"
+},
+{
+"choice": [
+{
+"text": {
+"en": "How do we get it back in its cell?",
+"es": "¿Cómo lo devolvemos a su celda?"
+},
+"do": [
+{
+"say": [
+{
+"en": "You ask it. Nicely. It isn't an animal, it's a doctor. A doctor with a patient list.",
+"es": "Se lo pides. Con educación. No es un animal, es un médico. Un médico con una lista de pacientes."
+},
+{
+"en": "Lavender calms it. There's a greenhouse past the wards. Carry some, and it will listen.",
+"es": "La lavanda lo calma. Hay un invernadero más allá de las salas. Lleva un poco y te escuchará."
+}
+],
+"who": "lin"
+}
+]
+},
+{
+"text": {
+"en": "You knew Elena Vega?",
+"es": "¿Conocías a Elena Vega?"
+},
+"do": [
+{
+"say": [
+{
+"en": "She took two SCP-500 pills from the vault at 03:40. 'For the core', she said. Someone down there is sick. Or will be.",
+"es": "Se llevó dos píldoras SCP-500 de la bóveda a las 03:40. 'Para el núcleo', dijo. Alguien ahí abajo está enfermo. O lo estará."
+}
+],
+"who": "lin"
+}
+]
+}
+],
+"who": "lin",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "And... Vega. Before you judge me for hiding: I signed the health checks for Black Tide. Forty of them. I told myself it was paperwork.",
+"es": "Y... Vega. Antes de que me juzgues por esconderme: firmé las revisiones médicas de Marea Negra. Cuarenta. Me dije que era papeleo."
+},
+{
+"en": "049 says the Pestilence is in the people who run this place. Some nights I think it's right.",
+"es": "049 dice que la Pestilencia está en quienes gobiernan este lugar. Algunas noches creo que tiene razón."
+}
+],
+"who": "lin"
+},
+{
+"quest": [
+"main_049",
+2
+]
+},
+{
+"objective": {
+"en": "Get lavender from the greenhouse (east of the wards).",
+"es": "Consigue lavanda en el invernadero (al este de las salas)."
+}
+}
+],
+"lin_again": [
+{
+"if": "scp049_contained,!lin_reward",
+"then": [
+{
+"say": [
+{
+"en": "It's back in its room. You actually did it. It walked in by itself?",
+"es": "Ha vuelto a su habitación. Lo has conseguido. ¿Entró solo?"
+},
+{
+"en": "Take my card. Level 4. Heavy Containment. And this - the hood. From the 096 retrieval. If you ever see that thing, never, ever look at its face.",
+"es": "Toma mi tarjeta. Nivel 4. Contención Pesada. Y esto: la capucha. De la recuperación de 096. Si alguna vez ves esa cosa, nunca, jamás, le mires la cara."
+},
+{
+"en": "Reyes, the last Nine-Tailed Fox, radioed from HCZ an hour ago. Find him. He'll know what's left down there.",
+"es": "Reyes, el último de Nueve Colas, llamó por radio desde ZCP hace una hora. Encuéntralo. Sabrá qué queda ahí abajo."
+}
+],
+"who": "lin"
+},
+{
+"give": "card_4"
+},
+{
+"give": "bag096"
+},
+{
+"mark": "lin_reward"
+},
+{
+"quest": [
+"main_049",
+-1
+]
+},
+{
+"objective": {
+"en": "Take the Heavy Containment lift (maintenance junction, south-east door, Level 4).",
+"es": "Toma el ascensor de Contención Pesada (cruce de mantenimiento, puerta sureste, nivel 4)."
+}
+},
+{
+"save": true
+}
+],
+"else": [
+{
+"if": "scp049_contained",
+"then": [
+{
+"say": [
+{
+"en": "Go. And come back alive, please. I'm tired of signing things.",
+"es": "Vete. Y vuelve vivo, por favor. Estoy cansada de firmar cosas."
+}
+],
+"who": "lin"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Lavender. Then talk to it. Don't let it touch you. Don't argue about medicine.",
+"es": "Lavanda. Luego habla con él. No dejes que te toque. No discutas de medicina."
+}
+],
+"who": "lin"
+}
+]
+}
+]
+}
+],
+"item:lavender": [
+{
+"if": "met_lin",
+"then": [
+{
+"quest": [
+"main_049",
+3
+]
+},
+{
+"objective": {
+"en": "Find SCP-049 in the wards. Talk to it with the lavender.",
+"es": "Encuentra a SCP-049 en las salas. Háblale con la lavanda."
+}
+}
+]
+}
+],
+"d02_enter": [
+{
+"if": "!d02_seen",
+"then": [
+{
+"mark": "d02_seen"
+},
+{
+"say": [
+{
+"en": "Somewhere among the beds, a low humming. An old tune. Someone is working.",
+"es": "En algún lugar entre las camas, un zumbido grave. Una melodía antigua. Alguien está trabajando."
+}
+],
+"who": ""
+}
+]
+}
+],
+"d03_enter": [
+{
+"if": "!d03_seen",
+"then": [
+{
+"mark": "d03_seen"
+},
+{
+"say": [
+{
+"en": "The operating table is still warm. The instruments are laid out in perfect order, cleaned, ready.",
+"es": "La mesa de operaciones sigue tibia. Los instrumentos están colocados en orden perfecto, limpios, listos."
+}
+],
+"who": ""
+},
+{
+"sanity": -5
+}
+]
+}
+],
+"d04_drawer": [
+{
+"sfx": "hit",
+"db": 2
+},
+{
+"shake": 0.4,
+"power": 2
+},
+{
+"wait": 0.6
+},
+{
+"sfx": "hit",
+"db": 0
+},
+{
+"wait": 0.9
+},
+{
+"sfx": "hit",
+"db": -2
+},
+{
+"say": [
+{
+"en": "Something knocks from inside one of the drawers. Three times. Then it stops.",
+"es": "Algo golpea desde dentro de uno de los cajones. Tres veces. Luego para."
+}
+],
+"who": ""
+},
+{
+"sanity": -7
+}
+],
+"scp049_meet": [
+{
+"if": "follow049",
+"then": [
+{
+"say": [
+{
+"en": "Lead on, doctor. I will follow.",
+"es": "Guíe usted, doctor. Le sigo."
+}
+],
+"who": "scp049"
+}
+],
+"else": [
+{
+"music": "079"
+},
+{
+"if": "item:lavender",
+"then": [
+{
+"say": [
+{
+"en": "Ah. Lavender. How civilized.",
+"es": "Ah. Lavanda. Qué civilizado."
+},
+{
+"en": "You are not one of the sick ones. Not yet. Tell me, colleague: why have you come to my ward?",
+"es": "Usted no es de los enfermos. Todavía no. Dígame, colega: ¿por qué ha venido a mi sala?"
+}
+],
+"who": "scp049"
+},
+{
+"choice": [
+{
+"text": {
+"en": "The Pestilence is spreading here. Your study is safer.",
+"es": "La Pestilencia se extiende aquí. Su estudio es más seguro."
+},
+"do": [
+{
+"say": [
+{
+"en": "You understand. The Pestilence is everywhere tonight. It walked out of the cells with the others.",
+"es": "Lo entiende. La Pestilencia está por todas partes esta noche. Salió de las celdas con los demás."
+},
+{
+"en": "Very well. Take me to my study. I have notes to write.",
+"es": "Muy bien. Lléveme a mi estudio. Tengo notas que escribir."
+}
+],
+"who": "scp049"
+},
+{
+"mark": "follow049"
+},
+{
+"quest": [
+"main_049",
+4
+]
+},
+{
+"objective": {
+"en": "Lead SCP-049 to its cell (south of the wards).",
+"es": "Lleva a SCP-049 a su celda (al sur de las salas)."
+}
+}
+]
+},
+{
+"text": {
+"en": "You're killing people.",
+"es": "Está matando gente."
+},
+"do": [
+{
+"say": [
+{
+"en": "I am curing them. You would understand if you were a physician. Are you questioning my methods?",
+"es": "Los estoy curando. Lo entendería si fuera médico. ¿Cuestiona mis métodos?"
+}
+],
+"who": "scp049"
+},
+{
+"choice": [
+{
+"text": {
+"en": "No, doctor. Forgive me.",
+"es": "No, doctor. Perdóneme."
+},
+"do": [
+{
+"say": [
+{
+"en": "Forgiven. Now, if you'll excuse me.",
+"es": "Perdonado. Ahora, si me disculpa."
+}
+],
+"who": "scp049"
+}
+]
+},
+{
+"text": {
+"en": "Yes.",
+"es": "Sí."
+},
+"do": [
+{
+"say": [
+{
+"en": "Then you are sick too. Hold still.",
+"es": "Entonces usted también está enfermo. Quieto."
+}
+],
+"who": "scp049"
+},
+{
+"sfx": "049_hum",
+"db": 4
+},
+{
+"flash": 2,
+"color": "#000000"
+},
+{
+"hp": -200,
+"cause": "049"
+}
+]
+}
+],
+"who": "scp049",
+"prompt": ""
+}
+]
+},
+{
+"text": {
+"en": "Nothing. Excuse me.",
+"es": "Nada. Disculpe."
+},
+"do": [
+{
+"say": [
+{
+"en": "Of course.",
+"es": "Por supuesto."
+}
+],
+"who": "scp049"
+}
+]
+}
+],
+"who": "scp049",
+"prompt": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Ah. Another one. I sense it in you... faint. Early. The Pestilence.",
+"es": "Ah. Otro más. Lo percibo en usted... tenue. Temprano. La Pestilencia."
+},
+{
+"en": "Hold still, please. This will not take long.",
+"es": "Quieto, por favor. No tardaré."
+}
+],
+"who": "scp049"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Back away slowly.",
+"es": "Retroceder despacio."
+},
+"do": [
+{
+"say": [
+{
+"en": "You cannot outrun a disease, my friend. But go. I have other patients.",
+"es": "No se puede huir de una enfermedad, amigo mío. Pero váyase. Tengo otros pacientes."
+}
+],
+"who": "scp049"
+},
+{
+"sanity": -8
+}
+]
+},
+{
+"text": {
+"en": "Hold still.",
+"es": "Quedarse quieto."
+},
+"do": [
+{
+"say": [
+{
+"en": "...Hm. Not yet. Come back to me when it has progressed.",
+"es": "...Hm. Todavía no. Vuelva cuando haya avanzado."
+}
+],
+"who": "scp049"
+},
+{
+"sanity": -12
+}
+]
+},
+{
+"text": {
+"en": "Don't touch me!",
+"es": "¡No me toque!"
+},
+"do": [
+{
+"say": [
+{
+"en": "Panic is a symptom.",
+"es": "El pánico es un síntoma."
+}
+],
+"who": "scp049"
+},
+{
+"flash": 2,
+"color": "#000000"
+},
+{
+"hp": -200,
+"cause": "049"
+}
+]
+}
+],
+"who": "scp049",
+"prompt": ""
+}
+]
+},
+{
+"music": ""
+}
+]
+}
+],
+"d08_contain": [
+{
+"say": [
+{
+"en": "My study. My books. Someone has moved my candles.",
+"es": "Mi estudio. Mis libros. Alguien ha movido mis velas."
+},
+{
+"en": "Thank you, colleague. Close the door when you leave. The Pestilence is out there. Not in here.",
+"es": "Gracias, colega. Cierre la puerta al salir. La Pestilencia está ahí fuera. No aquí dentro."
+}
+],
+"who": "scp049"
+},
+{
+"call": "contain049"
+},
+{
+"say": [
+{
+"en": "And... your sister. She visited me once. She had the Pestilence very badly, the guilt kind. I told her she would find her cure. I hope she did.",
+"es": "Y... su hermana. Me visitó una vez. Tenía muy avanzada la Pestilencia, la de la culpa. Le dije que encontraría su cura. Espero que la encontrara."
+}
+],
+"who": "scp049"
+},
+{
+"quest": [
+"main_049",
+5
+]
+},
+{
+"objective": {
+"en": "Return to Dr. Lin in the pharmacy.",
+"es": "Vuelve con la Dra. Lin en la farmacia."
+}
+},
+{
+"save": true
+}
 ]
 }

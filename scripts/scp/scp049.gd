@@ -61,3 +61,17 @@ func _process(dt: float) -> void:
 
 func talk() -> void:
 	world.events.run(String(spec.get("event", "scp049_meet")))
+
+
+## Event hook: "contain049" - it walks to its desk and the cell is sealed.
+func special(name: String, _args: Array) -> bool:
+	if name != "contain049":
+		return false
+	world.st.mark("scp049_contained")
+	world.st.flags.erase("follow049")
+	go_to(Vector2i(13, 6))
+	while not path.is_empty() or moving:
+		follow_path(0.4)
+		await get_tree().process_frame
+	face("south")
+	return true

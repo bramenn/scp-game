@@ -11,6 +11,7 @@ var _lost := 0.0
 var _heard := Vector2i(-1, -1)
 var _groan := 0.0
 var key := ""
+var _grace := 2.5   # seconds after the map loads before it can start a fight
 
 
 func init(a: Dictionary) -> void:
@@ -46,7 +47,8 @@ func _sees_player() -> bool:
 func _process(dt: float) -> void:
 	if not world or not world.player or world.busy > 0 or world._dying:
 		return
-	if adjacent_to_player() and not moving:
+	_grace -= dt
+	if adjacent_to_player() and not moving and _grace <= 0.0:
 		_attack()
 		return
 	_groan -= dt

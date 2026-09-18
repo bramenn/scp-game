@@ -542,5 +542,53 @@
 "en": "Scratched into the last landing",
 "es": "Rayado en el último rellano"
 }
+},
+"doc_049_notice": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Staff notice - SCP-049",
+"es": "Aviso al personal - SCP-049"
+}
+},
+"doc_049_interview": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Interview 049-B (excerpt)",
+"es": "Entrevista 049-B (extracto)"
+}
+},
+"doc_ward_chart": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Patient chart, ward 3",
+"es": "Historia clínica, sala 3"
+}
+},
+"doc_morgue_tag": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Toe tag",
+"es": "Etiqueta de pie"
+}
+},
+"doc_cold_storage": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Inventory, cold storage",
+"es": "Inventario, cámara frigorífica"
+}
+},
+"doc_049_journal": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "A journal in French",
+"es": "Un diario en francés"
+}
 }
 }

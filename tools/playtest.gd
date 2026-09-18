@@ -18,6 +18,7 @@ var failures := 0
 var _pressed := false
 var _step_map := ""
 var _tries := 0
+var _in_battle := false
 
 
 func _initialize() -> void:
@@ -74,6 +75,20 @@ func _process(dt: float) -> bool:
 		return true
 	if not world.player or not world.st:
 		return false
+	var battle: Node = null
+	for c in world.get_children():
+		if c.get_script() and String(c.get_script().resource_path).ends_with("battle.gd"):
+			battle = c
+	if battle:   # combat: always pick the first option (fight) and advance text
+		if int(step_t * 10) % 4 == 0:
+			_press("interact")
+		if not _in_battle:
+			_in_battle = true
+			_log("battle started")
+		return false
+	elif _in_battle:
+		_in_battle = false
+		_log("battle ended (hp=%d)" % int(world.st.hp))
 	if world.menu._reading:   # a document is open: read it, then close it
 		if int(step_t * 10) % 8 == 0:
 			_press("interact")
