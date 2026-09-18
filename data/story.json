@@ -59,6 +59,34 @@
 "scp294": {
 "en": "SCP-294. It waits for a request.",
 "es": "SCP-294. Espera una petición."
+},
+"scp914": {
+"en": "SCP-914. The dial reads: ROUGH · COARSE · 1:1 · FINE · VERY FINE.",
+"es": "SCP-914. El dial dice: TOSCO · GRUESO · 1:1 · FINO · MUY FINO."
+},
+"iron_box": {
+"en": "The box is open. Don't look inside. Don't.",
+"es": "La caja está abierta. No mires dentro. No."
+},
+"pill_case": {
+"en": "An empty cradle for the pill bottle. A label: 'SCP-500. Level 4.'",
+"es": "Un soporte vacío para el frasco. Una etiqueta: 'SCP-500. Nivel 4.'"
+},
+"toy_pile": {
+"en": "Toys, chewed on by something with no teeth.",
+"es": "Juguetes, mordisqueados por algo sin dientes."
+},
+"cell_bunk": {
+"en": "A concrete bunk. A number scratched into it with a fingernail.",
+"es": "Un camastro de hormigón. Un número rayado con la uña."
+},
+"shower": {
+"en": "Cold water still drips from the head.",
+"es": "Todavía gotea agua fría de la alcachofa."
+},
+"control_console": {
+"en": "CELL 173 CONTROL. Two buttons: OPEN, SEAL.",
+"es": "CONTROL CELDA 173. Dos botones: ABRIR, SELLAR."
 }
 }
 }

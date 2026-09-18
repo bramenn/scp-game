@@ -163,14 +163,14 @@ func _lights(mode: String, t: float) -> void:
 			for l in world.lights:
 				l.set_meta("base", l.energy)
 				l.energy = 0.0
-				var f: ColorRect = l.get_meta("fixture", null)
+				var f: ColorRect = (l.get_meta("fixture") if l.has_meta("fixture") else null)
 				if f:
 					f.visible = false
 		"on":
 			Sfx.play("power_up", -4.0)
 			for l in world.lights:
 				l.energy = float(l.get_meta("base", 1.0))
-				var f: ColorRect = l.get_meta("fixture", null)
+				var f: ColorRect = (l.get_meta("fixture") if l.has_meta("fixture") else null)
 				if f:
 					f.visible = true
 		"flicker":

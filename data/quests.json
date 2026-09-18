@@ -71,5 +71,66 @@
 "es": "La taquilla 7 de los dormitorios tiene un candado de 4 cifras. Alguien lo habrá apuntado."
 }
 ]
+},
+"main_173": {
+"main": true,
+"name": {
+"en": "The Sculpture",
+"es": "La Escultura"
+},
+"stages": [
+{
+"en": "SCP-173 is loose in the LCZ junction. Find a way to put it back in its cell.",
+"es": "SCP-173 anda suelto en el cruce de la ZCL. Encuentra la forma de devolverlo a su celda."
+},
+{
+"en": "Adebayo: the cell console is in the observation booth (Level 2). Get a Level 2 card from SCP-914.",
+"es": "Adebayo: la consola de la celda está en la cabina de observación (Nivel 2). Consigue una tarjeta de nivel 2 con SCP-914."
+},
+{
+"en": "The Eye Pods (SCP-131) never blink. Find them in their habitat and make friends.",
+"es": "Los Ojo-Cápsulas (SCP-131) nunca parpadean. Encuéntralos en su hábitat y hazte su amigo."
+},
+{
+"en": "Open the cell from the booth. Lure 173 inside, leave through the crawl hatch, and seal it.",
+"es": "Abre la celda desde la cabina. Atrae a 173 adentro, sal por la escotilla y séllala."
+},
+{
+"en": "Take the maintenance ladder down to Level -3.",
+"es": "Baja por la escalerilla de mantenimiento al Nivel -3."
+}
+]
+},
+"side_notebook": {
+"name": {
+"en": "Adebayo's notebook",
+"es": "El cuaderno de Adebayo"
+},
+"stages": [
+{
+"en": "Adebayo dropped his notebook in the SCP-012 room. Don't look at the music.",
+"es": "Adebayo dejó su cuaderno en la sala de SCP-012. No mires la partitura."
+},
+{
+"en": "Bring the notebook back to Adebayo in the 914 lab.",
+"es": "Devuélvele el cuaderno a Adebayo en el laboratorio de 914."
+}
+]
+},
+"side_marcus": {
+"name": {
+"en": "Cell 17",
+"es": "Celda 17"
+},
+"stages": [
+{
+"en": "Nico asked you to find his cell mate Marcus in D-block, cell 17.",
+"es": "Nico te pidió buscar a su compañero Marcus en el bloque D, celda 17."
+},
+{
+"en": "Marcus is dead. He left a letter for Nico. Nico should have it.",
+"es": "Marcus está muerto. Dejó una carta para Nico. Nico debería tenerla."
+}
+]
 }
 }

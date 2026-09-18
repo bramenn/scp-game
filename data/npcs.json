@@ -100,7 +100,16 @@
 "sprite": "adebayo",
 "portrait": "res://art/portraits/p_adebayo.png",
 "voice": 0.86,
-"talk": []
+"talk": [
+[
+"met_adebayo",
+"adebayo_again"
+],
+[
+"",
+"adebayo_first"
+]
+]
 },
 "elena": {
 "name": {

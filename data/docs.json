@@ -70,5 +70,112 @@
 "en": "If they ask you to stand in the room with the statue, say no. I know what the contract says. Say no anyway. They don't count the ones who blink. - T.",
 "es": "Si te piden estar en la sala con la estatua, di que no. Sé lo que dice el contrato. Di que no igualmente. No cuentan a los que parpadean. - T."
 }
+},
+"doc_173_file": {
+"title": {
+"en": "SCP-173 - Containment procedures",
+"es": "SCP-173 - Procedimientos de contención"
+},
+"body": {
+"en": "Object Class: Euclid.\n\nItem SCP-173 is to be kept in a locked container at all times. When personnel must enter SCP-173's container, no fewer than 3 may enter at any time and the door is to be relocked behind them. At all times, two persons must maintain direct eye contact with SCP-173 until all personnel have vacated and relocked the container.\n\nConstructed from concrete and rebar with traces of Krylon brand spray paint. Animate and extremely hostile. It cannot move while within a direct line of sight. Line of sight must not be broken at any time. Personnel are instructed to alert one another before blinking.\n\nReports of scraping stone originating from inside the container when no one is present are considered normal.",
+"es": "Clase de objeto: Euclid.\n\nSCP-173 debe mantenerse en un contenedor cerrado en todo momento. Cuando el personal deba entrar, no podrán hacerlo menos de 3 personas y la puerta se volverá a cerrar tras ellas. En todo momento, dos personas deben mantener contacto visual directo con SCP-173 hasta que todo el personal haya salido y cerrado el contenedor.\n\nConstruido de hormigón y varilla con restos de pintura en aerosol marca Krylon. Animado y extremadamente hostil. No puede moverse mientras esté en línea de visión directa. La línea de visión no debe romperse nunca. El personal debe avisarse antes de parpadear.\n\nLos informes de piedra raspando dentro del contenedor cuando no hay nadie se consideran normales."
+},
+"source": "SCP-173 by Moto42 · scp-wiki.wikidot.com/scp-173 · CC BY-SA 3.0"
+},
+"doc_914_log": {
+"title": {
+"en": "SCP-914 - Test log (excerpt)",
+"es": "SCP-914 - Registro de pruebas (extracto)"
+},
+"body": {
+"en": "SCP-914 is a large clockwork device: over eight million moving parts, tin and copper, 18 m². Two booths, 'Intake' and 'Output'. A dial: Rough, Coarse, 1:1, Fine, Very Fine. A key winds it.\n\nInput: 1 steel wrench. Setting: Fine. Output: 1 wrench, precision-machined, no maker's mark.\nInput: 1 Level-1 keycard. Setting: Fine. Output: 1 Level-2 keycard. Valid. [Security has been notified.]\nInput: 1 bandage. Setting: Fine. Output: 1 complete field dressing kit.\nInput: 1 battery. Setting: Very Fine. Output: 1 battery. Charge exceeds rating by 400%. Warm to the touch.\nInput: 1 revolver. Setting: Very Fine. Output: [REDACTED]. Test halted.\n\nBiological testing is prohibited. - Dr. Adebayo (who knows why)",
+"es": "SCP-914 es un gran dispositivo de relojería: más de ocho millones de piezas, estaño y cobre, 18 m². Dos cabinas, 'Entrada' y 'Salida'. Un dial: Tosco, Grueso, 1:1, Fino, Muy fino. Una llave le da cuerda.\n\nEntrada: 1 llave inglesa de acero. Ajuste: Fino. Salida: 1 llave, mecanizada con precisión, sin marca.\nEntrada: 1 tarjeta de nivel 1. Ajuste: Fino. Salida: 1 tarjeta de nivel 2. Válida. [Se ha notificado a Seguridad.]\nEntrada: 1 venda. Ajuste: Fino. Salida: 1 botiquín de campaña completo.\nEntrada: 1 pila. Ajuste: Muy fino. Salida: 1 pila. Carga un 400% superior a la nominal. Tibia al tacto.\nEntrada: 1 revólver. Ajuste: Muy fino. Salida: [REDACTADO]. Prueba detenida.\n\nLas pruebas biológicas están prohibidas. - Dr. Adebayo (que sabe por qué)"
+},
+"source": "SCP-914 by Dr Gears · scp-wiki.wikidot.com/scp-914 · CC BY-SA 3.0"
+},
+"doc_012_file": {
+"title": {
+"en": "SCP-012 - 'A Bad Composition'",
+"es": "SCP-012 - 'Una mala composición'"
+},
+"body": {
+"en": "An incomplete score titled 'On Mount Golgotha', written in blood from multiple subjects. Anyone who sees it feels an irresistible urge to finish it, using their own blood. Those who complete a section become psychotic. They all say the same thing: it cannot be finished.\n\nKeep it in darkness, in its iron box, at least 2.5 m from any surface.\n\nSomeone opened the box.",
+"es": "Una partitura incompleta titulada 'En el monte Gólgota', escrita con la sangre de varios sujetos. Quien la ve siente el impulso irresistible de terminarla, usando su propia sangre. Quienes completan una sección se vuelven psicóticos. Todos dicen lo mismo: no se puede terminar.\n\nMantener a oscuras, en su caja de hierro, a 2,5 m de cualquier superficie.\n\nAlguien abrió la caja."
+},
+"sanity": -8,
+"source": "SCP-012 by ITIFAMCO · scp-wiki.wikidot.com/scp-012 · CC BY-SA 3.0"
+},
+"doc_131_note": {
+"title": {
+"en": "Sticky note on a door",
+"es": "Nota adhesiva en una puerta"
+},
+"body": {
+"en": "To whoever is on 131 duty: the Eye Pods got out again and followed Keller all the way to the 173 wing. They sat there and STARED at it for two hours. It didn't move once. Nobody's writing this up, but I'm telling you: they never blink. They like candy wrappers. The crinkly sound. - J.",
+"es": "Para quien le toque 131: los Ojo-Cápsulas se volvieron a escapar y siguieron a Keller hasta el ala de 173. Se quedaron ahí MIRÁNDOLA dos horas. No se movió ni una vez. Nadie lo va a poner en un informe, pero os lo digo: nunca parpadean. Les gustan los envoltorios de caramelos. El ruidito. - J."
+}
+},
+"doc_999_note": {
+"title": {
+"en": "Caretaker's note",
+"es": "Nota del cuidador"
+},
+"body": {
+"en": "999 only eats candy. It refused a steak and then spent twenty minutes making a crying intern laugh. If you're having a bad day, go in. It will know. It always knows.",
+"es": "999 solo come caramelos. Rechazó un filete y luego pasó veinte minutos haciendo reír a un becario que lloraba. Si tienes un mal día, entra. Lo sabrá. Siempre lo sabe."
+},
+"source": "SCP-999 by ProfSnider · scp-wiki.wikidot.com/scp-999 · CC BY-SA 3.0"
+},
+"doc_500_file": {
+"title": {
+"en": "SCP-500 - Panacea",
+"es": "SCP-500 - Panacea"
+},
+"body": {
+"en": "A plastic container of red pills. One pill, taken orally, cures the subject of all diseases within two hours. Remaining: 47. Synthesis attempts have failed.\n\nThe log below the file shows two pills signed out at 03:40 by 'E. Vega - for the core'.",
+"es": "Un contenedor de plástico con píldoras rojas. Una píldora, por vía oral, cura al sujeto de toda enfermedad en dos horas. Restantes: 47. Los intentos de síntesis han fracasado.\n\nEl registro bajo el expediente muestra dos píldoras retiradas a las 03:40 por 'E. Vega - para el núcleo'."
+},
+"source": "SCP-500 by snorlison · scp-wiki.wikidot.com/scp-500 · CC BY-SA 3.0"
+},
+"doc_marcus_letter": {
+"title": {
+"en": "A letter, folded eight times",
+"es": "Una carta, doblada ocho veces"
+},
+"body": {
+"en": "Nico,\n\nif you read this you got out and I didn't, so don't be stupid about it. The guards said Tuesday they're moving the whole block to Heavy Containment for 'trials'. Nobody comes back from Heavy.\n\nI drew you the horses. The brown one is you. It's the fast one. When you're outside, go see real ones. Promise.\n\n- Marcus",
+"es": "Nico,\n\nsi lees esto es que saliste y yo no, así que no hagas tonterías. Los guardias dicen que el martes llevan todo el bloque a Contención Pesada para 'pruebas'. De Pesada no vuelve nadie.\n\nTe dibujé los caballos. El marrón eres tú. Es el rápido. Cuando estés fuera, ve a ver unos de verdad. Prométemelo.\n\n- Marcus"
+}
+},
+"doc_black_tide_schedule": {
+"title": {
+"en": "Transfer schedule - D-Block",
+"es": "Calendario de traslados - Bloque D"
+},
+"body": {
+"en": "BLACK TIDE / PHASE 1\nTuesday 04:00 - D-Block (all 40 subjects) to HCZ acid chamber, SCP-682.\nEscort: Security team 3.\nAmnestics for escort: Class-B, post-procedure.\nNote from the director: 'No names in the log. Numbers only.'\n\nThe breach started at 03:12, Tuesday.",
+"es": "MAREA NEGRA / FASE 1\nMartes 04:00 - Bloque D (los 40 sujetos) a la cámara de ácido de ZCP, SCP-682.\nEscolta: equipo de seguridad 3.\nAmnésicos para la escolta: clase B, tras el procedimiento.\nNota de la directora: 'Nada de nombres en el registro. Solo números.'\n\nLa brecha empezó a las 03:12, un martes."
+},
+"sanity": -4
+},
+"doc_shower_scrawl": {
+"title": {
+"en": "Written in the steam",
+"es": "Escrito en el vaho"
+},
+"body": {
+"en": "On the mirror, in the condensation, someone wrote: DON'T BLINK DON'T BLINK DON'T BL",
+"es": "En el espejo, sobre el vaho, alguien escribió: NO PARPADEES NO PARPADEES NO PARP"
+}
+},
+"adebayo_notebook": {
+"title": {
+"en": "Adebayo's notebook",
+"es": "El cuaderno de Adebayo"
+},
+"body": {
+"en": "Pages of dial settings and outcomes, in tiny handwriting. The last page, shakier: 'Elena asked me to put a Level-5 card through on Very Fine. I told her it's a crime. She said so is Tuesday. I did it. It came out black, with no level printed on it. God help us.'",
+"es": "Páginas de ajustes del dial y resultados, con letra diminuta. La última página, más temblorosa: 'Elena me pidió que pasara una tarjeta de nivel 5 en Muy fino. Le dije que era un delito. Me dijo que el martes también. Lo hice. Salió negra, sin nivel impreso. Que Dios nos ayude.'"
+}
 }
 }

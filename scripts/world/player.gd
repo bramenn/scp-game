@@ -18,6 +18,9 @@ var aura: PointLight2D
 var torch_on := true
 var _flicker := 0.0
 var _turn_to := 0.0
+var _turn_hold := 0.0
+var _dir_held := ""
+var _turned := false
 
 static var _cone: ImageTexture
 static var _radial: GradientTexture2D
@@ -117,10 +120,22 @@ func _process(dt: float) -> void:
 		return
 	var d := _held_dir()
 	if d == "":
+		_dir_held = ""
 		idle()
 		sprinting = false
 		if st:
 			st.stamina = minf(100.0, st.stamina + dt * 18.0)
+		return
+	# a quick tap on a new direction only turns (FireRed style); holding it walks
+	if d != _dir_held:
+		_dir_held = d
+		_turn_hold = 0.0
+		_turned = d != facing
+		if _turned:
+			face(d)
+			return
+	_turn_hold += dt
+	if _turned and _turn_hold < 0.12:
 		return
 	sprinting = Input.is_action_pressed("sprint") and st != null and st.stamina > 5.0
 	if st and sprinting:

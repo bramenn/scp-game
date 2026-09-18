@@ -50,6 +50,7 @@ class Map:
         self.doors, self.exits, self.spawns, self.npcs, self.items = [], {}, {}, [], []
         self.triggers, self.interact, self.fx, self.vermin, self.sounds, self.signs = [], [], [], [], [], []
         self.actors, self.rooms = [], []
+        self.hatches = []
         self.exits = []
         self.rnd = random.Random(mid)
 
@@ -147,6 +148,11 @@ class Map:
     def sign(self, x, y, text, style="plate"):
         self.signs.append({"x": x, "y": y, "text": text, "style": style})
 
+    def hatch(self, x, y):
+        """Crawl hatch through a wall: only the player fits (blocks SCPs and NPCs)."""
+        self._floor(x, y, self.m[y][x])
+        self.hatches.append([x, y])
+
     def actor(self, aid, x, y, **kw):
         self.actors.append(dict(id=aid, x=x, y=y, **kw))
 
@@ -206,7 +212,7 @@ class Map:
             "lights": self.lights, "doors": self.doors, "exits": self.exits, "spawns": self.spawns,
             "npcs": self.npcs, "items": self.items, "triggers": self.triggers, "interact": self.interact,
             "fx": self.fx, "vermin": self.vermin, "sounds": self.sounds, "signs": self.signs,
-            "actors": self.actors, "rooms": self.rooms,
+            "actors": self.actors, "rooms": self.rooms, "hatches": self.hatches,
         }
 
     def save(self):

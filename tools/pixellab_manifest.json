@@ -158,9 +158,45 @@
   "character_id": "b9f2882c-fa24-4d35-b075-1af0626c2574",
   "done": true
  },
+ "p_049": {
+  "done": true,
+  "job_id": "52449f3e-84f6-4b23-a540-1b6d1a95e4d0"
+ },
+ "p_adebayo": {
+  "done": true,
+  "job_id": "01e508c3-bdc7-499f-a9e9-70ded6b53938"
+ },
+ "p_elena": {
+  "done": true,
+  "job_id": "6ddfa9b7-177f-4fc6-bd2a-caae90ac416f"
+ },
+ "p_lin": {
+  "done": true,
+  "job_id": "a59d5235-ad0a-476a-9748-dd7b9fa7e9d4"
+ },
+ "p_mara": {
+  "done": true,
+  "job_id": "76f8bf06-2633-4bfd-8f08-30e17c36509e"
+ },
+ "p_nico": {
+  "done": true,
+  "job_id": "db3c19e3-5d5a-48e8-8a80-c088e9dd21d4"
+ },
  "p_ortega": {
   "done": true,
   "job_id": "26910cb5-142c-424e-a548-99093fd3fbb1"
+ },
+ "p_reyes": {
+  "done": true,
+  "job_id": "80a4a949-8a96-4475-adc9-ae898747fdde"
+ },
+ "p_tomas": {
+  "done": true,
+  "job_id": "87959c20-4fd1-4574-bf8d-edcfef9b8cde"
+ },
+ "p_vega": {
+  "done": true,
+  "job_id": "bbe5c950-cf48-4526-b817-7eb64e497185"
  },
  "pillar_rot": {
   "done": true,
@@ -325,8 +361,11 @@
   "object_id": "aee61b17-94ff-417d-887c-d356798df10f"
  },
  "rat": {
-  "anims_queued": [],
-  "character_id": "9b5ddea0-dcdb-47e4-adc3-1e2eb3481546"
+  "anims_queued": [
+   "walk-6-frames"
+  ],
+  "character_id": "9b5ddea0-dcdb-47e4-adc3-1e2eb3481546",
+  "done": true
  },
  "reception_desk": {
   "done": true,
@@ -390,12 +429,18 @@
   "done": true
  },
  "scp529": {
-  "anims_queued": [],
-  "character_id": "cf7c6c6a-e1f9-4275-b2f0-00d6c0a6e750"
+  "anims_queued": [
+   "walk-6-frames"
+  ],
+  "character_id": "cf7c6c6a-e1f9-4275-b2f0-00d6c0a6e750",
+  "done": true
  },
  "scp682": {
-  "anims_queued": [],
-  "character_id": "6c782e12-d7a7-4824-967c-ffa6cc89c022"
+  "anims_queued": [
+   "walk-6-frames"
+  ],
+  "character_id": "6c782e12-d7a7-4824-967c-ffa6cc89c022",
+  "done": true
  },
  "scp914": {
   "done": true,
@@ -406,8 +451,11 @@
   "object_id": "80d9e618-429d-4d4c-a50c-fe86c77804f4"
  },
  "scp939": {
-  "anims_queued": [],
-  "character_id": "3a88f412-109c-47a3-a41d-5efcb94668eb"
+  "anims_queued": [
+   "walk-6-frames"
+  ],
+  "character_id": "3a88f412-109c-47a3-a41d-5efcb94668eb",
+  "done": true
  },
  "scp999": {
   "done": true,
@@ -442,6 +490,46 @@
  "warhead_panel": {
   "done": true,
   "object_id": "16868301-2263-4679-89a3-b5d65474dbdf"
+ },
+ "wide64a": {
+  "done": true,
+  "names": [
+   "reception_desk",
+   "cctv_wall",
+   "conf_table",
+   "supercomputer"
+  ],
+  "object_id": "d57b3b3d-aff7-4416-ac5a-243206b3fa2f"
+ },
+ "wide64b": {
+  "done": true,
+  "names": [
+   "scp914",
+   "femur_breaker",
+   "morgue_drawers",
+   "forklift"
+  ],
+  "object_id": "65d4ebec-1197-4a98-b5e2-47ddf6622a42"
+ },
+ "wide64c": {
+  "done": true,
+  "names": [
+   "xray",
+   "locker_row",
+   "lab_bench",
+   "workbench"
+  ],
+  "object_id": "020dcf3d-10fc-4181-b7a3-9b7061bb69a0"
+ },
+ "wide64d": {
+  "done": true,
+  "names": [
+   "kitchen_counter",
+   "sandbags",
+   "pipes_floor",
+   "operating_lamp"
+  ],
+  "object_id": "b1e3fc6d-a4ff-4060-8e88-86d173632215"
  },
  "workbench": {
   "done": true,

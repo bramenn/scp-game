@@ -196,6 +196,7 @@ def sfx():
     save("sfx_click", shape(hp(noise(0.03), 3000), 0.0005, 0.01) + shape(sine(2400, 0.03), 0.0005, 0.008), 0.4)
     hiss = shape(bp(noise(0.7), 1500, 7000), 0.03, 0.5)
     save("sfx_door_open", place(0.9, [(0, hiss, 0.5), (0.05, thump(80, 0.3, 0.12), 1.0), (0.55, clank(0.35, 520), 0.5)]), 0.7)
+    save("sfx_door", place(0.9, [(0, hiss, 0.4), (0.05, thump(70, 0.3, 0.12), 0.8)]), 0.6)
     save("sfx_door_close", place(0.9, [(0, hiss, 0.4), (0.4, thump(55, 0.45, 0.3), 1.2), (0.42, clank(0.4, 300), 0.6)]), 0.8)
 
     def beep(f, s):

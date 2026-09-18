@@ -22,6 +22,7 @@ var doors: Array[Door] = []
 var door_at: Dictionary = {}     # Vector2i -> Door
 var exits: Array = []            # [{rect: Rect2i, to, at}]
 var water: Dictionary = {}       # Vector2i -> "shallow" | "deep"
+var hatch: Dictionary = {}       # Vector2i -> true: crawlspaces only the player fits through
 var ents: Node2D                 # y-sorted entity layer (props, actors)
 var layers := {}
 
@@ -91,6 +92,9 @@ func build(d: Dictionary) -> void:
 		_add_door(dd)
 	for p in d.get("props", []):
 		_add_prop(p)
+	for hh in d.get("hatches", []):
+		hatch[Vector2i(int(hh[0]), int(hh[1]))] = true
+		_put_trace("vent_floor_mark", Vector2i(int(hh[0]), int(hh[1])))
 	for e in d.get("exits", []):
 		var r: Array = e.rect
 		exits.append({"rect": Rect2i(int(r[0]), int(r[1]), int(r[2]), int(r[3])), "to": e.to, "at": e.at,

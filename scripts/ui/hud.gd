@@ -153,6 +153,49 @@ func set_dread(v: float) -> void:
 	_dread = lerpf(_dread, clampf(v, 0.0, 1.0), 0.3)
 
 
+var _eye: TextureRect
+var _eye_bar: ProgressBar
+var _lid_top: ColorRect
+var _lid_bot: ColorRect
+
+
+## Blink meter (value 0..1, <0 hides it) and the eyelid animation.
+func set_blink(v: float) -> void:
+	if not _eye:
+		_eye = TextureRect.new()
+		_eye.texture = load("res://art/gen/ui/i_eye.png")
+		_eye.position = Vector2(UiKit.W / 2.0 - 34, 8)
+		root.add_child(_eye)
+		_eye_bar = UiKit.bar(Color("e4e6e8"), 56, 3)
+		_eye_bar.position = Vector2(UiKit.W / 2.0 - 22, 10)
+		root.add_child(_eye_bar)
+		for i in 2:
+			var r := ColorRect.new()
+			r.color = Color.BLACK
+			r.size = Vector2(UiKit.W, 0)
+			r.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			root.add_child(r)
+			if i == 0: _lid_top = r
+			else: _lid_bot = r
+	_eye.visible = v >= 0.0
+	_eye_bar.visible = v >= 0.0
+	_eye_bar.value = clampf(v, 0.0, 1.0) * 100.0
+
+
+func blink() -> void:
+	var tw := create_tween().set_parallel()
+	tw.tween_property(_lid_top, "size:y", UiKit.H / 2.0 + 1, 0.07)
+	tw.tween_property(_lid_bot, "size:y", UiKit.H / 2.0 + 1, 0.07)
+	tw.tween_property(_lid_bot, "position:y", UiKit.H / 2.0 - 1, 0.07).from(float(UiKit.H))
+	await tw.finished
+	await get_tree().create_timer(0.16).timeout
+	var tw2 := create_tween().set_parallel()
+	tw2.tween_property(_lid_top, "size:y", 0.0, 0.09)
+	tw2.tween_property(_lid_bot, "size:y", 0.0, 0.09)
+	tw2.tween_property(_lid_bot, "position:y", float(UiKit.H), 0.09)
+	await tw2.finished
+
+
 func hurt() -> void:
 	_hurt = 1.0
 

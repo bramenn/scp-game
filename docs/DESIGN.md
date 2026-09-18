@@ -200,18 +200,19 @@ Legend: [x] done · [~] in progress · [ ] pending
 
 - [x] Research lore + licensing, PixelLab API
 - [x] Git repo, design doc
-- [~] P1 Asset generation batch 1 (characters, SCPs, vermin, portraits, props) — chars running; props need fix: map-objects min 32px + outline 'single color outline'; small props via create-1-direction-object (16px)
+- [x] P1 Asset generation batch 1 (19 characters, 4 quadrupeds, 10 portraits, ~170 props). Wide props use 64px Pro batches.
 - [x] P2 Engine: i18n (Loc), map loader (multi-material tiles, occluders), doors, exits
 - [x] P3 Engine: flashlight cone + shadows, fog shader, particles, ambient life
 - [x] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap (needs data)
 - [~] P5 Engine: HUD meters (hp, battery, sanity, stamina), pause menu, options — blink meter pending (173)
-- [ ] P6 SCP behaviours: 173, 131, 096, 106 (+pocket), 049 (+049-2), 939, 682, 999, 529
-- [ ] P7 Maps content (≈60 maps, sectors A-G)
-- [ ] P8 Story data EN+ES: dialogues, docs, quests, events, endings
+- [~] P6 SCP behaviours: done 173 (blink/creep/lunge/seal), 131 (follow/watch/stay), 999, 049 (talk/follow), 096 (face/bag), 106 (walls/light/pocket), chaser (049-2), 939 (sound/voices). Battle system done. Pending: 682 boss data, 529.
+- [~] P7 Maps content: A (14 maps) + B (12 maps) done and bot-tested. Next: C (maintenance/sewers/087), D (medical/049), E (HCZ), F (pocket), G (079 core/Gate A).
+- [~] P8 Story data EN+ES: Acts I-II done (tools/story/sector_a.py, sector_b.py). Build: python3 tools/build_story.py
 - [ ] P9 Audio expansion
 - [ ] P10 Full playthrough bot + screenshots of every area; polish pass
 - [ ] P10b README with good screenshots (players must find and play it)
 - [ ] P11 CREDITS.md, README, final push
 
 ### Log
+- 2026-09-18 04:40 Sector B + SCP actors + battle. Tests: tests/routes/*.json run with tools/playtest.gd (SCP_MAP, SCP_FLAGS, SCP_SAVE env). b02_contain.json validates 173 recontainment.
 - 2026-09-18 00:00-01:30 research, design, git, asset pipeline, new engine core (commit 82ab3b7). Tools: tools/shot.gd (SCP_MAP=<id> in-game screenshot), tools/render_map.gd (full map PNG), tools/build_maps.py. Tests must use SCP_SAVE=user://test_save.json.

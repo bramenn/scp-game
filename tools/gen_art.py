@@ -350,6 +350,7 @@ TRACES = [
     "shade_n", "shade_w", "shade_e", "shade_nw", "shade_ne",
     # trail variants (alternated by the map DSL so trails don't look stamped)
     "blood_drag_h2", "blood_drag_v2", "blood_drag_h3", "blood_drag_v3", "scrape_h2", "scrape_v2",
+    "vent_floor_mark", "drawing_horse", "hopscotch",
 ]
 
 
@@ -546,6 +547,15 @@ def trace(name, rnd):
                 d.line([(i, 0), (i, 15)], (0, 0, 0, a // 2))
             if side in ("e", "ne"):
                 d.line([(15 - i, 0), (15 - i, 15)], (0, 0, 0, a // 2))
+    elif name == "vent_floor_mark":
+        d.rectangle([1, 3, 14, 12], C["k1"]); d.rectangle([1, 3, 14, 12], outline=C["g3"])
+        for x in range(3, 14, 2): d.line([(x, 4), (x, 11)], C["g1"])
+    elif name == "drawing_horse":   # a child-like horse drawn in charcoal
+        d.line([(3, 9), (11, 9)], A("k1", 200)); d.line([(4, 9), (3, 13)], A("k1", 200)); d.line([(6, 9), (6, 13)], A("k1", 200))
+        d.line([(9, 9), (9, 13)], A("k1", 200)); d.line([(11, 9), (12, 13)], A("k1", 200)); d.line([(11, 9), (13, 5)], A("k1", 200))
+        d.line([(13, 5), (15, 6)], A("k1", 200)); d.line([(2, 9), (1, 12)], A("k1", 160))
+    elif name == "hopscotch":
+        for i in range(3): d.rectangle([4, 1 + i * 5, 11, 5 + i * 5], outline=A("w", 110))
     elif name == "chalk":
         d.line([(2, 2), (13, 13)], A("w", 150)); d.line([(13, 2), (2, 13)], A("w", 150)); d.ellipse([4, 4, 11, 11], outline=A("w", 120))
     return im

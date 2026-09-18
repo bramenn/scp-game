@@ -414,5 +414,85 @@
 "en": "Letter in locker 7",
 "es": "Carta en la taquilla 7"
 }
+},
+"doc_173_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-173 - Containment procedures",
+"es": "SCP-173 - Procedimientos de contención"
+}
+},
+"doc_914_log": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-914 - Test log (excerpt)",
+"es": "SCP-914 - Registro de pruebas (extracto)"
+}
+},
+"doc_012_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-012 - 'A Bad Composition'",
+"es": "SCP-012 - 'Una mala composición'"
+}
+},
+"doc_131_note": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Sticky note on a door",
+"es": "Nota adhesiva en una puerta"
+}
+},
+"doc_999_note": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Caretaker's note",
+"es": "Nota del cuidador"
+}
+},
+"doc_500_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-500 - Panacea",
+"es": "SCP-500 - Panacea"
+}
+},
+"doc_marcus_letter": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "A letter, folded eight times",
+"es": "Una carta, doblada ocho veces"
+}
+},
+"doc_black_tide_schedule": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Transfer schedule - D-Block",
+"es": "Calendario de traslados - Bloque D"
+}
+},
+"doc_shower_scrawl": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Written in the steam",
+"es": "Escrito en el vaho"
+}
+},
+"adebayo_notebook": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Adebayo's notebook",
+"es": "El cuaderno de Adebayo"
+}
 }
 }

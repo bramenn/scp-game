@@ -218,5 +218,73 @@
  "ending_stats": {
   "en": "Time %dh %02dm  ·  Documents %d/%d  ·  Deaths %d",
   "es": "Tiempo %dh %02dm  ·  Documentos %d/%d  ·  Muertes %d"
+ },
+ "b_fled": {
+  "en": "You get away.",
+  "es": "Consigues escapar."
+ },
+ "b_no_flee": {
+  "en": "It cuts you off!",
+  "es": "¡Te corta el paso!"
+ },
+ "b_shoot": {
+  "en": "You fire at %s.",
+  "es": "Disparas a %s."
+ },
+ "b_swing": {
+  "en": "You swing the baton at %s.",
+  "es": "Golpeas a %s con la porra."
+ },
+ "b_punch": {
+  "en": "No weapon. You hit %s with your fists.",
+  "es": "Sin arma. Golpeas a %s con los puños."
+ },
+ "b_uses": {
+  "en": "%s: %s!",
+  "es": "%s: ¡%s!"
+ },
+ "b_mind": {
+  "en": "Something claws at the inside of your skull.",
+  "es": "Algo araña el interior de tu cráneo."
+ },
+ "b_used": {
+  "en": "You use %s.",
+  "es": "Usas %s."
+ },
+ "b_ammo": {
+  "en": "Ammo %d",
+  "es": "Balas %d"
+ },
+ "b_what": {
+  "en": "What do you do?",
+  "es": "¿Qué haces?"
+ },
+ "b_fight_pistol": {
+  "en": "Shoot",
+  "es": "Disparar"
+ },
+ "b_fight_baton": {
+  "en": "Strike",
+  "es": "Golpear"
+ },
+ "b_item": {
+  "en": "Item",
+  "es": "Objeto"
+ },
+ "b_flee": {
+  "en": "Run",
+  "es": "Huir"
+ },
+ "b_back": {
+  "en": "Back",
+  "es": "Volver"
+ },
+ "b_no_items": {
+  "en": "You have nothing that helps right now.",
+  "es": "No tienes nada que ayude ahora."
+ },
+ "b_which": {
+  "en": "Use what?",
+  "es": "¿Usar qué?"
  }
 }

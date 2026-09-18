@@ -72,6 +72,8 @@ func idle() -> void:
 
 
 func _play_move(run: bool) -> void:
+	if not sprite:
+		return
 	var a := ("run_" if run else "walk_") + facing
 	if not sprite.sprite_frames.has_animation(a):
 		a = "walk_" + facing

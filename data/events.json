@@ -1543,5 +1543,2134 @@
 "es": "Entra en Contención Ligera."
 }
 }
+],
+"enter:B01": [
+{
+"if": "!b01_seen",
+"then": [
+{
+"mark": "b01_seen"
+},
+{
+"quest": [
+"main_breach",
+-1
+]
+},
+{
+"wait": 0.4
+},
+{
+"say": [
+{
+"en": "Vega, you're in Light Containment. Readings show movement in the central junction. Something heavy. It stops when the cameras look at it.",
+"es": "Vega, está en Contención Ligera. Hay movimiento en el cruce central. Algo pesado. Se detiene cuando las cámaras lo miran."
+}
+],
+"who": "radio"
+},
+{
+"objective": {
+"en": "Cross the LCZ junction. Keep your light on anything that moves.",
+"es": "Cruza el cruce de la ZCL. Mantén la luz sobre cualquier cosa que se mueva."
+}
+}
+]
+}
+],
+"b02_reveal": [
+{
+"if": "!scp173_contained",
+"then": [
+{
+"lights": "flicker",
+"t": 1.0
+},
+{
+"sfx": "scrape",
+"db": 2
+},
+{
+"say": [
+{
+"en": "Something stands in the middle of the junction. Tall. Concrete. Its face is sprayed in red and green.",
+"es": "Algo está de pie en mitad del cruce. Alto. De hormigón. Tiene la cara pintada con spray rojo y verde."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "That's it. SCP-173. Do not take your eyes off it. Keep it in your light.",
+"es": "Es él. SCP-173. No le quite los ojos de encima. Manténgalo bajo su luz."
+},
+{
+"en": "It moves when you blink. Every time you blink.",
+"es": "Se mueve cuando parpadea. Cada vez que parpadea."
+}
+],
+"who": "radio"
+},
+{
+"quest": [
+"main_173",
+1
+]
+},
+{
+"objective": {
+"en": "Get past SCP-173. The research corridor is north.",
+"es": "Deja atrás a SCP-173. El pasillo de investigación está al norte."
+}
+}
+]
+}
+],
+"b02_console": [
+{
+"if": "scp173_contained",
+"then": [
+{
+"say": [
+{
+"en": "CELL 173: SEALED. OCCUPANT: PRESENT.",
+"es": "CELDA 173: SELLADA. OCUPANTE: PRESENTE."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"sfx": "terminal"
+},
+{
+"if": "!b02_cell_open",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Open the cell door",
+"es": "Abrir la puerta de la celda"
+},
+"do": [
+{
+"mark": "b02_cell_open"
+},
+{
+"call": "refresh_doors"
+},
+{
+"door": "B02_cell",
+"open": true
+},
+{
+"sfx": "alarm_short"
+},
+{
+"say": [
+{
+"en": "The heavy door grinds open. The cell is dark.",
+"es": "La puerta blindada se abre con un chirrido. La celda está a oscuras."
+}
+],
+"who": ""
+},
+{
+"if": "bond131",
+"then": [
+{
+"say": [
+{
+"en": "If I leave the Pods here, nothing will watch it. It'll follow me.",
+"es": "Si dejo aquí a los Ojo-Cápsulas, nada lo vigilará. Me seguirá."
+}
+],
+"who": "vega"
+}
+]
+},
+{
+"quest": [
+"main_173",
+4
+]
+},
+{
+"objective": {
+"en": "Lure 173 into its cell, leave through the hatch, seal it from here.",
+"es": "Atrae a 173 a su celda, sal por la escotilla y séllala desde aquí."
+}
+}
+]
+},
+{
+"text": {
+"en": "Leave it",
+"es": "Dejarlo"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": {
+"en": "CELL 173 - STATUS: CLOSED, EMPTY.",
+"es": "CELDA 173 - ESTADO: CERRADA, VACÍA."
+}
+}
+],
+"else": [
+{
+"unmark": "seal_failed"
+},
+{
+"call": "seal_173",
+"args": [
+24,
+2,
+10,
+8
+]
+},
+{
+"if": "scp173_contained",
+"then": [
+{
+"door": "B02_cell",
+"open": false
+},
+{
+"sfx": "door_close",
+"db": 4
+},
+{
+"shake": 0.8,
+"power": 3
+},
+{
+"say": [
+{
+"en": "You slam the SEAL button. The door crashes down. Behind it, stone scrapes against steel. Then nothing.",
+"es": "Golpeas el botón de SELLAR. La puerta cae de golpe. Detrás, piedra que raspa acero. Luego, nada."
+}
+],
+"who": ""
+},
+{
+"sfx": "crt_on"
+},
+{
+"say": [
+{
+"en": "IMPRESSIVE. THE STATUE IS HOME.",
+"es": "IMPRESIONANTE. LA ESTATUA ESTÁ EN CASA."
+},
+{
+"en": "I OPENED THE MAINTENANCE DOOR FOR YOU. CONSIDER IT A LOAN.",
+"es": "TE HE ABIERTO LA PUERTA DE MANTENIMIENTO. CONSIDÉRALO UN PRÉSTAMO."
+}
+],
+"who": "079"
+},
+{
+"say": [
+{
+"en": "Vega... good work. How did you open maintenance? That door is on the core network.",
+"es": "Vega... buen trabajo. ¿Cómo abrió mantenimiento? Esa puerta está en la red del núcleo."
+}
+],
+"who": "radio"
+},
+{
+"unmark": "pods_stay"
+},
+{
+"quest": [
+"main_173",
+5
+]
+},
+{
+"call": "refresh_doors"
+},
+{
+"objective": {
+"en": "Take the maintenance ladder down to Level -3.",
+"es": "Baja por la escalerilla de mantenimiento al Nivel -3."
+}
+},
+{
+"save": true
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "SEAL REFUSED: CELL SENSORS REPORT NO OCCUPANT.",
+"es": "SELLADO DENEGADO: LOS SENSORES NO DETECTAN OCUPANTE."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+]
+}
+],
+"enter:B06": [
+{
+"if": "!met_adebayo",
+"then": [
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "A man in an oil-stained lab coat is winding a brass key the size of his arm. He doesn't turn around.",
+"es": "Un hombre con una bata manchada de aceite da cuerda a una llave de latón del tamaño de su brazo. No se gira."
+}
+],
+"who": ""
+}
+]
+}
+],
+"adebayo_first": [
+{
+"mark": "met_adebayo"
+},
+{
+"say": [
+{
+"en": "You are not a statue. Good. You would be surprised how often I have to check.",
+"es": "No eres una estatua. Bien. Te sorprendería cuántas veces tengo que comprobarlo."
+},
+{
+"en": "Adebayo. I've worked on 914 for eleven years. When the doors opened I locked myself in with it. It seemed the safest thing in the building.",
+"es": "Adebayo. Llevo once años con 914. Cuando se abrieron las puertas me encerré con ella. Me pareció lo más seguro del edificio."
+}
+],
+"who": "adebayo"
+},
+{
+"choice": [
+{
+"text": {
+"en": "I need to put 173 back in its cell.",
+"es": "Tengo que devolver a 173 a su celda."
+},
+"do": [
+{
+"say": [
+{
+"en": "The cell console is in the observation booth. Level 2. You have a Level 1 card, I assume.",
+"es": "La consola de la celda está en la cabina de observación. Nivel 2. Supongo que tienes una tarjeta de nivel 1."
+},
+{
+"en": "Put it in the Intake booth. Turn the dial to Fine. The Foundation pretends it doesn't know this works.",
+"es": "Métela en la cabina de Entrada. Gira el dial a Fino. La Fundación finge que no sabe que esto funciona."
+}
+],
+"who": "adebayo"
+}
+]
+},
+{
+"text": {
+"en": "Do you know Elena Vega?",
+"es": "¿Conoces a Elena Vega?"
+},
+"do": [
+{
+"say": [
+{
+"en": "...She asked me for a favour, two days ago. I did it. I should not have. Ask me about it when you've earned it.",
+"es": "...Me pidió un favor hace dos días. Se lo hice. No debí. Pregúntame cuando te lo hayas ganado."
+}
+],
+"who": "adebayo"
+}
+]
+}
+],
+"who": "adebayo",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "One more thing. If you want to survive 173, you need eyes that never close. There are two of them in the Eye Pod habitat.",
+"es": "Una cosa más. Si quieres sobrevivir a 173, necesitas ojos que nunca se cierren. Hay dos en el hábitat de los Ojo-Cápsulas."
+},
+{
+"en": "And... I dropped my notebook in the 012 room when I ran. I cannot go back there. Please don't read the music.",
+"es": "Y... se me cayó el cuaderno en la sala de 012 cuando huí. No puedo volver. Por favor, no leas la partitura."
+}
+],
+"who": "adebayo"
+},
+{
+"quest": [
+"main_173",
+2
+]
+},
+{
+"quest": [
+"side_notebook",
+1
+]
+},
+{
+"objective": {
+"en": "Refine your Level 1 card into Level 2 with SCP-914 (Fine).",
+"es": "Refina tu tarjeta de nivel 1 a nivel 2 con SCP-914 (Fino)."
+}
+}
+],
+"adebayo_again": [
+{
+"if": "quest:side_notebook:2,!done:side_notebook",
+"then": [
+{
+"say": [
+{
+"en": "My notebook! You went in there. Are you... fine? Look at your hands. Good. Good.",
+"es": "¡Mi cuaderno! Entraste ahí. ¿Estás... bien? Mírate las manos. Bien. Bien."
+}
+],
+"who": "adebayo"
+},
+{
+"quest": [
+"side_notebook",
+-1
+]
+},
+{
+"say": [
+{
+"en": "You read the last page. I can see it in your face.",
+"es": "Leíste la última página. Te lo veo en la cara."
+},
+{
+"en": "Your sister put a Level 5 card through on Very Fine. It came out as something that opens every door in this site. An O5 key. Forged by a clock.",
+"es": "Tu hermana pasó una tarjeta de nivel 5 en Muy fino. Salió algo que abre todas las puertas del sitio. Una llave O5. Falsificada por un reloj."
+},
+{
+"en": "I think that is how the cells opened. I think I helped her do it.",
+"es": "Creo que así se abrieron las celdas. Creo que la ayudé a hacerlo."
+}
+],
+"who": "adebayo"
+},
+{
+"give": "battery",
+"n": 2
+},
+{
+"give": "medkit"
+},
+{
+"mark": "knows_o5_key"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Fine for keycards. Very Fine for... surprises. Never put anything alive in there.",
+"es": "Fino para tarjetas. Muy fino para... sorpresas. Nunca metas nada vivo ahí."
+}
+],
+"who": "adebayo"
+}
+]
+}
+],
+"scp914": [
+{
+"if": "!seen_914",
+"then": [
+{
+"mark": "seen_914"
+},
+{
+"say": [
+{
+"en": "SCP-914. A cathedral of brass, eight million parts ticking in the dark. An Intake booth, an Output booth, and a big dial between them.",
+"es": "SCP-914. Una catedral de latón, ocho millones de piezas latiendo en la oscuridad. Una cabina de Entrada, una de Salida y un gran dial entre ellas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"choice": [
+{
+"text": {
+"en": "Level 1 keycard",
+"es": "Tarjeta de nivel 1"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_1"
+},
+{
+"say": [
+{
+"en": "Out comes a small heap of dust and shavings.",
+"es": "Sale un montoncito de polvo y virutas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_1"
+},
+{
+"say": [
+{
+"en": "A bent strip of plastic.",
+"es": "Una tira de plástico doblada."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_1"
+},
+{
+"give": "card_1",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_1"
+},
+{
+"give": "card_2",
+"n": 1
+},
+{
+"say": [
+{
+"en": "A clean new card. The stripe is green: LEVEL 2.",
+"es": "Una tarjeta nueva y limpia. La franja es verde: NIVEL 2."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_1"
+},
+{
+"give": "card_2",
+"n": 1
+},
+{
+"say": [
+{
+"en": "A LEVEL 2 card, printed with a name you don't recognise and a photo of you, older.",
+"es": "Una tarjeta de NIVEL 2, con un nombre que no reconoces y una foto tuya, más viejo."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:card_1"
+},
+{
+"text": {
+"en": "Level 2 keycard",
+"es": "Tarjeta de nivel 2"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_2"
+},
+{
+"say": [
+{
+"en": "Out comes a small heap of dust and shavings.",
+"es": "Sale un montoncito de polvo y virutas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_2"
+},
+{
+"give": "card_1",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out as a Level 1 card.",
+"es": "Sale como tarjeta de nivel 1."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_2"
+},
+{
+"give": "card_2",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_2"
+},
+{
+"give": "card_2",
+"n": 1
+},
+{
+"say": [
+{
+"en": "The card comes back, scratched: 'NICE TRY'.",
+"es": "La tarjeta vuelve, rayada: 'BUEN INTENTO'."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "card_2"
+},
+{
+"give": "card_2",
+"n": 1
+},
+{
+"say": [
+{
+"en": "The card comes back, scratched: 'NICE TRY'.",
+"es": "La tarjeta vuelve, rayada: 'BUEN INTENTO'."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:card_2,!item:card_3"
+},
+{
+"text": {
+"en": "Bandage",
+"es": "Venda"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "bandage"
+},
+{
+"say": [
+{
+"en": "Out comes a small heap of dust and shavings.",
+"es": "Sale un montoncito de polvo y virutas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "bandage"
+},
+{
+"say": [
+{
+"en": "Loose cotton threads.",
+"es": "Hilos de algodón sueltos."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "bandage"
+},
+{
+"give": "bandage",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "bandage"
+},
+{
+"give": "medkit",
+"n": 1
+},
+{
+"say": [
+{
+"en": "A complete medkit.",
+"es": "Un botiquín completo."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "bandage"
+},
+{
+"give": "adrenaline",
+"n": 1
+},
+{
+"say": [
+{
+"en": "An auto-injector, humming faintly.",
+"es": "Un autoinyector que zumba levemente."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:bandage"
+},
+{
+"text": {
+"en": "Medkit",
+"es": "Botiquín"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "medkit"
+},
+{
+"give": "bandage",
+"n": 2
+},
+{
+"say": [
+{
+"en": "Two bandages.",
+"es": "Dos vendas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "medkit"
+},
+{
+"give": "bandage",
+"n": 1
+},
+{
+"say": [
+{
+"en": "One bandage.",
+"es": "Una venda."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "medkit"
+},
+{
+"give": "medkit",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "medkit"
+},
+{
+"give": "adrenaline",
+"n": 1
+},
+{
+"say": [
+{
+"en": "Adrenaline.",
+"es": "Adrenalina."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "medkit"
+},
+{
+"give": "medkit",
+"n": 1
+},
+{
+"say": [
+{
+"en": "A medkit full of instruments you don't recognise. You keep the gauze.",
+"es": "Un botiquín lleno de instrumentos que no reconoces. Te quedas con las gasas."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:medkit"
+},
+{
+"text": {
+"en": "Battery",
+"es": "Pila"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "battery"
+},
+{
+"say": [
+{
+"en": "Out comes a small heap of dust and shavings.",
+"es": "Sale un montoncito de polvo y virutas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "battery"
+},
+{
+"say": [
+{
+"en": "Acid leaks out. Nothing useful.",
+"es": "Sale ácido. Nada útil."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "battery"
+},
+{
+"give": "battery",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "battery"
+},
+{
+"give": "battery",
+"n": 2
+},
+{
+"say": [
+{
+"en": "Two batteries.",
+"es": "Dos pilas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"take": "battery"
+},
+{
+"sfx": "machine_pour"
+},
+{
+"wait": 1.0
+},
+{
+"battery": 100
+},
+{
+"give": "battery"
+},
+{
+"say": [
+{
+"en": "A battery that is warm and heavy. The flashlight will love it.",
+"es": "Una pila tibia y pesada. A la linterna le encantará."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:battery"
+},
+{
+"text": {
+"en": "Coin",
+"es": "Moneda"
+},
+"do": [
+{
+"choice": [
+{
+"text": {
+"en": "Rough",
+"es": "Tosco"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "coin"
+},
+{
+"say": [
+{
+"en": "Out comes a small heap of dust and shavings.",
+"es": "Sale un montoncito de polvo y virutas."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Coarse",
+"es": "Grueso"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "coin"
+},
+{
+"say": [
+{
+"en": "A flat disc of metal.",
+"es": "Un disco plano de metal."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "1:1",
+"es": "1:1"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "coin"
+},
+{
+"give": "coin",
+"n": 1
+},
+{
+"say": [
+{
+"en": "It comes out exactly the same. Slightly warm.",
+"es": "Sale exactamente igual. Ligeramente tibio."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Fine",
+"es": "Fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "coin"
+},
+{
+"give": "coin",
+"n": 2
+},
+{
+"say": [
+{
+"en": "Two quarters. Adebayo pretends not to see.",
+"es": "Dos monedas. Adebayo finge no verlo."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Very Fine",
+"es": "Muy fino"
+},
+"do": [
+{
+"sfx": "machine_pour"
+},
+{
+"shake": 2.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"take": "coin"
+},
+{
+"give": "candy",
+"n": 3
+},
+{
+"say": [
+{
+"en": "Three candies. The machine has a sense of humour.",
+"es": "Tres caramelos. La máquina tiene sentido del humor."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "Set the dial.",
+"es": "Gira el dial."
+}
+}
+],
+"cond": "item:coin"
+},
+{
+"text": {
+"en": "Nothing",
+"es": "Nada"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": {
+"en": "What do you put in the Intake booth?",
+"es": "¿Qué metes en la cabina de Entrada?"
+}
+}
+],
+"enter:B07": [
+{
+"if": "!b07_seen",
+"then": [
+{
+"mark": "b07_seen"
+},
+{
+"wait": 0.5
+},
+{
+"sfx": "whisper"
+},
+{
+"say": [
+{
+"en": "The iron box hangs open. The paper inside is covered in notes of dried blood.",
+"es": "La caja de hierro cuelga abierta. El papel de dentro está cubierto de notas de sangre seca."
+},
+{
+"en": "You can almost hear the melody. It's missing one bar. Only one.",
+"es": "Casi puedes oír la melodía. Le falta un compás. Solo uno."
+}
+],
+"who": ""
+},
+{
+"sanity": -8
+}
+]
+}
+],
+"b07_close": [
+{
+"if": "!b07_resisted",
+"then": [
+{
+"say": [
+{
+"en": "Your hand is already reaching for the paper. Your fingertip is wet.",
+"es": "Tu mano ya se estira hacia el papel. Tienes la yema del dedo húmeda."
+}
+],
+"who": ""
+},
+{
+"choice": [
+{
+"text": {
+"en": "Look away",
+"es": "Apartar la vista"
+},
+"do": [
+{
+"mark": "b07_resisted"
+},
+{
+"sanity": -4
+},
+{
+"say": [
+{
+"en": "No. Not today.",
+"es": "No. Hoy no."
+}
+],
+"who": "vega"
+}
+]
+},
+{
+"text": {
+"en": "Finish the bar",
+"es": "Terminar el compás"
+},
+"do": [
+{
+"hp": -25,
+"cause": "sanity"
+},
+{
+"sanity": -30
+},
+{
+"say": [
+{
+"en": "You write one note with your own blood. It is wrong. It is always wrong.",
+"es": "Escribes una nota con tu propia sangre. Está mal. Siempre está mal."
+}
+],
+"who": ""
+},
+{
+"mark": "b07_resisted"
+}
+]
+}
+],
+"who": "",
+"prompt": ""
+}
+]
+}
+],
+"item:adebayo_notebook": [
+{
+"quest": [
+"side_notebook",
+2
+]
+}
+],
+"scp131_talk": [
+{
+"if": "bond131",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Stay here and watch",
+"es": "Quedaos aquí vigilando"
+},
+"do": [
+{
+"mark": "pods_stay"
+},
+{
+"say": [
+{
+"en": "They huddle behind the console, trembling, and squeeze their eyes shut. For once, nothing is watching.",
+"es": "Se acurrucan detrás de la consola, temblando, y cierran los ojos con fuerza. Por una vez, nada vigila."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Come with me",
+"es": "Venid conmigo"
+},
+"do": [
+{
+"unmark": "pods_stay"
+},
+{
+"say": [
+{
+"en": "They wheel around your ankles, delighted.",
+"es": "Ruedan alrededor de tus tobillos, encantados."
+}
+],
+"who": ""
+}
+]
+}
+],
+"who": "",
+"prompt": {
+"en": "The Eye Pods babble at you, both eyes wide.",
+"es": "Los Ojo-Cápsulas te balbucean, con los ojos muy abiertos."
+}
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Two little teardrop creatures, orange and yellow, each one a single enormous blue eye. They roll back from you.",
+"es": "Dos criaturitas con forma de lágrima, naranja y amarilla, cada una un único ojo azul enorme. Retroceden rodando."
+}
+],
+"who": ""
+},
+{
+"if": "item:candy",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Crinkle a candy wrapper",
+"es": "Hacer sonar un envoltorio"
+},
+"do": [
+{
+"take": "candy"
+},
+{
+"sfx": "paper",
+"pitch": 1.4
+},
+{
+"say": [
+{
+"en": "They freeze. Then they zoom to your feet and start babbling, bouncing, staring up at you.",
+"es": "Se quedan quietos. Luego salen disparados hacia tus pies y empiezan a balbucear, saltando, mirándote."
+}
+],
+"who": ""
+},
+{
+"mark": "bond131"
+},
+{
+"quest": [
+"main_173",
+3
+]
+},
+{
+"toast": {
+"en": "The Eye Pods are following you.",
+"es": "Los Ojo-Cápsulas te siguen."
+}
+},
+{
+"say": [
+{
+"en": "Two pairs of eyes that never blink. Alright. Stay close.",
+"es": "Dos pares de ojos que nunca parpadean. Muy bien. No os separéis."
+}
+],
+"who": "vega"
+},
+{
+"objective": {
+"en": "Return to the junction. Open 173's cell from the observation booth.",
+"es": "Vuelve al cruce. Abre la celda de 173 desde la cabina de observación."
+}
+}
+]
+},
+{
+"text": {
+"en": "Leave them",
+"es": "Dejarlos"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "They don't trust you. Something small and noisy might help.",
+"es": "No se fían de ti. Algo pequeño y ruidoso ayudaría."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"enter:B08": [
+{
+"if": "!bond131",
+"then": [
+{
+"quest": [
+"main_173",
+3
+]
+}
+]
+}
+],
+"scp999_talk": [
+{
+"say": [
+{
+"en": "The orange blob wobbles against your legs and gurgles. It smells like your mother's kitchen.",
+"es": "La masa naranja se tambalea contra tus piernas y gorgotea. Huele a la cocina de tu madre."
+}
+],
+"who": ""
+},
+{
+"if": "!b09_hugged",
+"then": [
+{
+"mark": "b09_hugged"
+},
+{
+"sanity": 100
+},
+{
+"hp": 15
+},
+{
+"sfx": "heal"
+},
+{
+"say": [
+{
+"en": "It wraps itself around you. You are laughing. You don't remember deciding to laugh.",
+"es": "Te envuelve. Te estás riendo. No recuerdas haber decidido reírte."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "...Thanks, little guy.",
+"es": "...Gracias, pequeño."
+}
+],
+"who": "vega"
+}
+],
+"else": [
+{
+"if": "item:candy",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Give it a candy",
+"es": "Darle un caramelo"
+},
+"do": [
+{
+"take": "candy"
+},
+{
+"sanity": 60
+},
+{
+"sfx": "squelch",
+"pitch": 1.6
+},
+{
+"say": [
+{
+"en": "It absorbs the candy with a happy squeal. You feel lighter.",
+"es": "Absorbe el caramelo con un chillido feliz. Te sientes más ligero."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Pat it",
+"es": "Acariciarlo"
+},
+"do": [
+{
+"sanity": 10
+}
+]
+}
+],
+"who": "",
+"prompt": ""
+}
+],
+"else": [
+{
+"sanity": 10
+},
+{
+"say": [
+{
+"en": "It bumps your hand, hoping for candy.",
+"es": "Te empuja la mano, esperando un caramelo."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"enter:B11": [
+{
+"if": "!b11_seen",
+"then": [
+{
+"mark": "b11_seen"
+},
+{
+"wait": 0.4
+},
+{
+"say": [
+{
+"en": "Forty cells. Most doors hang open. The ones that are closed are quiet.",
+"es": "Cuarenta celdas. Casi todas las puertas están abiertas. Las cerradas están en silencio."
+}
+],
+"who": ""
+},
+{
+"if": "nico_asked_marcus",
+"then": [
+{
+"quest": [
+"side_marcus",
+1
+]
+}
+]
+}
+]
+}
+],
+"b11_marcus": [
+{
+"say": [
+{
+"en": "Horses. Dozens of them, drawn in charcoal on every wall, running.",
+"es": "Caballos. Decenas, dibujados con carbón en todas las paredes, corriendo."
+},
+{
+"en": "The man on the floor still holds the charcoal.",
+"es": "El hombre del suelo todavía sujeta el carbón."
+}
+],
+"who": ""
+},
+{
+"if": "nico_asked_marcus",
+"then": [
+{
+"say": [
+{
+"en": "Marcus. I'm sorry, kid.",
+"es": "Marcus. Lo siento, chico."
+}
+],
+"who": "vega"
+},
+{
+"quest": [
+"side_marcus",
+2
+]
+}
+]
+},
+{
+"sanity": -5
+}
+],
+"item:doc_marcus_letter": [
+{
+"if": "nico_asked_marcus",
+"then": [
+{
+"quest": [
+"side_marcus",
+2
+]
+}
+]
+}
+],
+"item:doc_black_tide_schedule": [
+{
+"mark": "knows_black_tide"
+},
+{
+"say": [
+{
+"en": "Tuesday. Today. They were going to feed forty people to 682 today.",
+"es": "Martes. Hoy. Hoy iban a darle cuarenta personas a 682."
+}
+],
+"who": "vega"
+}
+],
+"b12_mirror": [
+{
+"lights": "off"
+},
+{
+"wait": 0.8
+},
+{
+"sfx": "scrape",
+"db": 4
+},
+{
+"wait": 0.6
+},
+{
+"lights": "on"
+},
+{
+"say": [
+{
+"en": "For a moment, in the mirror, there was someone standing behind you.",
+"es": "Por un momento, en el espejo, había alguien de pie detrás de ti."
+}
+],
+"who": ""
+},
+{
+"sanity": -6
+}
+],
+"b15_ladder": [
+{
+"say": [
+{
+"en": "A service ladder goes down into warm, wet darkness. It smells of rust and something rotting.",
+"es": "Una escalerilla de servicio baja hacia una oscuridad cálida y húmeda. Huele a óxido y a algo podrido."
+}
+],
+"who": ""
+}
+],
+"enter:B15": [
+{
+"if": "!b15_seen",
+"then": [
+{
+"mark": "b15_seen"
+},
+{
+"say": [
+{
+"en": "Vega, the power plant for Levels -3 to -5 is down there. If you can restore it, the lower doors will answer.",
+"es": "Vega, la central eléctrica de los niveles -3 a -5 está ahí abajo. Si la restablece, las puertas inferiores responderán."
+}
+],
+"who": "radio"
+}
+]
+}
+],
+"enter:B02": [
+{
+"if": "scp173_contained,!b02_after",
+"then": [
+{
+"mark": "b02_after"
+}
+]
+}
 ]
 }

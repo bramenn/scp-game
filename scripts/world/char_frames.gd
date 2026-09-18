@@ -5,7 +5,7 @@ extends RefCounted
 ##   running-6-frames/<dir>/<i>.png -> "run_<dir>". Cached per id.
 
 const DIRS := ["south", "east", "north", "west"]
-const WALKS := ["walking-6-frames", "scary-walk", "walking-4-frames", "walking-8-frames"]
+const WALKS := ["walking-6-frames", "walk-6-frames", "scary-walk", "walking-4-frames", "walking-8-frames"]
 
 static var _cache: Dictionary = {}
 

@@ -124,10 +124,20 @@ func _process(dt: float) -> bool:
 					for dtile in dr.tiles():
 						world.astar.set_point_solid(dtile, false)
 						opened.append(dtile)
-			var path: Array = world.find_path(world.player.tile, target)
+			var blocked_by: Array = []
+			if _stuck > 0.8:   # an actor is in the way: route around it
+				for a in world.actors:
+					if a.tile != target and not world.astar.is_point_solid(a.tile):
+						world.astar.set_point_solid(a.tile, true)
+						blocked_by.append(a.tile)
+			var path: Array = world.find_path(world.player.tile, target, true)
+			for bt in blocked_by:
+				world.astar.set_point_solid(bt, false)
 			for dtile in opened:
 				world.astar.set_point_solid(dtile, true)
 			if path.size() < 2:
+				for dr in world.view.doors:
+					print("   door ", dr.id, " open=", dr.is_open, " can=", world.can_open(dr), " solid=", world.astar.is_point_solid(dr.tile))
 				_log("no path from %s to %s (busy=%d map=%s tgt_blocked=%s tgt_solid=%s region=%s)" % [world.player.tile, target, world.busy, world.st.map, world.view.blocked.has(target), world.astar.is_point_solid(target) if world.astar.region.has_point(target) else "out", world.astar.region])
 				failures += 1
 				quit(1)
@@ -136,7 +146,7 @@ func _process(dt: float) -> bool:
 			_hold({Vector2i.UP: "ui_up", Vector2i.DOWN: "ui_down", Vector2i.LEFT: "ui_left", Vector2i.RIGHT: "ui_right"}[d])
 			if world.player.tile == _last_tile:
 				_stuck += dt
-				if _stuck > 3.0:
+				if _stuck > 6.0:
 					_log("stuck at %s" % world.player.tile)
 					quit(1)
 					return true
@@ -146,6 +156,37 @@ func _process(dt: float) -> bool:
 		"face":
 			world.player.face(String(s[1]))
 			_next()
+		"talk_actor":  # walk next to the nearest talkable actor, face it, press E
+			if world.player.moving:
+				return false
+			var best = null
+			var bd := 1e9
+			for a in world.actors:
+				var want_pods: bool = s.size() > 1 and s[1] == "pods"
+				if a.has_method("talk") and a.get("npc_id") != "nico" and a.has_method("watches") == want_pods:
+					var dd: float = Vector2(a.tile - world.player.tile).length()
+					if dd < bd:
+						bd = dd
+						best = a
+			if best == null:
+				_log("no talkable actor")
+				_next()
+				return false
+			var diff: Vector2i = best.tile - world.player.tile
+			if absi(diff.x) + absi(diff.y) == 1:
+				_hold("")
+				world.player.face(Actor.dir_name(diff))
+				s[0] = "talk"
+				_pressed = false
+				step_t = 0.0
+				return false
+			var p2: Array = world.find_path(world.player.tile, best.tile)
+			if p2.size() >= 2:
+				var d2: Vector2i = p2[1] - world.player.tile
+				if p2[1] != best.tile:
+					_hold({Vector2i.UP: "ui_up", Vector2i.DOWN: "ui_down", Vector2i.LEFT: "ui_left", Vector2i.RIGHT: "ui_right"}[d2])
+			else:
+				_hold("")
 		"use", "talk":
 			if world.player.moving:
 				return false
@@ -177,6 +218,22 @@ func _process(dt: float) -> bool:
 		"wait":
 			if step_t >= float(s[1]):
 				_next()
+		"wait_actor_in":  # [cmd, x, y, w, h, timeout]: wait until a blink-type SCP is inside the rect
+			var r := Rect2i(int(s[1]), int(s[2]), int(s[3]), int(s[4]))
+			for a in world.actors:
+				if a.has_method("wants_blink") and r.has_point(a.tile):
+					_log("actor inside at %s" % a.tile)
+					_next()
+					return false
+			if step_t > float(s[5]):
+				_log("WARNING: actor never came in")
+				_next()
+		"sprint":
+			if s[1]:
+				Input.action_press("sprint")
+			else:
+				Input.action_release("sprint")
+			_next()
 		"flag":
 			if world.st.has(String(s[1])):
 				_log("ok")

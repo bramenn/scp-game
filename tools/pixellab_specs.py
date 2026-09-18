@@ -75,15 +75,15 @@ SPECS = {
     "scp049": dict(kind="char", size=34, proportions="realistic_male", anims=["walking-6-frames"],
                    desc="SCP-049 plague doctor, long black hooded robe, white beaked ceramic plague mask, black "
                         "gloves, black leather doctor bag"),
-    "scp939": dict(kind="char", size=48, template="dog", anims=["walking-6-frames"],
+    "scp939": dict(kind="char", size=48, template="dog", anims=["walk-6-frames"],
                    desc="SCP-939, large quadruped predator, translucent red skin, eyeless elongated head, long jaw "
                         "full of teeth, lean muscular body, four clawed limbs"),
-    "scp682": dict(kind="char", size=64, template="lion", anims=["walking-6-frames"],
+    "scp682": dict(kind="char", size=64, template="lion", anims=["walk-6-frames"],
                    desc="SCP-682, huge hard-to-destroy reptile, scarred dark green scaly hide, damaged plates, "
                         "massive jaws, glowing eyes, thick tail"),
-    "scp529": dict(kind="char", size=24, template="cat", anims=["walking-6-frames"],
+    "scp529": dict(kind="char", size=24, template="cat", anims=["walk-6-frames"],
                    desc="grey tabby house cat whose body ends abruptly at the ribcage, the missing half is pure black"),
-    "rat": dict(kind="char", size=16, template="dog", anims=["walking-6-frames"],
+    "rat": dict(kind="char", size=16, template="dog", anims=["walk-6-frames"],
                 desc="small brown sewer rat, long pink tail, dirty fur"),
     "scp131a": prop("SCP-131-A, small burnt orange teardrop-shaped creature with one big blue eye and a small "
                     "wheel at the bottom", 32, mode="pixflux"),
@@ -266,4 +266,41 @@ SPECS = {
     "forklift": prop("small yellow forklift", 48, 48),
     "pillar_rot": prop("rotting black organic pillar with veins", 32, 48),
     "floating_door": prop("old wooden door frame standing alone, corroded", 32, 48),
+
+    # ------------------------------------------------------------- portraits
+    "p_vega": dict(kind="portrait", size=64, **{"from": "art/chars/vega/south.png"}),
+    "p_nico": dict(kind="portrait", size=64, **{"from": "art/chars/nico/south.png"}),
+    "p_lin": dict(kind="portrait", size=64, **{"from": "art/chars/lin/south.png"}),
+    "p_reyes": dict(kind="portrait", size=64, **{"from": "art/chars/reyes/south.png"}),
+    "p_tomas": dict(kind="portrait", size=64, **{"from": "art/chars/tomas/south.png"}),
+    "p_adebayo": dict(kind="portrait", size=64, **{"from": "art/chars/adebayo/south.png"}),
+    "p_elena": dict(kind="portrait", size=64, **{"from": "art/chars/elena/south.png"}),
+    "p_mara": dict(kind="portrait", size=64, **{"from": "art/chars/mara/south.png"}),
+    "p_049": dict(kind="portrait", size=64, **{"from": "art/chars/scp049/south.png"}),
+
+    # --------------------------------------- wide props redone as 64px Pro batches (fill the canvas)
+    "wide64a": dict(kind="batch", size=64, desc=BATCH_STYLE + "large furniture", items={
+        "reception_desk": "long curved reception desk with two computer monitors and a desk bell",
+        "cctv_wall": "security desk under a wall of many small CRT monitors showing grainy camera feeds",
+        "conf_table": "long conference table with office chairs around it and scattered papers",
+        "supercomputer": "row of 1980s supercomputer cabinets with tape reels and blinking lights",
+    }),
+    "wide64b": dict(kind="batch", size=64, desc=BATCH_STYLE + "large machines", items={
+        "scp914": "SCP-914, enormous clockwork machine of brass and copper, thousands of gears, pipes, a big dial in the middle",
+        "femur_breaker": "sinister machine: padded restraint chair with a hydraulic press over the leg",
+        "morgue_drawers": "wall of stainless steel morgue drawers, one drawer pulled open",
+        "forklift": "small yellow forklift",
+    }),
+    "wide64c": dict(kind="batch", size=64, desc=BATCH_STYLE + "large furniture", items={
+        "xray": "x-ray baggage scanner with a conveyor belt",
+        "locker_row": "row of three grey staff lockers, one door hanging open",
+        "lab_bench": "long laboratory bench with microscopes, beakers and a computer",
+        "workbench": "cluttered workbench with a vise, tools and a lamp",
+    }),
+    "wide64d": dict(kind="batch", size=64, desc=BATCH_STYLE + "large objects", items={
+        "kitchen_counter": "long stainless steel kitchen counter with pots and a cutting board",
+        "sandbags": "sandbag barricade wall",
+        "pipes_floor": "bundle of large rusty pipes running along the floor",
+        "operating_lamp": "surgical operating table under a big round operating lamp",
+    }),
 }

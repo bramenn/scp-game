@@ -12,7 +12,7 @@ sys.path.insert(0, str(HERE / "story"))
 
 
 def main():
-    items, npcs, quests, docs, events, props, story = {}, {}, {}, {}, {}, {}, {}
+    items, npcs, quests, docs, events, props, story, talk = {}, {}, {}, {}, {}, {}, {}, {}
     for p in sorted((HERE / "story").glob("*.py")):
         if p.stem == "common":
             continue
@@ -24,6 +24,9 @@ def main():
         events.update(getattr(mod, "EVENTS", {}))
         props.update(getattr(mod, "PROPS", {}))
         story.update(getattr(mod, "STORY", {}))
+        talk.update(getattr(mod, "NPC_TALK", {}))
+    for nid, t in talk.items():
+        npcs[nid]["talk"] = t
     for d in docs:  # every document can lie on the floor as an item
         items.setdefault(d, {"type": "doc", "icon": "doc", "name": docs[d]["title"]})
     story["props"] = props

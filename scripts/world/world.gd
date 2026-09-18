@@ -54,8 +54,16 @@ func _ready() -> void:
 	add_child(menu)
 	busy += 1
 	var start_map := OS.get_environment("SCP_MAP")
-	if start_map != "":   # dev / test shortcut
+	if start_map != "":   # dev / test shortcut: SCP_MAP, SCP_SPAWN, SCP_FLAGS="flag,item:id,quest:id:stage"
 		st = GameState.new()
+		for f in OS.get_environment("SCP_FLAGS").split(",", false):
+			var p := f.split(":")
+			if p[0] == "item":
+				st.give(p[1], int(p[2]) if p.size() > 2 else 1)
+			elif p[0] == "quest":
+				st.set_quest(p[1], int(p[2]))
+			else:
+				st.mark(f)
 		_start(start_map, OS.get_environment("SCP_SPAWN") if OS.get_environment("SCP_SPAWN") != "" else "start")
 		return
 	var title := TitleScreen.new()
@@ -114,6 +122,10 @@ func load_map(map_id: String, spawn: String, at := Vector2i(-1, -1), fade := tru
 	if fade:
 		await hud.fade(true, 0.35)
 	if view:
+		for a in actors:
+			if a.has_method("on_map_leave"):
+				a.on_map_leave()
+		st.flags.erase("pods_stay")
 		if player.get_parent():
 			player.get_parent().remove_child(player)
 		view.queue_free()
@@ -274,12 +286,12 @@ func _flicker(pl: PointLight2D, amount: float) -> void:
 	var tw := pl.create_tween().set_loops()
 	tw.tween_interval(randf_range(0.8, 4.0) / amount)
 	tw.tween_callback(func() -> void:
-		var f: ColorRect = pl.get_meta("fixture", null)
+		var f: ColorRect = (pl.get_meta("fixture") if pl.has_meta("fixture") else null)
 		pl.energy = base * randf_range(0.0, 0.3)
 		if f: f.visible = false)
 	tw.tween_interval(randf_range(0.04, 0.12))
 	tw.tween_callback(func() -> void:
-		var f: ColorRect = pl.get_meta("fixture", null)
+		var f: ColorRect = (pl.get_meta("fixture") if pl.has_meta("fixture") else null)
 		pl.energy = base
 		if f: f.visible = true)
 	if amount > 0.6:
@@ -330,6 +342,10 @@ func _spawn_npcs(d: Dictionary) -> void:
 
 ## NPCs with the flag "follow:<id>" come along to every map, appearing next to the player.
 func _spawn_followers() -> void:
+	if st.has("bond131") and not actors.any(func(a): return a.has_method("watches")):
+		for i in 2:
+			Actors.spawn(self, {"id": "scp131", "x": player.tile.x, "y": player.tile.y + 1,
+				"sprite": "scp131a" if i == 0 else "scp131b", "offset": i})
 	for f in st.flags:
 		if not String(f).begins_with("follow:") or not st.has(f):
 			continue
@@ -358,6 +374,8 @@ func _spawn_followers() -> void:
 func is_free(t: Vector2i, who = null) -> bool:
 	if not view or view.blocked.has(t):
 		return false
+	if view.hatch.has(t) and who != player:
+		return false
 	if who == player:  # the player may walk into a friendly NPC's tile only through a swap (on_bump)
 		for a in actors:
 			if a.tile == t and a.get("solid") != false:
@@ -371,12 +389,16 @@ func is_free(t: Vector2i, who = null) -> bool:
 	return true
 
 
-func find_path(a: Vector2i, b: Vector2i) -> Array[Vector2i]:
+func find_path(a: Vector2i, b: Vector2i, through_hatches := false) -> Array[Vector2i]:
 	var out: Array[Vector2i] = []
 	if not astar.region.has_point(a) or not astar.region.has_point(b):
 		return out
+	for h in view.hatch if through_hatches else {}:
+		astar.set_point_solid(h, false)
 	for p in astar.get_id_path(a, b, true):
 		out.append(p)
+	for h in view.hatch if through_hatches else {}:
+		astar.set_point_solid(h, true)
 	return out
 
 
@@ -386,6 +408,8 @@ func _rebuild_astar() -> void:
 	astar.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	astar.update()
 	for t in view.blocked:
+		astar.set_point_solid(t, true)
+	for t in view.hatch:
 		astar.set_point_solid(t, true)
 
 
@@ -558,6 +582,7 @@ func _process(dt: float) -> void:
 	if busy == 0:
 		st.play_time += dt
 	player.locked = busy > 0
+	_update_blink(dt)
 	_sanity_tick += dt
 	if _sanity_tick >= 0.5 and busy == 0:
 		_update_sanity(_sanity_tick)
@@ -568,6 +593,7 @@ func _update_sanity(dt: float) -> void:
 	var lit := light_at(player.position + Vector2(0, -8))
 	var torch := player.torch.energy > 0.3
 	var dark := lit < 0.15 and not torch
+	st.sanity = maxf(0.0, st.sanity - dt * float(view.data.get("env", {}).get("drain", 0.0)))
 	if dark:
 		st.sanity = maxf(0.0, st.sanity - dt * 0.8)
 	elif lit > 0.35:
@@ -689,3 +715,76 @@ func ending(id: String) -> void:
 	st.mark("ending_" + id)
 	st.save()
 	get_tree().reload_current_scene()
+
+
+# ------------------------------------------------------------ sight & blinking
+
+## Grid line of sight (Bresenham). Walls and closed doors block it.
+func los(a: Vector2i, b: Vector2i) -> bool:
+	var x0 := a.x
+	var y0 := a.y
+	var dx := absi(b.x - a.x)
+	var dy := -absi(b.y - a.y)
+	var sx := 1 if a.x < b.x else -1
+	var sy := 1 if a.y < b.y else -1
+	var err := dx + dy
+	while not (x0 == b.x and y0 == b.y):
+		var e2 := 2 * err
+		if e2 >= dy:
+			err += dy
+			x0 += sx
+		if e2 <= dx:
+			err += dx
+			y0 += sy
+		var t := Vector2i(x0, y0)
+		if t == b:
+			break
+		if view.is_wall(t) or (view.door_at.has(t) and not view.door_at[t].is_open):
+			return false
+	return true
+
+
+## True if the player can see tile t right now: eyes open, in front (180°), line of sight,
+## and it is lit (map light or the flashlight cone).
+func player_sees(t: Vector2i) -> bool:
+	if blinking or not player:
+		return false
+	var d := t - player.tile
+	if d == Vector2i.ZERO:
+		return true
+	var fwd: Vector2i = Actor.DIRS[player.facing]
+	if d.x * fwd.x + d.y * fwd.y < 0:
+		return false
+	if d.length() > 14.0 or not los(player.tile, t):
+		return false
+	var pos := Actor.feet(t) + Vector2(0, -10)
+	if light_at(pos) > 0.12:
+		return true
+	if player.torch.energy > 0.3:
+		var to := pos - (player.position + player.torch.position)
+		return to.length() < 175.0 * player.torch.texture_scale and \
+			absf(angle_difference(player.torch.rotation, to.angle())) < deg_to_rad(PlayerActor.CONE_DEG + 4.0)
+	return d.length() <= 2.0   # right next to you, even in the dark
+
+
+var blinking := false
+var _blink_t := 7.0
+
+
+## Called by World._process: blink only matters when something that moves unseen is near.
+func _update_blink(dt: float) -> void:
+	var need := false
+	for a in actors:
+		if a.has_method("wants_blink") and a.wants_blink():
+			need = true
+			break
+	hud.set_blink(_blink_t / 7.0 if need else -1.0)
+	if not need or busy > 0:
+		_blink_t = 7.0
+		return
+	_blink_t -= dt
+	if _blink_t <= 0.0 and not blinking:
+		_blink_t = randf_range(6.0, 8.0)
+		blinking = true
+		await hud.blink()
+		blinking = false
