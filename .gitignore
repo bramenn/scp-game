@@ -1,0 +1,7 @@
+# Godot
+.godot/
+export/
+*.pck
+# Python tooling
+__pycache__/
+*.pyc

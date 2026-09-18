@@ -1,0 +1,192 @@
+{
+  "intro": [
+    "SITIO-19 · 03:14 h · BRECHA DE CONTENCIÓN EN CASCADA.",
+    "Un fallo en los cierres magnéticos liberó a cinco anomalías. La Fuerza Operativa Móvil Épsilon-11 'Nueve Colas' entró hace seis horas. No ha vuelto a comunicarse.",
+    "MANDO: Agente Vega, eres el último activo en la zona. Tu misión: recontener cada SCP y devolver el Sitio-19 al silencio.",
+    "Cada celda contenida reactiva su terminal y te otorga acceso de nivel superior. Empieza en la Zona de Entrada. Busca supervivientes."
+  ],
+  "final": [
+    "Los cierres magnéticos se reactivan en cascada. Uno a uno, los sensores pasan de rojo a verde.",
+    "MANDO: Sitio-19 asegurado. Buen trabajo, agente Vega. Nueve Colas estaría orgulloso.",
+    "Pero la orden que abrió las celdas no salió del Consejo. Vino de fuera. Firmada con tres flechas en un círculo.",
+    "La Insurgencia del Caos quería el Sitio-19 abierto. Y alguien, dentro, les ayudó.",
+    "Esto no ha terminado."
+  ],
+  "npcs": {
+    "ortega": {
+      "nombre": "Sgto. Ortega",
+      "sprite": "res://art/npc/guard.png",
+      "dialogos": [
+        {
+          "no": [
+            "tiene:tarjeta_1"
+          ],
+          "lineas": [
+            "¡Agente! Creí que nadie más bajaría aquí.",
+            "Sargento Ortega, seguridad del sector. Me hirieron cuando se abrieron las celdas.",
+            "Toma mi tarjeta de Nivel 1. Abre la primera puerta del pasillo: SCP-173.",
+            "Un consejo: no le quites la vista de encima. En la oficina de seguridad debería haber una linterna táctica.",
+            "Y vuelve aquí cuando estés herido. Te remendaré."
+          ],
+          "da": [
+            "tarjeta_1",
+            "botiquin"
+          ]
+        },
+        {
+          "no": [
+            "contenido:scp-173"
+          ],
+          "lineas": [
+            "173 está tras la puerta 1. Luz y nervios de acero, agente."
+          ]
+        },
+        {
+          "no": [
+            "contenido:scp-049"
+          ],
+          "lineas": [
+            "Buen trabajo con la escultura. Lo siguiente es la morgue: SCP-049.",
+            "Ese 'doctor' solo ataca si te le acercas. Registra la sala antes."
+          ]
+        },
+        {
+          "no": [
+            "contenido:scp-096"
+          ],
+          "lineas": [
+            "¿096? Nunca, jamás, le mires la cara.",
+            "Si la Dra. Lin sigue viva, ella sabrá cómo calmarlo."
+          ]
+        },
+        {
+          "no": [
+            "contenido:scp-106"
+          ],
+          "lineas": [
+            "106 atraviesa las paredes. Si oyes crujir el suelo, ya es tarde.",
+            "Un Nueve Colas bajó a su foso hace horas. Quizá siga ahí."
+          ]
+        },
+        {
+          "no": [
+            "contenido:scp-682"
+          ],
+          "lineas": [
+            "Solo queda 682. La Fundación nunca pudo matarlo. Solo contenerlo en ácido.",
+            "Prepárate bien antes de cruzar esa puerta."
+          ]
+        },
+        {
+          "lineas": [
+            "Lo lograste, Vega. El sitio respira otra vez."
+          ]
+        }
+      ]
+    },
+    "dclass": {
+      "nombre": "D-4417",
+      "sprite": "res://art/npc/dclass.png",
+      "dialogos": [
+        {
+          "no": [
+            "hablo:dclass"
+          ],
+          "lineas": [
+            "¡No dispares! Soy D-4417. Me escondí aquí cuando se fue la luz.",
+            "Oí a dos guardias antes de que... bueno. Decían que la brecha no fue un accidente.",
+            "Que alguien abrió las celdas desde fuera. Con credenciales del Consejo.",
+            "Toma, encontré esto en un casillero. Tú lo necesitas más que yo."
+          ],
+          "da": [
+            "adrenalina"
+          ],
+          "marca": "hablo:dclass"
+        },
+        {
+          "si": [
+            "contenido:scp-682"
+          ],
+          "lineas": [
+            "¿Se acabó? ¿De verdad? ...¿Y ahora qué pasa con los Clase-D como yo?"
+          ]
+        },
+        {
+          "lineas": [
+            "Yo me quedo aquí. Tú eres el del arma.",
+            "Si ves un símbolo de tres flechas... no es de la Fundación."
+          ]
+        }
+      ]
+    },
+    "lin": {
+      "nombre": "Dra. Lin",
+      "sprite": "res://art/npc/researcher.png",
+      "dialogos": [
+        {
+          "no": [
+            "contenido:scp-049"
+          ],
+          "lineas": [
+            "¡Shh! Está ahí, tras el cristal. Dice que yo también tengo la 'pestilencia'.",
+            "Hay un sedante en el almacén de la morgue. Úsalo antes de acercarte a él.",
+            "Contén a 049 y te daré algo que necesitarás para 096."
+          ]
+        },
+        {
+          "no": [
+            "tiene:capucha"
+          ],
+          "lineas": [
+            "Lo lograste... Toma: una capucha opaca de contención.",
+            "Si le cubres el rostro a 096, se calmará. Así lo contuvimos la primera vez.",
+            "Otra cosa. Revisé el terminal: la orden de apertura usó una credencial O5 falsificada.",
+            "Alguien de dentro ayudó. Ten cuidado en quién confías."
+          ],
+          "da": [
+            "capucha"
+          ]
+        },
+        {
+          "lineas": [
+            "Sigo revisando los registros. Algo no cuadra con esta brecha."
+          ]
+        }
+      ]
+    },
+    "reyes": {
+      "nombre": "Cabo Reyes",
+      "sprite": "res://art/npc/soldier.png",
+      "dialogos": [
+        {
+          "no": [
+            "hablo:reyes"
+          ],
+          "lineas": [
+            "Agente... Nueve Colas, cabo Reyes. Mi escuadra... 106 se los llevó a través del suelo.",
+            "Toma mi chaleco. Y este inyector de ácido: lo preparamos para 682.",
+            "El señuelo de audio lo dejamos en la celda de 096... si lo encontraste, úsalo contra el viejo."
+          ],
+          "da": [
+            "chaleco",
+            "hcl"
+          ],
+          "marca": "hablo:reyes"
+        },
+        {
+          "si": [
+            "contenido:scp-106"
+          ],
+          "lineas": [
+            "Lo encerraste... Gracias. Por ellos."
+          ]
+        },
+        {
+          "lineas": [
+            "Termina el trabajo, agente. Yo cubro la salida."
+          ]
+        }
+      ]
+    }
+  }
+}

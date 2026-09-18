@@ -1,0 +1,33 @@
+{
+  "id": "scp-096",
+  "nombre": "SCP-096 · El Tímido",
+  "clase": "Euclid",
+  "ref": "scp-096",
+  "descripcion": "Humanoide pálido. Ver su rostro desata una persecución imparable.",
+  "ambiente": "Está de espaldas, sollozando. No le mires la cara.",
+  "sprite": "res://art/scp/scp-096.png",
+  "stats": {
+    "hp": 55,
+    "atk": 18,
+    "def": 5,
+    "spd": 14
+  },
+  "movimientos": [
+    {
+      "nombre": "Alarido",
+      "poder": 16
+    },
+    {
+      "nombre": "Desgarro",
+      "poder": 28
+    }
+  ],
+  "trigger": [
+    {
+      "tipo": "interactuar"
+    }
+  ],
+  "debilidad": "capucha",
+  "texto_debilidad": "¡Le cubres el rostro con la capucha! Su furia se apaga un poco.",
+  "recompensa": "tarjeta_4"
+}

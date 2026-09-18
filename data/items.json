@@ -1,0 +1,117 @@
+{
+  "tarjeta_1": {
+    "nombre": "Tarjeta Nivel 1",
+    "tipo": "llave",
+    "desc": "Acceso a la Celda 173."
+  },
+  "tarjeta_2": {
+    "nombre": "Tarjeta Nivel 2",
+    "tipo": "llave",
+    "desc": "Acceso a la Morgue (Celda 049)."
+  },
+  "tarjeta_3": {
+    "nombre": "Tarjeta Nivel 3",
+    "tipo": "llave",
+    "desc": "Acceso al Aislamiento de 096."
+  },
+  "tarjeta_4": {
+    "nombre": "Tarjeta Nivel 4",
+    "tipo": "llave",
+    "desc": "Acceso al Foso de 106."
+  },
+  "tarjeta_5": {
+    "nombre": "Tarjeta Nivel 5",
+    "tipo": "llave",
+    "desc": "Acceso al Tanque de 682. Solo personal Omni."
+  },
+  "botiquin": {
+    "nombre": "Botiquín",
+    "tipo": "consumible",
+    "cura": 35,
+    "desc": "Vendas y antiséptico. Recupera 35 de vida."
+  },
+  "adrenalina": {
+    "nombre": "Adrenalina",
+    "tipo": "consumible",
+    "cura": 70,
+    "desc": "Autoinyector militar. Recupera 70 de vida."
+  },
+  "scp_500": {
+    "nombre": "Píldora SCP-500",
+    "tipo": "consumible",
+    "cura": 999,
+    "desc": "Una píldora roja que cura cualquier dolencia. Vida al máximo."
+  },
+  "chaleco": {
+    "nombre": "Chaleco balístico",
+    "tipo": "mejora",
+    "def": 6,
+    "desc": "Placas de cerámica de Nueve Colas. Defensa +6."
+  },
+  "municion": {
+    "nombre": "Munición perforante",
+    "tipo": "mejora",
+    "atk": 6,
+    "desc": "Cargadores de punta de tungsteno. Ataque +6."
+  },
+  "linterna": {
+    "nombre": "Linterna táctica",
+    "tipo": "debilidad",
+    "desc": "Luz intensa. Ideal contra SCP-173."
+  },
+  "sedante": {
+    "nombre": "Sedante de uso animal",
+    "tipo": "debilidad",
+    "desc": "Dosis para un rinoceronte. Útil contra SCP-049."
+  },
+  "capucha": {
+    "nombre": "Capucha opaca",
+    "tipo": "debilidad",
+    "desc": "Tela que no deja ver nada. Para cubrir el rostro de SCP-096."
+  },
+  "senuelo": {
+    "nombre": "Señuelo de audio",
+    "tipo": "debilidad",
+    "desc": "Grabadora con el procedimiento de recontención de SCP-106."
+  },
+  "hcl": {
+    "nombre": "Inyector de HCl",
+    "tipo": "debilidad",
+    "desc": "Ácido clorhídrico concentrado. Lo único que frena a SCP-682."
+  },
+  "doc_brecha": {
+    "nombre": "Registro 03:12",
+    "tipo": "doc",
+    "desc": "REGISTRO DEL SITIO-19 · 03:12 h. Orden remota de apertura de cierres emitida con credencial O5. Firma: NO VERIFICABLE. Nadie del Consejo reconoce la orden."
+  },
+  "doc_173": {
+    "nombre": "Protocolo 173",
+    "tipo": "doc",
+    "desc": "PROCEDIMIENTO 173: Mínimo tres personas en la celda. Contacto visual constante. Anunciar cada parpadeo. Si se va la luz... que Dios te ayude."
+  },
+  "doc_049": {
+    "nombre": "Entrevista 049-B",
+    "tipo": "doc",
+    "desc": "ENTREVISTA 049-B. Investigador: '¿Qué es la pestilencia?' SCP-049: 'Está en todos ustedes. Yo solo quiero curarlos.' [Fin del registro. El investigador no volvió a su puesto.]"
+  },
+  "doc_096": {
+    "nombre": "Incidente 096-1",
+    "tipo": "doc",
+    "desc": "INCIDENTE 096-1: Una fotografía de su rostro bastó. Recorrió 40 km en 3 horas. No existe distancia segura. Solo la capucha lo calma."
+  },
+  "doc_106": {
+    "nombre": "Nota manuscrita",
+    "tipo": "doc",
+    "desc": "'Se mete en las paredes. El suelo se pudre donde pisa. Reyes lleva la grabación del procedimiento. Si lo oyes, viene hacia ti.'"
+  },
+  "doc_682": {
+    "nombre": "Memorándum Omni",
+    "tipo": "doc",
+    "desc": "MEMORÁNDUM: 682 debe permanecer sumergido en ácido clorhídrico. Todos los intentos de terminación han fallado. Se adapta. Recuerda. Odia."
+  },
+  "doc_insurgencia": {
+    "nombre": "Orden cifrada",
+    "tipo": "doc",
+    "desc": "Papel quemado con un símbolo: tres flechas en un círculo. 'Fase 1: abrir Sitio-19. Fase 2: recoger lo que quede.' Es la marca de la Insurgencia del Caos."
+  }
+}

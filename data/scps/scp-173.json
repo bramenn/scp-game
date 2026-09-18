@@ -1,0 +1,37 @@
+{
+  "id": "scp-173",
+  "nombre": "SCP-173 · La Escultura",
+  "clase": "Euclid",
+  "ref": "scp-173",
+  "descripcion": "Escultura de concreto y varilla. Solo se mueve cuando nadie la mira.",
+  "ambiente": "La escultura no se mueve. Mientras la mires.",
+  "sprite": "res://art/scp/scp-173.png",
+  "stats": {
+    "hp": 40,
+    "atk": 12,
+    "def": 4,
+    "spd": 20
+  },
+  "movimientos": [
+    {
+      "nombre": "Parpadeo",
+      "poder": 18
+    },
+    {
+      "nombre": "Rompe Cuello",
+      "poder": 30
+    }
+  ],
+  "trigger": [
+    {
+      "tipo": "entrar_celda"
+    },
+    {
+      "tipo": "tiempo_en_celda",
+      "s": 2
+    }
+  ],
+  "debilidad": "linterna",
+  "texto_debilidad": "Enciendes la linterna táctica: 173 no puede aprovechar tus parpadeos.",
+  "recompensa": "tarjeta_2"
+}
