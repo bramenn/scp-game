@@ -1,0 +1,222 @@
+{
+ "door_level": {
+  "en": "ACCESS DENIED. Level %d keycard required.",
+  "es": "ACCESO DENEGADO. Se requiere tarjeta de nivel %d."
+ },
+ "door_sealed": {
+  "en": "The door is sealed. The panel doesn't respond.",
+  "es": "La puerta está sellada. El panel no responde."
+ },
+ "doc_found": {
+  "en": "Document found: %s",
+  "es": "Documento encontrado: %s"
+ },
+ "picked_up": {
+  "en": "Picked up: %s",
+  "es": "Recogido: %s"
+ },
+ "received": {
+  "en": "Received: %s",
+  "es": "Recibido: %s"
+ },
+ "quest_done": {
+  "en": "Completed: %s",
+  "es": "Completado: %s"
+ },
+ "quest_new": {
+  "en": "New objective: %s",
+  "es": "Nuevo objetivo: %s"
+ },
+ "journal_updated": {
+  "en": "Journal updated",
+  "es": "Diario actualizado"
+ },
+ "saved": {
+  "en": "Progress saved",
+  "es": "Progreso guardado"
+ },
+ "death": {
+  "en": "YOU DIED",
+  "es": "HAS MUERTO"
+ },
+ "death_wounds": {
+  "en": "YOU BLED OUT",
+  "es": "TE DESANGRASTE"
+ },
+ "death_sanity": {
+  "en": "YOUR MIND BROKE",
+  "es": "TU MENTE SE QUEBRÓ"
+ },
+ "death_173": {
+  "en": "YOU BLINKED",
+  "es": "PARPADEASTE"
+ },
+ "death_096": {
+  "en": "YOU SAW ITS FACE",
+  "es": "VISTE SU ROSTRO"
+ },
+ "death_106": {
+  "en": "TAKEN INTO THE CORROSION",
+  "es": "ARRASTRADO A LA CORROSIÓN"
+ },
+ "death_049": {
+  "en": "YOU HAVE BEEN CURED",
+  "es": "HAS SIDO CURADO"
+ },
+ "death_939": {
+  "en": "IT SPOKE WITH YOUR VOICE",
+  "es": "HABLÓ CON TU VOZ"
+ },
+ "death_682": {
+  "en": "IT HATES ALL LIFE",
+  "es": "ODIA TODA FORMA DE VIDA"
+ },
+ "death_tesla": {
+  "en": "ELECTROCUTED",
+  "es": "ELECTROCUTADO"
+ },
+ "death_sub": {
+  "en": "Returning to your last record...",
+  "es": "Volviendo a tu último registro..."
+ },
+ "radio_name": {
+  "en": "Command (radio)",
+  "es": "Mando (radio)"
+ },
+ "tab_objectives": {
+  "en": "Objectives",
+  "es": "Objetivos"
+ },
+ "tab_inventory": {
+  "en": "Inventory",
+  "es": "Inventario"
+ },
+ "tab_documents": {
+  "en": "Documents",
+  "es": "Documentos"
+ },
+ "tab_map": {
+  "en": "Map",
+  "es": "Mapa"
+ },
+ "tab_options": {
+  "en": "Options",
+  "es": "Opciones"
+ },
+ "menu_hint": {
+  "en": "A/D tabs   W/S select   E use   Esc close",
+  "es": "A/D pestañas   W/S elegir   E usar   Esc cerrar"
+ },
+ "current_objective": {
+  "en": "Current objective",
+  "es": "Objetivo actual"
+ },
+ "side": {
+  "en": "side",
+  "es": "secundaria"
+ },
+ "inv_empty": {
+  "en": "You carry nothing but your flashlight.",
+  "es": "No llevas nada más que tu linterna."
+ },
+ "press_use": {
+  "en": "E: use",
+  "es": "E: usar"
+ },
+ "docs_empty": {
+  "en": "No documents recovered yet.",
+  "es": "Aún no has recuperado documentos."
+ },
+ "opt_language": {
+  "en": "Language",
+  "es": "Idioma"
+ },
+ "opt_master": {
+  "en": "Master volume",
+  "es": "Volumen general"
+ },
+ "opt_music": {
+  "en": "Music",
+  "es": "Música"
+ },
+ "opt_sfx": {
+  "en": "Effects",
+  "es": "Efectos"
+ },
+ "opt_fullscreen": {
+  "en": "Fullscreen",
+  "es": "Pantalla completa"
+ },
+ "opt_save_quit": {
+  "en": "Save and quit",
+  "es": "Guardar y salir"
+ },
+ "on": {
+  "en": "On",
+  "es": "Sí"
+ },
+ "off": {
+  "en": "Off",
+  "es": "No"
+ },
+ "controls_help": {
+  "en": "WASD/Arrows move · Shift sprint · F flashlight · E interact · Esc menu",
+  "es": "WASD/Flechas mover · Shift correr · F linterna · E interactuar · Esc menú"
+ },
+ "controls_short": {
+  "en": "WASD move · E interact · F flashlight · Shift sprint · Esc menu",
+  "es": "WASD mover · E interactuar · F linterna · Shift correr · Esc menú"
+ },
+ "title_site": {
+  "en": "SITE-19",
+  "es": "SITIO-19"
+ },
+ "title_sub": {
+  "en": "CONTAINMENT BREACH",
+  "es": "BRECHA DE CONTENCIÓN"
+ },
+ "license_line": {
+  "en": "Based on the SCP Foundation (scp-wiki.wikidot.com) · CC BY-SA 3.0",
+  "es": "Basado en la Fundación SCP (scp-wiki.wikidot.com) · CC BY-SA 3.0"
+ },
+ "menu_continue": {
+  "en": "Continue",
+  "es": "Continuar"
+ },
+ "menu_new": {
+  "en": "New game",
+  "es": "Nueva partida"
+ },
+ "menu_language": {
+  "en": "Language",
+  "es": "Idioma"
+ },
+ "menu_quit": {
+  "en": "Quit",
+  "es": "Salir"
+ },
+ "p_open": {
+  "en": "[E] Open",
+  "es": "[E] Abrir"
+ },
+ "p_locked": {
+  "en": "[E] Locked - Level %d",
+  "es": "[E] Bloqueada - Nivel %d"
+ },
+ "p_sealed": {
+  "en": "[E] Sealed",
+  "es": "[E] Sellada"
+ },
+ "p_talk": {
+  "en": "[E] Talk to %s",
+  "es": "[E] Hablar con %s"
+ },
+ "p_examine": {
+  "en": "[E] Examine",
+  "es": "[E] Examinar"
+ },
+ "ending_stats": {
+  "en": "Time %dh %02dm  ·  Documents %d/%d  ·  Deaths %d",
+  "es": "Tiempo %dh %02dm  ·  Documentos %d/%d  ·  Muertes %d"
+ }
+}

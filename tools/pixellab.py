@@ -59,7 +59,8 @@ def fetch(url, dest: Path):
     dest.parent.mkdir(parents=True, exist_ok=True)
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(url, timeout=120) as resp:
+            r = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (scp-game asset pipeline)"})
+            with urllib.request.urlopen(r, timeout=120) as resp:
                 dest.write_bytes(resp.read())
             return
         except Exception:

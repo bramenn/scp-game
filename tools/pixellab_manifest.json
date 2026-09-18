@@ -1,9 +1,177 @@
 {
+ "adebayo": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "2755c4aa-b5eb-40eb-9109-9c5128fff3d7"
+ },
+ "body_aged": {
+  "done": true,
+  "image": "art/props/body_aged.png"
+ },
+ "body_bag": {
+  "done": true,
+  "image": "art/props/body_bag.png"
+ },
+ "body_cured": {
+  "done": true,
+  "image": "art/props/body_cured.png"
+ },
+ "body_dclass": {
+  "done": true,
+  "image": "art/props/body_dclass.png"
+ },
+ "body_dissolved": {
+  "done": true,
+  "image": "art/props/body_dissolved.png"
+ },
+ "body_guard": {
+  "done": true,
+  "image": "art/props/body_guard.png"
+ },
+ "body_ntf": {
+  "done": true,
+  "image": "art/props/body_ntf.png"
+ },
+ "body_scientist": {
+  "done": true,
+  "image": "art/props/body_scientist.png"
+ },
+ "dclass": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "9ac78e60-4063-43b7-a363-d249b21663bb"
+ },
+ "desk_pc": {
+  "done": true,
+  "object_id": "36d978bf-1659-4fda-bfe5-66dbba147966"
+ },
+ "elena": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "f9122cb7-673d-4e44-b6db-f62b4d742634"
+ },
+ "guard": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "cb559d6f-3649-4b24-b860-fc51902a2267"
+ },
+ "lin": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "c1186b96-b095-4e24-be60-937575a5bcf3"
+ },
+ "mara": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "f1b7fcae-3b59-4858-828f-4524a61dae6e"
+ },
+ "nico": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "6cbe9d62-2c20-466d-96b2-ba7423df54e9"
+ },
  "ortega": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "94cfc40f-3d92-4ff7-86e9-d38171baece7"
+  "character_id": "94cfc40f-3d92-4ff7-86e9-d38171baece7",
+  "done": true
  },
- "p_ortega": {}
+ "ortega32": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "b9f2882c-fa24-4d35-b075-1af0626c2574",
+  "done": true
+ },
+ "p_ortega": {
+  "done": true,
+  "job_id": "26910cb5-142c-424e-a548-99093fd3fbb1"
+ },
+ "rat": {
+  "character_id": "9b5ddea0-dcdb-47e4-adc3-1e2eb3481546"
+ },
+ "reyes": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "9a0754e2-7bd9-4000-85d2-5eccfc24ce65"
+ },
+ "scientist": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "67339ac1-f555-4874-914c-6c414f53781f"
+ },
+ "scp049": {
+  "character_id": "6acf5898-383f-4bed-8ff1-4e1185020ed6"
+ },
+ "scp087_face": {
+  "done": true,
+  "image": "art/props/scp087_face.png"
+ },
+ "scp096": {
+  "character_id": "ab698228-6958-41b0-a3fc-f7a2723b19e2"
+ },
+ "scp106": {
+  "character_id": "68f86c63-2b05-4bcd-b76c-bef3d2df1552"
+ },
+ "scp131a": {
+  "done": true,
+  "image": "art/props/scp131a.png"
+ },
+ "scp131b": {
+  "done": true,
+  "image": "art/props/scp131b.png"
+ },
+ "scp173": {
+  "anims_queued": [],
+  "character_id": "5bf022b9-e2b0-4a52-9949-d0a38b905605",
+  "done": true
+ },
+ "scp529": {
+  "character_id": "cf7c6c6a-e1f9-4275-b2f0-00d6c0a6e750"
+ },
+ "scp682": {
+  "character_id": "6c782e12-d7a7-4824-967c-ffa6cc89c022"
+ },
+ "scp939": {
+  "character_id": "3a88f412-109c-47a3-a41d-5efcb94668eb"
+ },
+ "scp999": {
+  "done": true,
+  "image": "art/props/scp999.png"
+ },
+ "tomas": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "e8f513b5-35b1-40fa-92fa-4f623585d2f4"
+ },
+ "vega": {
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "6a840a14-d859-4050-9c39-7ba027548c62",
+  "done": true
+ },
+ "zombie": {
+  "anims_queued": [
+   "scary-walk"
+  ],
+  "character_id": "61e12149-b1e5-49b7-9f74-9441a2080f17"
+ },
+ "zombie_guard": {
+  "anims_queued": [
+   "scary-walk"
+  ],
+  "character_id": "17e88867-85ea-46c6-a5a3-0bd166c67d5b"
+ }
 }
