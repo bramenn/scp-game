@@ -5,6 +5,7 @@ extends ScpActor
 
 var _t := 0.0
 var _hum := 0.0
+var _talk_cd := 0.0
 
 
 func init(a: Dictionary) -> void:
@@ -34,8 +35,9 @@ func _process(dt: float) -> void:
 				path.clear()
 			follow_path(0.3)
 		return
-	if adjacent_to_player() and not world.st.has("talked049_now"):
-		world.st.mark("talked049_now")
+	_talk_cd -= dt
+	if adjacent_to_player() and _talk_cd <= 0.0:
+		_talk_cd = 6.0
 		face_toward(world.player.tile)
 		world.events.run(String(spec.get("event", "scp049_meet")))
 		return

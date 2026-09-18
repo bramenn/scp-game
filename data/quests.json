@@ -132,5 +132,58 @@
 "es": "Marcus está muerto. Dejó una carta para Nico. Nico debería tenerla."
 }
 ]
+},
+"main_power": {
+"main": true,
+"name": {
+"en": "Lights Out",
+"es": "Apagón"
+},
+"stages": [
+{
+"en": "Levels -3 to -5 have no power. Find a way into the electrical substation.",
+"es": "Los niveles -3 a -5 no tienen energía. Encuentra la forma de entrar en la subestación."
+},
+{
+"en": "Tomás gave you his keys. Find the three 400 A fuses: pump room, spider tunnel, boiler room.",
+"es": "Tomás te dio sus llaves. Encuentra los tres fusibles de 400 A: sala de bombas, túnel de las arañas, sala de calderas."
+},
+{
+"en": "Put the fuses in the three breakers and throw the main panel.",
+"es": "Pon los fusibles en los tres interruptores y activa el panel principal."
+}
+]
+},
+"side_josie": {
+"name": {
+"en": "The half-cat",
+"es": "La media gata"
+},
+"stages": [
+{
+"en": "Tomás' cat Josie is lost somewhere down here. She likes cheese.",
+"es": "La gata de Tomás, Josie, anda perdida por aquí. Le gusta el queso."
+},
+{
+"en": "Josie is following you. Take her home to Tomás.",
+"es": "Josie te sigue. Llévala con Tomás."
+}
+]
+},
+"side_087": {
+"name": {
+"en": "The Stairwell",
+"es": "La escalera"
+},
+"stages": [
+{
+"en": "There is a door marked SCP-087 past the spider tunnel. Nobody is allowed down there.",
+"es": "Hay una puerta marcada SCP-087 más allá del túnel de las arañas. Nadie puede bajar ahí."
+},
+{
+"en": "Something is crying at the bottom of the stairs. Go down, or don't.",
+"es": "Algo llora al fondo de la escalera. Baja, o no."
+}
+]
 }
 }

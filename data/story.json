@@ -1,4 +1,345 @@
 {
+"enemies": {
+"zombie": {
+"name": {
+"en": "SCP-049-2",
+"es": "SCP-049-2"
+},
+"tag": {
+"en": "'Cured' patient",
+"es": "Paciente 'curado'"
+},
+"sprite": "zombie",
+"hp": 34,
+"atk": 11,
+"flee": 0.6,
+"bg": "#1b2226",
+"intro": {
+"en": "A 'cured' patient lurches at you, stitches pulling apart.",
+"es": "Un paciente 'curado' se abalanza sobre ti, con los puntos abriéndose."
+},
+"win": {
+"en": "It folds to the floor like an empty coat.",
+"es": "Se desploma en el suelo como un abrigo vacío."
+},
+"moves": [
+{
+"name": {
+"en": "Grab",
+"es": "Agarrar"
+},
+"power": 16
+},
+{
+"name": {
+"en": "Bite",
+"es": "Morder"
+},
+"power": 20
+},
+{
+"name": {
+"en": "Moan",
+"es": "Gemido"
+},
+"power": 6,
+"fx": "sanity"
+}
+],
+"def": 4
+},
+"zombie_guard": {
+"name": {
+"en": "SCP-049-2",
+"es": "SCP-049-2"
+},
+"tag": {
+"en": "'Cured' guard",
+"es": "Guardia 'curado'"
+},
+"sprite": "zombie_guard",
+"hp": 46,
+"atk": 13,
+"flee": 0.5,
+"bg": "#1b2226",
+"intro": {
+"en": "A dead guard stands up, its baton still on its belt.",
+"es": "Un guardia muerto se levanta, con la porra aún en el cinturón."
+},
+"win": {
+"en": "It stops. For good this time.",
+"es": "Se detiene. Esta vez para siempre."
+},
+"moves": [
+{
+"name": {
+"en": "Strangle",
+"es": "Estrangular"
+},
+"power": 20
+},
+{
+"name": {
+"en": "Charge",
+"es": "Embestir"
+},
+"power": 16
+}
+],
+"def": 7
+},
+"rats": {
+"name": {
+"en": "Rat swarm",
+"es": "Enjambre de ratas"
+},
+"tag": {
+"en": "Dozens of them",
+"es": "Decenas"
+},
+"sprite": "rat",
+"hp": 24,
+"atk": 8,
+"flee": 0.8,
+"bg": "#1f1a14",
+"intro": {
+"en": "The floor moves. It is all rats.",
+"es": "El suelo se mueve. Son todo ratas."
+},
+"win": {
+"en": "The swarm scatters into the pipes.",
+"es": "El enjambre se dispersa por las tuberías."
+},
+"moves": [
+{
+"name": {
+"en": "Swarm",
+"es": "Enjambrar"
+},
+"power": 12
+},
+{
+"name": {
+"en": "Bites",
+"es": "Mordiscos"
+},
+"power": 9
+}
+],
+"def": 2
+},
+"939": {
+"name": {
+"en": "SCP-939",
+"es": "SCP-939"
+},
+"tag": {
+"en": "Keter · With Many Voices",
+"es": "Keter · Con Muchas Voces"
+},
+"sprite": "scp939",
+"hp": 90,
+"atk": 18,
+"flee": 0.35,
+"bg": "#241214",
+"cry": "939_call",
+"intro": {
+"en": "It opens its jaws and says your name. In Ortega's voice.",
+"es": "Abre las fauces y dice tu nombre. Con la voz de Ortega."
+},
+"win": {
+"en": "It retreats into the dark, wheezing through a dozen stolen voices.",
+"es": "Se retira a la oscuridad, jadeando con una docena de voces robadas."
+},
+"moves": [
+{
+"name": {
+"en": "Bite",
+"es": "Mordisco"
+},
+"power": 26
+},
+{
+"name": {
+"en": "Amnestic breath",
+"es": "Aliento amnésico"
+},
+"power": 14,
+"fx": "sanity"
+},
+{
+"name": {
+"en": "Pounce",
+"es": "Salto"
+},
+"power": 22
+}
+],
+"def": 9
+},
+"106": {
+"name": {
+"en": "SCP-106",
+"es": "SCP-106"
+},
+"tag": {
+"en": "Keter · The Old Man",
+"es": "Keter · El Viejo"
+},
+"sprite": "scp106",
+"hp": 999,
+"atk": 16,
+"flee": 0.9,
+"bg": "#140f14",
+"immune": true,
+"intro": {
+"en": "The Old Man grins at you from the other end of its world.",
+"es": "El Viejo te sonríe desde el otro extremo de su mundo."
+},
+"moves": [
+{
+"name": {
+"en": "Corrode",
+"es": "Corroer"
+},
+"power": 18
+},
+{
+"name": {
+"en": "Laugh",
+"es": "Risa"
+},
+"power": 10,
+"fx": "sanity"
+}
+],
+"def": 30
+},
+"682": {
+"name": {
+"en": "SCP-682",
+"es": "SCP-682"
+},
+"tag": {
+"en": "Keter · Hard-to-Destroy Reptile",
+"es": "Keter · Reptil Difícil de Destruir"
+},
+"sprite": "scp682",
+"hp": 260,
+"atk": 24,
+"flee": 0.0,
+"bg": "#1a2410",
+"cry": "682_roar",
+"music": "chase",
+"intro": {
+"en": "DISGUSTING, it says. Then it comes out of the acid.",
+"es": "REPUGNANTE, dice. Luego sale del ácido."
+},
+"win": {
+"en": "It sinks back into the acid, screaming, and the tank seals over it.",
+"es": "Se hunde de nuevo en el ácido, gritando, y el tanque se sella sobre él."
+},
+"moves": [
+{
+"name": {
+"en": "Maul",
+"es": "Destrozar"
+},
+"power": 30
+},
+{
+"name": {
+"en": "Tail sweep",
+"es": "Coletazo"
+},
+"power": 22
+},
+{
+"name": {
+"en": "Regenerate",
+"es": "Regenerar"
+},
+"power": 30,
+"fx": "heal"
+},
+{
+"name": {
+"en": "Hatred",
+"es": "Odio"
+},
+"power": 12,
+"fx": "sanity"
+}
+],
+"special": {
+"label": {
+"en": "Open the HCl valves",
+"es": "Abrir las válvulas de HCl"
+},
+"cond": "item:hcl",
+"text": {
+"en": "You slam the injector into the valve port. Acid floods the chamber.",
+"es": "Clavas el inyector en la válvula. El ácido inunda la cámara."
+},
+"dmg_pct": 0.45,
+"event_flag": "682_acid"
+},
+"def": 14
+}
+},
+"voices939": [
+{
+"text": {
+"en": "Hello? Is someone there?",
+"es": "¿Hola? ¿Hay alguien ahí?"
+}
+},
+{
+"text": {
+"en": "Help me... I can't see...",
+"es": "Ayúdame... no veo nada..."
+}
+},
+{
+"text": {
+"en": "Security, respond. Security.",
+"es": "Seguridad, responda. Seguridad."
+}
+},
+{
+"text": {
+"en": "Mom? Mom, I'm in here.",
+"es": "¿Mamá? Mamá, estoy aquí."
+}
+},
+{
+"text": {
+"en": "Vega. Over here. I found a way out.",
+"es": "Vega. Aquí. Encontré una salida."
+},
+"cond": "met_ortega"
+},
+{
+"text": {
+"en": "Kid? Nico? Is that you?",
+"es": "¿Chico? ¿Nico? ¿Eres tú?"
+},
+"cond": "met_nico"
+},
+{
+"text": {
+"en": "It's alright. It's alright. Come closer.",
+"es": "Tranquilo. Tranquilo. Acércate."
+}
+},
+{
+"text": {
+"en": "Dani, it's me. It's Elena.",
+"es": "Dani, soy yo. Soy Elena."
+},
+"cond": "read:doc_elena_log1"
+}
+],
 "props": {
 "body_scientist": {
 "en": "A receptionist. Her badge reads 'H. Park - Front Desk'.",
@@ -87,6 +428,30 @@
 "control_console": {
 "en": "CELL 173 CONTROL. Two buttons: OPEN, SEAL.",
 "es": "CONTROL CELDA 173. Dos botones: ABRIR, SELLAR."
+},
+"breaker": {
+"en": "A breaker cabinet. The fuse slot is empty.",
+"es": "Un armario de interruptores. El hueco del fusible está vacío."
+},
+"burn_barrel": {
+"en": "Warm. Tomás burns old files in it. Some of them still have photos.",
+"es": "Caliente. Tomás quema expedientes viejos. Algunos todavía tienen fotos."
+},
+"mattress": {
+"en": "Tomás' bed. A rat is asleep on the pillow.",
+"es": "La cama de Tomás. Una rata duerme en la almohada."
+},
+"spider_web": {
+"en": "Thick, dusty, occupied.",
+"es": "Espesa, polvorienta, habitada."
+},
+"boiler": {
+"en": "It ticks and groans. The gauge is in the red.",
+"es": "Hace tic-tac y gime. La aguja está en rojo."
+},
+"pump": {
+"en": "The pump hums. Water still rises around your boots.",
+"es": "La bomba zumba. El agua sigue subiendo alrededor de tus botas."
 }
 }
 }

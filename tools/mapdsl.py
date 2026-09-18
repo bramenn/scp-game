@@ -109,8 +109,8 @@ class Map:
     def decor(self, name, x, y):
         self.walldecor.append([name, x, y])
 
-    def light(self, x, y, color="#ffe6b8", r=1.0, e=1.0, flicker=0.0, shadow=False):
-        self.lights.append([x, y, color, r, e, flicker, shadow])
+    def light(self, x, y, color="#ffe6b8", r=1.0, e=1.0, flicker=0.0, shadow=False, cond=""):
+        self.lights.append([x, y, color, r, e, flicker, shadow, cond])
 
     def exit(self, x, y, w, h, to, at, sfx="door", cond="", msg=None):
         e = {"rect": [x, y, w, h], "to": to, "at": at, "sfx": sfx}

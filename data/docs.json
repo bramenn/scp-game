@@ -177,5 +177,68 @@
 "en": "Pages of dial settings and outcomes, in tiny handwriting. The last page, shakier: 'Elena asked me to put a Level-5 card through on Very Fine. I told her it's a crime. She said so is Tuesday. I did it. It came out black, with no level printed on it. God help us.'",
 "es": "Páginas de ajustes del dial y resultados, con letra diminuta. La última página, más temblorosa: 'Elena me pidió que pasara una tarjeta de nivel 5 en Muy fino. Le dije que era un delito. Me dijo que el martes también. Lo hice. Salió negra, sin nivel impreso. Que Dios nos ayude.'"
 }
+},
+"doc_power_memo": {
+"title": {
+"en": "Maintenance memo",
+"es": "Nota de mantenimiento"
+},
+"body": {
+"en": "Main breakers for -3/-4/-5 were pulled at 03:13 by remote order. Fuses removed and 'secured' by the night crew, who then ran. If you find them: pump room, the old tunnel, boiler room. The substation door is on Tomás' ring. Good luck finding Tomás. - Shift lead",
+"es": "Los interruptores de -3/-4/-5 se abrieron a las 03:13 por orden remota. Los fusibles los quitó y 'guardó' el turno de noche, que luego huyó. Si los encuentras: sala de bombas, el túnel viejo, calderas. La puerta de la subestación está en el llavero de Tomás. Suerte encontrando a Tomás. - Jefe de turno"
+}
+},
+"doc_tomas_note": {
+"title": {
+"en": "Scrawled on a pipe",
+"es": "Garabateado en una tubería"
+},
+"body": {
+"en": "RATS = FRIENDS. PEOPLE = DANGER. CAT = MISSING. IF YOU FIND JOSIE BRING HER HOME. - T.",
+"es": "RATAS = AMIGAS. GENTE = PELIGRO. GATA = PERDIDA. SI ENCUENTRAS A JOSIE TRÁELA A CASA. - T."
+}
+},
+"doc_substation": {
+"title": {
+"en": "Burnt logbook",
+"es": "Bitácora quemada"
+},
+"body": {
+"en": "03:13 - Remote shutdown. Authorization: CORE. Core? Core is a computer. Since when does it give orders?\n03:20 - Rodríguez tried to reset breaker 2 by hand. Rodríguez is dead.\n03:21 - Leaving.",
+"es": "03:13 - Apagado remoto. Autorización: NÚCLEO. ¿Núcleo? El núcleo es un ordenador. ¿Desde cuándo da órdenes?\n03:20 - Rodríguez intentó rearmar el interruptor 2 a mano. Rodríguez está muerto.\n03:21 - Me voy."
+}
+},
+"doc_087_warning": {
+"title": {
+"en": "Warning sign, torn",
+"es": "Cartel de aviso, rasgado"
+},
+"body": {
+"en": "SCP-087. NO PERSONNEL ARE PERMITTED ACCESS. Light sources brighter than 75 W are ineffective: the stairwell absorbs the excess. If you hear a child asking for help, do not answer. It is not a child.",
+"es": "SCP-087. NINGÚN PERSONAL TIENE PERMITIDO EL ACCESO. Las fuentes de luz de más de 75 W son ineficaces: la escalera absorbe el exceso. Si oye a un niño pidiendo ayuda, no responda. No es un niño."
+},
+"source": "SCP-087 by Zaeyde · scp-wiki.wikidot.com/scp-087 · CC BY-SA 3.0"
+},
+"doc_087_log": {
+"title": {
+"en": "Exploration log 087-I (excerpt)",
+"es": "Registro de exploración 087-I (extracto)"
+},
+"body": {
+"en": "An unlit stairwell, 38° descent, 13 steps per flight, then a semicircular landing. Visibility: about one and a half flights. Sounds of a child, estimated 200 m below, pleading for help. After 22 minutes the subject reports the voice is no closer. After 30 minutes a face is seen on the landing below. No pupils. No nostrils. No mouth. The subject runs. It takes him much longer to go up than it took him to go down.",
+"es": "Una escalera sin luz, 38° de descenso, 13 escalones por tramo y un rellano semicircular. Visibilidad: tramo y medio. Sonidos de un niño, a unos 200 m por debajo, pidiendo ayuda. A los 22 minutos el sujeto informa de que la voz no está más cerca. A los 30 minutos se ve una cara en el rellano de abajo. Sin pupilas. Sin nariz. Sin boca. El sujeto corre. Tarda mucho más en subir de lo que tardó en bajar."
+},
+"source": "SCP-087 by Zaeyde · scp-wiki.wikidot.com/scp-087 · CC BY-SA 3.0"
+},
+"doc_087_bottom": {
+"title": {
+"en": "Scratched into the last landing",
+"es": "Rayado en el último rellano"
+},
+"body": {
+"en": "I came down to find her. There was no her. There is only down. - Dr. [name scratched out]",
+"es": "Bajé a buscarla. No había ella. Solo hay abajo. - Dr. [nombre tachado]"
+},
+"sanity": -6
 }
 }

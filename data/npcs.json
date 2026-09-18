@@ -90,7 +90,16 @@
 "sprite": "tomas",
 "portrait": "res://art/portraits/p_tomas.png",
 "voice": 0.78,
-"talk": []
+"talk": [
+[
+"met_tomas",
+"tomas_again"
+],
+[
+"",
+"tomas_first"
+]
+]
 },
 "adebayo": {
 "name": {

@@ -3672,5 +3672,830 @@
 }
 ]
 }
+],
+"enter:C01": [
+{
+"if": "!c01_seen",
+"then": [
+{
+"mark": "c01_seen"
+},
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "Level -3. The only light is the red pulse of the emergency lamps. Water drips somewhere. Something small runs.",
+"es": "Nivel -3. La única luz es el pulso rojo de las lámparas de emergencia. Gotea agua en algún sitio. Algo pequeño corre."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "Vega, the power for the lower levels was cut from here. The medical wing and the Heavy Containment lift are dead without it.",
+"es": "Vega, la energía de los niveles inferiores se cortó desde aquí. Sin ella, el ala médica y el ascensor de Contención Pesada están muertos."
+}
+],
+"who": "radio"
+},
+{
+"quest": [
+"main_power",
+1
+]
+},
+{
+"objective": {
+"en": "Find a way into the electrical substation.",
+"es": "Encuentra la forma de entrar en la subestación eléctrica."
+}
+}
+]
+}
+],
+"c04_spiders": [
+{
+"say": [
+{
+"en": "Webs hang from every pipe. Some of them twitch.",
+"es": "Hay telarañas colgando de cada tubería. Algunas se mueven."
+}
+],
+"who": ""
+},
+{
+"sanity": -3
+}
+],
+"c07_burn": [
+{
+"sfx": "gas_hiss",
+"db": -4
+},
+{
+"hp": -6,
+"cause": "wounds"
+}
+],
+"tomas_first": [
+{
+"mark": "met_tomas"
+},
+{
+"say": [
+{
+"en": "Stop right there. Slow. Show me your hands. ...Foundation. Figures.",
+"es": "Quieto ahí. Despacio. Enséñame las manos. ...Fundación. Cómo no."
+},
+{
+"en": "Thirty-one years I've mopped this place. Nobody comes down here. Not even the things that got out. Too many rats. They like the rats.",
+"es": "Treinta y un años fregando este sitio. Aquí no baja nadie. Ni siquiera las cosas que se escaparon. Demasiadas ratas. Les gustan las ratas."
+}
+],
+"who": "tomas"
+},
+{
+"choice": [
+{
+"text": {
+"en": "I need the substation keys.",
+"es": "Necesito las llaves de la subestación."
+},
+"do": [
+{
+"say": [
+{
+"en": "Course you do. Everybody needs something from Tomás. Nobody brings Tomás anything.",
+"es": "Claro. Todo el mundo necesita algo de Tomás. Nadie le trae nada a Tomás."
+}
+],
+"who": "tomas"
+}
+]
+},
+{
+"text": {
+"en": "How are you still alive?",
+"es": "¿Cómo sigues vivo?"
+},
+"do": [
+{
+"say": [
+{
+"en": "I know where not to be. And I don't look at things. Twenty years ago a doctor told me: 'Tomás, the less you see, the longer you live.' He saw something. I didn't.",
+"es": "Sé dónde no estar. Y no miro las cosas. Hace veinte años un doctor me dijo: 'Tomás, cuanto menos veas, más vivirás.' Él vio algo. Yo no."
+}
+],
+"who": "tomas"
+}
+]
+}
+],
+"who": "tomas",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "Here. Keys. And this card, Level 3. Took it off Dr. Mills in the pipes. He won't be needing it.",
+"es": "Toma. Llaves. Y esta tarjeta, nivel 3. Se la quité al Dr. Mills en las tuberías. No la va a necesitar."
+},
+{
+"en": "Fuses? The night crew hid them where nobody'd go: pump room, the old tunnel with the spiders, the boilers. Idiots.",
+"es": "¿Fusibles? El turno de noche los escondió donde nadie iría: sala de bombas, el túnel viejo de las arañas, las calderas. Idiotas."
+},
+{
+"en": "And if you see a grey cat... half a grey cat... that's Josie. She's mine. She likes cheese.",
+"es": "Y si ves una gata gris... media gata gris... es Josie. Es mía. Le gusta el queso."
+}
+],
+"who": "tomas"
+},
+{
+"give": "janitor_keys"
+},
+{
+"give": "card_3"
+},
+{
+"quest": [
+"main_power",
+2
+]
+},
+{
+"quest": [
+"side_josie",
+1
+]
+},
+{
+"objective": {
+"en": "Find the three fuses: pump room, spider tunnel, boiler room.",
+"es": "Encuentra los tres fusibles: bombas, túnel de las arañas, calderas."
+}
+}
+],
+"tomas_again": [
+{
+"if": "follow_josie",
+"then": [
+{
+"say": [
+{
+"en": "Josie! Josie, you stupid, beautiful half-a-cat. Come here.",
+"es": "¡Josie! Josie, media gata tonta y preciosa. Ven aquí."
+}
+],
+"who": "tomas"
+},
+{
+"unmark": "follow_josie"
+},
+{
+"mark": "josie_found"
+},
+{
+"quest": [
+"side_josie",
+-1
+]
+},
+{
+"say": [
+{
+"en": "...Thank you. Nobody's done a thing for me in this place in thirty years. Take these. And listen.",
+"es": "...Gracias. Nadie ha hecho nada por mí en este sitio en treinta años. Toma esto. Y escucha."
+},
+{
+"en": "The kids in D-block. Tuesday. I cleaned the acid room after last time. They said it was a 'drill'. It wasn't a drill.",
+"es": "Los chicos del bloque D. El martes. Limpié la sala del ácido después de la última vez. Dijeron que era un 'simulacro'. No era un simulacro."
+}
+],
+"who": "tomas"
+},
+{
+"give": "adrenaline"
+},
+{
+"give": "battery",
+"n": 2
+},
+{
+"mark": "tomas_told_acid"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Fuses. Pump room, tunnel, boilers. Then the big panel. Don't touch the red cable. I mean it.",
+"es": "Fusibles. Bombas, túnel, calderas. Luego el panel grande. No toques el cable rojo. Lo digo en serio."
+}
+],
+"who": "tomas"
+}
+]
+}
+],
+"josie_talk": [
+{
+"if": "follow_josie",
+"then": [
+{
+"say": [
+{
+"en": "Josie purrs and bumps her head against your boot. Her back half isn't there. She doesn't seem to mind.",
+"es": "Josie ronronea y te da cabezazos en la bota. Su mitad trasera no está. No parece importarle."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "A grey tabby cat. It ends at the ribcage: behind it there is only a flat, perfect black.",
+"es": "Una gata atigrada gris. Termina en las costillas: detrás solo hay un negro plano y perfecto."
+},
+{
+"en": "She walks as if her back legs were still there.",
+"es": "Camina como si sus patas traseras siguieran ahí."
+}
+],
+"who": ""
+},
+{
+"if": "item:cheese",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Offer the cheese",
+"es": "Ofrecerle el queso"
+},
+"do": [
+{
+"take": "cheese"
+},
+{
+"sfx": "squeak",
+"pitch": 0.6
+},
+{
+"say": [
+{
+"en": "She eats it in three bites, then decides you are her person now.",
+"es": "Se lo come en tres bocados y decide que ahora eres su persona."
+}
+],
+"who": ""
+},
+{
+"mark": "follow_josie"
+},
+{
+"quest": [
+"side_josie",
+2
+]
+}
+]
+},
+{
+"text": {
+"en": "Leave her",
+"es": "Dejarla"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "She ignores you with great dignity.",
+"es": "Te ignora con gran dignidad."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"enter:C06": [
+{
+"if": "!c06_seen",
+"then": [
+{
+"mark": "c06_seen"
+},
+{
+"quest": [
+"main_power",
+3
+]
+}
+]
+}
+],
+"c06_breaker1": [
+{
+"if": "breaker1",
+"then": [
+{
+"say": [
+{
+"en": "Breaker 1: fuse seated. Ready.",
+"es": "Interruptor 1: fusible colocado. Listo."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "item:fuse",
+"then": [
+{
+"take": "fuse"
+},
+{
+"sfx": "lock_click"
+},
+{
+"mark": "breaker1"
+},
+{
+"say": [
+{
+"en": "You slide a fuse into breaker 1. It clicks home.",
+"es": "Metes un fusible en el interruptor 1. Encaja con un clic."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "An empty fuse slot. 400 A.",
+"es": "Un hueco vacío para fusible. 400 A."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"c06_breaker2": [
+{
+"if": "breaker2",
+"then": [
+{
+"say": [
+{
+"en": "Breaker 2: fuse seated. Ready.",
+"es": "Interruptor 2: fusible colocado. Listo."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "item:fuse",
+"then": [
+{
+"take": "fuse"
+},
+{
+"sfx": "lock_click"
+},
+{
+"mark": "breaker2"
+},
+{
+"say": [
+{
+"en": "You slide a fuse into breaker 2. It clicks home.",
+"es": "Metes un fusible en el interruptor 2. Encaja con un clic."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "An empty fuse slot. 400 A.",
+"es": "Un hueco vacío para fusible. 400 A."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"c06_breaker3": [
+{
+"if": "breaker3",
+"then": [
+{
+"say": [
+{
+"en": "Breaker 3: fuse seated. Ready.",
+"es": "Interruptor 3: fusible colocado. Listo."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "item:fuse",
+"then": [
+{
+"take": "fuse"
+},
+{
+"sfx": "lock_click"
+},
+{
+"mark": "breaker3"
+},
+{
+"say": [
+{
+"en": "You slide a fuse into breaker 3. It clicks home.",
+"es": "Metes un fusible en el interruptor 3. Encaja con un clic."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "An empty fuse slot. 400 A.",
+"es": "Un hueco vacío para fusible. 400 A."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"c06_console": [
+{
+"if": "power_on",
+"then": [
+{
+"say": [
+{
+"en": "MAIN BUS: ONLINE.",
+"es": "BUS PRINCIPAL: EN LÍNEA."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "breaker1,breaker2,breaker3",
+"then": [
+{
+"sfx": "breaker",
+"db": 4
+},
+{
+"shake": 1.0,
+"power": 3
+},
+{
+"mark": "power_on"
+},
+{
+"call": "relight"
+},
+{
+"sfx": "power_up",
+"db": 2
+},
+{
+"call": "refresh_doors"
+},
+{
+"say": [
+{
+"en": "The panel roars. Somewhere above and below you, thousands of lights come on at once.",
+"es": "El panel ruge. Por encima y por debajo de ti, miles de luces se encienden a la vez."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "Power is back on -3 to -5. Well done, Vega. The medical wing is open. The HCZ lift needs Level 4.",
+"es": "La energía ha vuelto de -3 a -5. Bien hecho, Vega. El ala médica está abierta. El ascensor de ZCP necesita nivel 4."
+}
+],
+"who": "radio"
+},
+{
+"say": [
+{
+"en": "Vega, it's Ortega. I heard. The HCZ generator has to be started by hand or the lift won't hold.",
+"es": "Vega, soy Ortega. Me he enterado. El generador de ZCP hay que arrancarlo a mano o el ascensor no aguantará."
+},
+{
+"en": "I'm going down the service shaft. Don't argue. The kid's safe with the door locked.",
+"es": "Voy a bajar por el pozo de servicio. No discutas. El chico está a salvo con la puerta cerrada."
+}
+],
+"who": "ortega"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Ortega, wait for me.",
+"es": "Ortega, espérame."
+},
+"do": [
+{
+"say": [
+{
+"en": "No time. See you down there.",
+"es": "No hay tiempo. Nos vemos abajo."
+}
+],
+"who": "ortega"
+}
+]
+},
+{
+"text": {
+"en": "Be careful.",
+"es": "Ten cuidado."
+},
+"do": [
+{
+"say": [
+{
+"en": "Always am.",
+"es": "Siempre lo tengo."
+}
+],
+"who": "ortega"
+}
+]
+}
+],
+"who": "vega",
+"prompt": ""
+},
+{
+"mark": "ortega_went_hcz"
+},
+{
+"quest": [
+"main_power",
+-1
+]
+},
+{
+"objective": {
+"en": "Enter the medical wing (east of the maintenance junction).",
+"es": "Entra en el ala médica (al este del cruce de mantenimiento)."
+}
+},
+{
+"save": true
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "MAIN BUS: FAULT. Breakers 1-3 need fuses.",
+"es": "BUS PRINCIPAL: FALLO. Los interruptores 1-3 necesitan fusibles."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"item:fuse": [
+{
+"if": "!quest:main_power:2",
+"then": [
+{
+"quest": [
+"main_power",
+2
+]
+}
+]
+}
+],
+"enter:C08": [
+{
+"if": "!c08_seen",
+"then": [
+{
+"mark": "c08_seen"
+},
+{
+"quest": [
+"side_087",
+1
+]
+}
+]
+}
+],
+"enter:C09": [
+{
+"if": "!c09_seen",
+"then": [
+{
+"mark": "c09_seen"
+},
+{
+"quest": [
+"side_087",
+2
+]
+},
+{
+"say": [
+{
+"en": "Your flashlight reaches barely a flight ahead. The dark below swallows the rest.",
+"es": "La linterna apenas llega a un tramo. La oscuridad de abajo se traga el resto."
+}
+],
+"who": ""
+},
+{
+"sfx": "child_cry",
+"db": -12
+}
+]
+}
+],
+"c09_depth1": [
+{
+"sfx": "child_cry",
+"db": -8
+},
+{
+"say": [
+{
+"en": "A child's voice, far below: 'Help me... please...'",
+"es": "Una voz de niño, muy abajo: 'Ayúdame... por favor...'"
+}
+],
+"who": ""
+}
+],
+"c09_depth2": [
+{
+"sfx": "child_cry",
+"db": -6
+},
+{
+"say": [
+{
+"en": "You have gone down further than the building is deep. The voice is no closer.",
+"es": "Has bajado más de lo que mide el edificio. La voz no está más cerca."
+}
+],
+"who": ""
+},
+{
+"sanity": -6
+}
+],
+"c09_depth3": [
+{
+"sfx": "child_cry",
+"db": -4
+},
+{
+"say": [
+{
+"en": "The steps are wet. You don't remember how many flights. You count again. You get a different number.",
+"es": "Los escalones están húmedos. No recuerdas cuántos tramos. Vuelves a contar. Te sale otro número."
+}
+],
+"who": ""
+},
+{
+"sanity": -8
+}
+],
+"c09_face": [
+{
+"if": "!saw_087",
+"then": [
+{
+"lights": "off"
+},
+{
+"music": ""
+},
+{
+"wait": 1.2
+},
+{
+"sfx": "static_burst",
+"db": -4
+},
+{
+"flash": 1,
+"color": "#e8e8f0"
+},
+{
+"say": [
+{
+"en": "On the landing below, a face. Pale. No pupils. No nostrils. No mouth.",
+"es": "En el rellano de abajo, una cara. Pálida. Sin pupilas. Sin nariz. Sin boca."
+},
+{
+"en": "It is not the child. It was never the child.",
+"es": "No es el niño. Nunca fue el niño."
+}
+],
+"who": ""
+},
+{
+"sfx": "heartbeat",
+"db": 2
+},
+{
+"shake": 1.5,
+"power": 2
+},
+{
+"sanity": -30
+},
+{
+"mark": "saw_087"
+},
+{
+"doc": "doc_087_bottom"
+},
+{
+"quest": [
+"side_087",
+-1
+]
+},
+{
+"objective": {
+"en": "Get out of the stairwell.",
+"es": "Sal de la escalera."
+}
+}
+]
+}
+],
+"enter:C05": [
+{
+"if": "follow_josie,!josie_found",
+"then": [
+{
+"wait": 0.3
+},
+{
+"run": "tomas_again"
+}
+]
+}
 ]
 }

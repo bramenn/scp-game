@@ -494,5 +494,53 @@
 "en": "Adebayo's notebook",
 "es": "El cuaderno de Adebayo"
 }
+},
+"doc_power_memo": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Maintenance memo",
+"es": "Nota de mantenimiento"
+}
+},
+"doc_tomas_note": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Scrawled on a pipe",
+"es": "Garabateado en una tubería"
+}
+},
+"doc_substation": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Burnt logbook",
+"es": "Bitácora quemada"
+}
+},
+"doc_087_warning": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Warning sign, torn",
+"es": "Cartel de aviso, rasgado"
+}
+},
+"doc_087_log": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Exploration log 087-I (excerpt)",
+"es": "Registro de exploración 087-I (extracto)"
+}
+},
+"doc_087_bottom": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Scratched into the last landing",
+"es": "Rayado en el último rellano"
+}
 }
 }

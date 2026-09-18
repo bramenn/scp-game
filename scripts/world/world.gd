@@ -199,6 +199,8 @@ func load_map(map_id: String, spawn: String, at := Vector2i(-1, -1), fade := tru
 
 func _apply_env(env: Dictionary) -> void:
 	ambient.color = Color(env.get("ambient", "#343844"))
+	if env.has("ambient_power") and st.has("power_on"):
+		ambient.color = Color(env.ambient_power)
 	if fog:
 		fog.queue_free()
 		fog = null
@@ -243,6 +245,8 @@ func _make_dust() -> CPUParticles2D:
 
 func _spawn_lights(d: Dictionary) -> void:
 	for l in d.get("lights", []):
+		if l.size() > 7 and not st.check(String(l[7])):
+			continue
 		var pl := PointLight2D.new()
 		var kind := String(l[2])
 		pl.position = Vector2(float(l[0]) * TILE + 8, float(l[1]) * TILE + 8)
@@ -340,12 +344,26 @@ func _spawn_npcs(d: Dictionary) -> void:
 		actors.append(a)
 
 
+func _free_near(t: Vector2i) -> Vector2i:
+	for d in [Vector2i.DOWN, Vector2i.UP, Vector2i.LEFT, Vector2i.RIGHT, Vector2i(1, 1), Vector2i(-1, 1), Vector2i(0, 2)]:
+		var c: Vector2i = t + d
+		if is_free(c) and not view.door_at.has(c) and view.exit_at(c) == null:
+			return c
+	return t
+
+
 ## NPCs with the flag "follow:<id>" come along to every map, appearing next to the player.
 func _spawn_followers() -> void:
 	if st.has("bond131") and not actors.any(func(a): return a.has_method("watches")):
 		for i in 2:
 			Actors.spawn(self, {"id": "scp131", "x": player.tile.x, "y": player.tile.y + 1,
 				"sprite": "scp131a" if i == 0 else "scp131b", "offset": i})
+	if st.has("follow049") and not st.has("scp049_contained") and not actors.any(func(a): return a.get_script().resource_path.ends_with("scp049.gd")):
+		var c := _free_near(player.tile)
+		Actors.spawn(self, {"id": "scp049", "x": c.x, "y": c.y, "sprite": "scp049"})
+	if st.has("follow_josie") and not actors.any(func(a): return a.get_script().resource_path.ends_with("scp529.gd")):
+		var cj := _free_near(player.tile)
+		Actors.spawn(self, {"id": "scp529", "x": cj.x, "y": cj.y, "sprite": "scp529", "event": "josie_talk"})
 	for f in st.flags:
 		if not String(f).begins_with("follow:") or not st.has(f):
 			continue
@@ -685,6 +703,12 @@ func special(name: String, args: Array) -> void:
 			st.sanity = maxf(st.sanity, 80.0)
 		"refresh_doors":
 			_refresh_doors()
+		"relight":   # re-evaluate conditional lights and the ambient (e.g. after power comes back)
+			for l in lights:
+				l.queue_free()
+			lights.clear()
+			_spawn_lights(view.data)
+			_apply_env(view.data.get("env", {}))
 		_:
 			for a in actors:
 				if a.has_method("special") and await a.special(name, args):
