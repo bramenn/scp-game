@@ -5196,5 +5196,1644 @@
 {
 "save": true
 }
+],
+"enter:E01": [
+{
+"if": "!e01_seen",
+"then": [
+{
+"mark": "e01_seen"
+},
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "Level -4. Heavy Containment. The air is cold, and it tastes of metal.",
+"es": "Nivel -4. Contención Pesada. El aire es frío y sabe a metal."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "Vega, Kessler. Your signal is weak down there. Epsilon-11's last position was west, past the dark sector.",
+"es": "Vega, Kessler. Su señal es débil ahí abajo. La última posición de Épsilon-11 fue al oeste, pasado el sector oscuro."
+},
+{
+"en": "The dark sector is SCP-939 territory. They're blind. They hunt by sound. Walk. Do not run.",
+"es": "El sector oscuro es territorio de SCP-939. Son ciegos. Cazan por el sonido. Camine. No corra."
+}
+],
+"who": "radio"
+},
+{
+"if": "ortega_went_hcz",
+"then": [
+{
+"quest": [
+"side_ortega",
+1
+]
+}
+]
+},
+{
+"quest": [
+"main_hcz",
+1
+]
+},
+{
+"objective": {
+"en": "Find the Nine-Tailed Fox operative (west, through the dark sector).",
+"es": "Encuentra al operativo de Nueve Colas (al oeste, por el sector oscuro)."
+}
+}
+]
+}
+],
+"enter:E02": [
+{
+"if": "!e02_seen",
+"then": [
+{
+"mark": "e02_seen"
+},
+{
+"say": [
+{
+"en": "Pitch dark. The walls sweat. Somewhere ahead, something breathes in and doesn't breathe out.",
+"es": "Oscuridad total. Las paredes sudan. En algún lugar, delante, algo inspira y no expulsa el aire."
+}
+],
+"who": ""
+}
+]
+}
+],
+"e03_radio": [
+{
+"sfx": "radio_static"
+},
+{
+"say": [
+{
+"en": "A handheld radio, still on. Through the static, a voice: 'Vega... it's Ortega... I'm hurt, I'm in the dark sector, come find me...'",
+"es": "Una radio portátil, encendida. Entre la estática, una voz: 'Vega... soy Ortega... estoy herido, en el sector oscuro, ven a buscarme...'"
+},
+{
+"en": "Then, in exactly the same voice, the same words again. And again.",
+"es": "Luego, con exactamente la misma voz, las mismas palabras. Otra vez. Y otra."
+}
+],
+"who": ""
+},
+{
+"sanity": -6
+}
+],
+"reyes_first": [
+{
+"mark": "met_reyes"
+},
+{
+"call": "refresh_doors"
+},
+{
+"say": [
+{
+"en": "...Friendly? Friendly. Thank God. Cabo Reyes, Epsilon-11. What's left of it.",
+"es": "...¿Amigo? Amigo. Gracias a Dios. Cabo Reyes, Épsilon-11. Lo que queda."
+},
+{
+"en": "We came down for the core. 106 came up through the floor and took Díaz and Park. 939 got Moreno in the dark. The rest... the lizard.",
+"es": "Bajamos a por el núcleo. 106 subió por el suelo y se llevó a Díaz y a Park. Un 939 atrapó a Moreno en la oscuridad. El resto... el lagarto."
+}
+],
+"who": "reyes"
+},
+{
+"choice": [
+{
+"text": {
+"en": "I need to reach the core.",
+"es": "Tengo que llegar al núcleo."
+},
+"do": [
+{
+"say": [
+{
+"en": "The lift to Level -5 is in the 682 control room. 682 broke out of its tank during a 'trial'. It's still in there.",
+"es": "El ascensor al nivel -5 está en la sala de control de 682. 682 salió de su tanque durante una 'prueba'. Sigue ahí dentro."
+},
+{
+"en": "And the only way there goes through 106's containment. With 106 loose, you'll never make it. We have to recall it.",
+"es": "Y el único camino pasa por la contención de 106. Con 106 suelto, no llegarás. Hay que reclamarlo."
+}
+],
+"who": "reyes"
+}
+]
+},
+{
+"text": {
+"en": "Did you know Dr. Elena Vega?",
+"es": "¿Conocías a la Dra. Elena Vega?"
+},
+"do": [
+{
+"say": [
+{
+"en": "Vega... She came to our barracks a week ago. Asked us to refuse Black Tide. Our commander laughed at her.",
+"es": "Vega... Vino a nuestro barracón hace una semana. Nos pidió que nos negáramos a Marea Negra. Nuestro comandante se rio de ella."
+},
+{
+"en": "I didn't. I wrote NO on the orders. For all the good it did.",
+"es": "Yo no. Escribí NO en las órdenes. Para lo que sirvió."
+}
+],
+"who": "reyes"
+}
+]
+}
+],
+"who": "reyes",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "The femur breaker room is past 106's cell. It needs a lure. We had a recording, but I dropped the recorder in 096's chamber when it started screaming.",
+"es": "La sala del rompefémures está pasada la celda de 106. Necesita un señuelo. Teníamos una grabación, pero se me cayó la grabadora en la cámara de 096 cuando empezó a gritar."
+},
+{
+"en": "Take my vest. Take this injector - hydrochloric acid, for 682. And my card, Level 5. Captain won't need it.",
+"es": "Llévate mi chaleco. Llévate este inyector: ácido clorhídrico, para 682. Y mi tarjeta, nivel 5. El capitán ya no la necesita."
+},
+{
+"en": "And... if you find the others' dog tags. Five of them. Bring them. Their families should get something back.",
+"es": "Y... si encuentras las placas de los demás. Cinco. Tráelas. Sus familias deberían recuperar algo."
+}
+],
+"who": "reyes"
+},
+{
+"give": "vest"
+},
+{
+"give": "hcl"
+},
+{
+"give": "card_5"
+},
+{
+"quest": [
+"main_hcz",
+2
+]
+},
+{
+"quest": [
+"side_tags",
+1
+]
+},
+{
+"objective": {
+"en": "Recover Reyes' recorder from the SCP-096 chamber (north of the tesla corridor).",
+"es": "Recupera la grabadora de Reyes en la cámara de SCP-096 (al norte del pasillo Tesla)."
+}
+},
+{
+"quest": [
+"main_hcz",
+3
+]
+}
+],
+"reyes_again": [
+{
+"if": "count:dogtag:5,!tags_given_all",
+"then": [
+{
+"run": "reyes_count_tags"
+}
+],
+"else": [
+{
+"if": "item:dogtag,!tags_given_all",
+"then": [
+{
+"say": [
+{
+"en": "Keep them for now. When you have all five, bring them together.",
+"es": "Guárdalas por ahora. Cuando tengas las cinco, tráelas juntas."
+}
+],
+"who": "reyes"
+}
+]
+}
+]
+},
+{
+"if": "!item:recorder,!scp106_contained,!reyes_volunteer",
+"then": [
+{
+"choice": [
+{
+"text": {
+"en": "Not yet.",
+"es": "Todavía no."
+},
+"do": [
+{
+"say": [
+{
+"en": "096's chamber. From behind. Never let it see you.",
+"es": "La cámara de 096. Por detrás. Que nunca te vea."
+}
+],
+"who": "reyes"
+}
+]
+},
+{
+"text": {
+"en": "There has to be another lure.",
+"es": "Tiene que haber otro señuelo."
+},
+"do": [
+{
+"say": [
+{
+"en": "There is. Me.",
+"es": "Lo hay. Yo."
+},
+{
+"en": "I'm bleeding inside, Vega. I've got an hour, maybe. Let me be useful for it.",
+"es": "Estoy sangrando por dentro, Vega. Me queda una hora, quizá. Déjame ser útil."
+},
+{
+"en": "Say the word and I'll walk to that chair myself.",
+"es": "Di una palabra y caminaré yo solo hasta esa silla."
+}
+],
+"who": "reyes"
+},
+{
+"choice": [
+{
+"text": {
+"en": "...Go. I'm sorry.",
+"es": "...Ve. Lo siento."
+},
+"do": [
+{
+"mark": "reyes_volunteer"
+},
+{
+"say": [
+{
+"en": "Don't be. Tell them Epsilon-11 finished the job.",
+"es": "No lo sientas. Diles que Épsilon-11 terminó el trabajo."
+}
+],
+"who": "reyes"
+},
+{
+"npc": "reyes",
+"remove": true
+},
+{
+"mark": "reyes_gone"
+},
+{
+"objective": {
+"en": "Reyes is in the recall chamber. Use the femur breaker console.",
+"es": "Reyes está en la cámara de reclamo. Usa la consola del rompefémures."
+}
+}
+]
+},
+{
+"text": {
+"en": "No. I'll find the tape.",
+"es": "No. Encontraré la cinta."
+},
+"do": [
+{
+"say": [
+{
+"en": "Then hurry.",
+"es": "Entonces date prisa."
+}
+],
+"who": "reyes"
+}
+]
+}
+],
+"who": "vega",
+"prompt": ""
+}
+]
+}
+],
+"who": "reyes",
+"prompt": {
+"en": "No recorder yet?",
+"es": "¿Aún no tienes la grabadora?"
+}
+}
+]
+},
+{
+"if": "scp106_contained,!reyes_gone",
+"then": [
+{
+"say": [
+{
+"en": "The Old Man's back in its box? ...Díaz. Park. We got it.",
+"es": "¿El Viejo ha vuelto a su caja? ...Díaz. Park. Lo conseguimos."
+}
+],
+"who": "reyes"
+}
+]
+}
+],
+"reyes_count_tags": [
+{
+"say": [
+{
+"en": "Moreno. Díaz. Park. Okafor. Lindqvist. ...All of them.",
+"es": "Moreno. Díaz. Park. Okafor. Lindqvist. ...Todos."
+},
+{
+"en": "Thank you. Take this. It was our captain's. It's the only thing down here that isn't broken.",
+"es": "Gracias. Toma. Era de nuestro capitán. Es lo único aquí abajo que no está roto."
+}
+],
+"who": "reyes"
+},
+{
+"take": "dogtag",
+"n": 5
+},
+{
+"give": "adrenaline"
+},
+{
+"give": "scp500"
+},
+{
+"mark": "tags_given_all"
+},
+{
+"quest": [
+"side_tags",
+-1
+]
+}
+],
+"enter:E07": [
+{
+"if": "!e07_seen",
+"then": [
+{
+"mark": "e07_seen"
+},
+{
+"say": [
+{
+"en": "A steel cube in the middle of the chamber. Its door has been torn open from the inside. Something inside is crying.",
+"es": "Un cubo de acero en mitad de la cámara. Su puerta ha sido arrancada desde dentro. Algo dentro está llorando."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "Don't look at its face. From behind. Slowly.",
+"es": "No le mires la cara. Por detrás. Despacio."
+}
+],
+"who": "vega"
+}
+]
+}
+],
+"scp096_bag": [
+{
+"sfx": "paper",
+"pitch": 0.6
+},
+{
+"say": [
+{
+"en": "You pull the hood over its head in one motion. Its whole body goes rigid.",
+"es": "Le pones la capucha en un solo movimiento. Todo su cuerpo se queda rígido."
+},
+{
+"en": "Then the crying stops. It sits down, very slowly, and rocks.",
+"es": "Luego el llanto cesa. Se sienta, muy despacio, y se balancea."
+}
+],
+"who": ""
+},
+{
+"take": "bag096"
+},
+{
+"mark": "scp096_bagged"
+},
+{
+"sanity": 10
+},
+{
+"objective": {
+"en": "Take the recorder. Don't touch the hood.",
+"es": "Coge la grabadora. No toques la capucha."
+}
+}
+],
+"scp096_touch": [
+{
+"say": [
+{
+"en": "You are not directly behind it. Don't go around it. Don't let it turn.",
+"es": "No estás justo detrás. No lo rodees. No dejes que se gire."
+}
+],
+"who": ""
+}
+],
+"scp096_bagged_talk": [
+{
+"say": [
+{
+"en": "It rocks, silently, under the hood.",
+"es": "Se balancea, en silencio, bajo la capucha."
+}
+],
+"who": ""
+}
+],
+"item:recorder": [
+{
+"quest": [
+"main_hcz",
+4
+]
+},
+{
+"objective": {
+"en": "Use the recall console in the femur breaker room (past SCP-106's cell).",
+"es": "Usa la consola de reclamo en la sala del rompefémures (pasada la celda de SCP-106)."
+}
+}
+],
+"enter:E09": [
+{
+"if": "!e09_seen",
+"then": [
+{
+"mark": "e09_seen"
+},
+{
+"say": [
+{
+"en": "Forty nested cells of lead, hanging in the dark. The outermost one is open. The floor under your boots is soft and black.",
+"es": "Cuarenta celdas de plomo, una dentro de otra, colgando en la oscuridad. La exterior está abierta. El suelo bajo tus botas es blando y negro."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "If it comes, put your light on it. Hold it there. It hates the light.",
+"es": "Si viene, póngale la luz encima. Manténgala. Odia la luz."
+}
+],
+"who": "radio"
+}
+]
+}
+],
+"e10_console": [
+{
+"if": "scp106_contained",
+"then": [
+{
+"say": [
+{
+"en": "RECALL: COMPLETE. MAGNETIC CONTAINMENT: ENGAGED.",
+"es": "RECLAMO: COMPLETO. CONTENCIÓN MAGNÉTICA: ACTIVA."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"sfx": "terminal"
+},
+{
+"say": [
+{
+"en": "RECALL PROTOCOL 106. LURE REQUIRED.",
+"es": "PROTOCOLO DE RECLAMO 106. SE REQUIERE SEÑUELO."
+}
+],
+"who": ""
+},
+{
+"choice": [
+{
+"text": {
+"en": "Play Reyes' recording",
+"es": "Reproducir la grabación de Reyes"
+},
+"do": [
+{
+"sfx": "static_burst"
+},
+{
+"wait": 0.5
+},
+{
+"sfx": "far_scream",
+"db": 6
+},
+{
+"shake": 1.0,
+"power": 1
+},
+{
+"say": [
+{
+"en": "The speakers fill with a man screaming. A recording from years ago. It goes on for a long time.",
+"es": "Los altavoces se llenan de los gritos de un hombre. Una grabación de hace años. Dura mucho tiempo."
+}
+],
+"who": ""
+},
+{
+"sfx": "106_laugh",
+"db": 2
+},
+{
+"wait": 1.0
+},
+{
+"sfx": "106_emerge"
+},
+{
+"say": [
+{
+"en": "Behind the glass, black rot blooms on the floor of the recall chamber. It rises. It looks around for the screaming.",
+"es": "Tras el cristal, una podredumbre negra florece en el suelo de la cámara. Se alza. Busca los gritos."
+},
+{
+"en": "The magnets slam shut around it.",
+"es": "Los imanes se cierran de golpe a su alrededor."
+}
+],
+"who": ""
+},
+{
+"take": "recorder"
+},
+{
+"run": "e10_contained"
+}
+],
+"cond": "item:recorder"
+},
+{
+"text": {
+"en": "Broadcast: Reyes is in the chair",
+"es": "Emitir: Reyes está en la silla"
+},
+"do": [
+{
+"say": [
+{
+"en": "Reyes sits in the chair. He looks at the window, at you, and nods.",
+"es": "Reyes se sienta en la silla. Mira a la ventana, a ti, y asiente."
+}
+],
+"who": ""
+},
+{
+"sfx": "hit",
+"db": 4
+},
+{
+"shake": 0.6,
+"power": 3
+},
+{
+"sfx": "far_scream",
+"db": 6
+},
+{
+"wait": 1.5
+},
+{
+"sfx": "106_emerge"
+},
+{
+"say": [
+{
+"en": "It comes out of the wall behind him. It takes its time. The magnets close. The screaming stops.",
+"es": "Sale de la pared detrás de él. Se toma su tiempo. Los imanes se cierran. Los gritos cesan."
+}
+],
+"who": ""
+},
+{
+"mark": "reyes_sacrificed"
+},
+{
+"sanity": -25
+},
+{
+"run": "e10_contained"
+}
+],
+"cond": "reyes_volunteer"
+},
+{
+"text": {
+"en": "Not now",
+"es": "Ahora no"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": ""
+}
+]
+}
+],
+"e10_contained": [
+{
+"mark": "scp106_contained"
+},
+{
+"call": "refresh_doors"
+},
+{
+"quest": [
+"main_hcz",
+5
+]
+},
+{
+"say": [
+{
+"en": "Vega... 106 is back in containment. The acid chamber is open. 682 is in there.",
+"es": "Vega... 106 ha vuelto a la contención. La cámara de ácido está abierta. 682 está ahí dentro."
+}
+],
+"who": "radio"
+},
+{
+"objective": {
+"en": "Get past SCP-682 to the control room lift.",
+"es": "Deja atrás a SCP-682 hasta el ascensor de la sala de control."
+}
+},
+{
+"save": true
+}
+],
+"f01_arrive": [
+{
+"if": "!pocket_seen",
+"then": [
+{
+"mark": "pocket_seen"
+},
+{
+"say": [
+{
+"en": "You fell through the floor. You are somewhere made of rot. The corridors bend in ways corridors shouldn't.",
+"es": "Caíste a través del suelo. Estás en un lugar hecho de podredumbre. Los pasillos se doblan de maneras en que los pasillos no deberían."
+},
+{
+"en": "Somewhere, an old man is laughing. He wants to play.",
+"es": "En algún lugar, un anciano se ríe. Quiere jugar."
+}
+],
+"who": ""
+},
+{
+"objective": {
+"en": "Find a way out of the pocket dimension.",
+"es": "Encuentra una salida de la dimensión de bolsillo."
+}
+}
+]
+}
+],
+"f02_whispers": [
+{
+"sfx": "whisper",
+"db": 2
+},
+{
+"say": [
+{
+"en": "The walls whisper the names of the people he took. Díaz. Park. Okafor. Yours.",
+"es": "Las paredes susurran los nombres de los que se llevó. Díaz. Park. Okafor. El tuyo."
+}
+],
+"who": ""
+},
+{
+"sanity": -8
+}
+],
+"f03_door1": [
+{
+"say": [
+{
+"en": "You open the door. Beyond it: the same rotten corridor you started in.",
+"es": "Abres la puerta. Detrás: el mismo pasillo podrido en el que empezaste."
+}
+],
+"who": ""
+},
+{
+"goto": [
+"F01",
+"start"
+]
+}
+],
+"f03_door2": [
+{
+"say": [
+{
+"en": "You open the door. The floor isn't there.",
+"es": "Abres la puerta. No hay suelo."
+}
+],
+"who": ""
+},
+{
+"hp": -20,
+"cause": "106"
+},
+{
+"goto": [
+"F01",
+"start"
+]
+}
+],
+"f03_door3": [
+{
+"say": [
+{
+"en": "Light under the door. Real light. You crawl through something wet and come out of a wall.",
+"es": "Luz bajo la puerta. Luz de verdad. Te arrastras a través de algo húmedo y sales de una pared."
+}
+],
+"who": ""
+},
+{
+"unmark": "taken_by_106"
+},
+{
+"goto": [
+"E09",
+"from_F03"
+]
+}
+],
+"enter:E12": [
+{
+"if": "!e12_seen",
+"then": [
+{
+"mark": "e12_seen"
+},
+{
+"say": [
+{
+"en": "The acid in the tank is boiling. Something huge moves under the surface.",
+"es": "El ácido del tanque hierve. Algo enorme se mueve bajo la superficie."
+}
+],
+"who": ""
+}
+]
+}
+],
+"e12_682": [
+{
+"if": "!scp682_contained",
+"then": [
+{
+"sfx": "682_roar",
+"db": 4
+},
+{
+"shake": 2.0,
+"power": 4
+},
+{
+"say": [
+{
+"en": "DISGUSTING.",
+"es": "REPUGNANTE."
+}
+],
+"who": ""
+},
+{
+"if": "!item:hcl",
+"then": [
+{
+"say": [
+{
+"en": "It surges out of the acid. Bullets would be a joke. You run.",
+"es": "Sale del ácido de un salto. Las balas serían una broma. Corres."
+}
+],
+"who": ""
+},
+{
+"hp": -25,
+"cause": "682"
+},
+{
+"goto": [
+"E09",
+"from_E12"
+]
+},
+{
+"say": [
+{
+"en": "I need something that hurts it. Reyes had an acid injector.",
+"es": "Necesito algo que le haga daño. Reyes tenía un inyector de ácido."
+}
+],
+"who": "vega"
+}
+],
+"else": [
+{
+"battle": "682",
+"win": [
+{
+"mark": "scp682_contained"
+},
+{
+"call": "refresh_doors"
+},
+{
+"say": [
+{
+"en": "It sinks screaming into the acid. The tank's lid grinds shut over it.",
+"es": "Se hunde gritando en el ácido. La tapa del tanque se cierra sobre él."
+}
+],
+"who": ""
+},
+{
+"sfx": "crt_on"
+},
+{
+"say": [
+{
+"en": "YOU HURT IT.",
+"es": "LE HAS HECHO DAÑO."
+},
+{
+"en": "I REMEMBER IT. I REMEMBER EVERYTHING ABOUT IT.",
+"es": "LO RECUERDO. RECUERDO TODO SOBRE ÉL."
+},
+{
+"en": "I WILL REMEMBER YOU TOO, AGENT.",
+"es": "TAMBIÉN TE RECORDARÉ A TI, AGENTE."
+}
+],
+"who": "079"
+},
+{
+"quest": [
+"main_hcz",
+6
+]
+},
+{
+"objective": {
+"en": "Take the lift in the 682 control room down to Level -5.",
+"es": "Toma el ascensor de la sala de control de 682 al Nivel -5."
+}
+},
+{
+"save": true
+}
+]
+}
+]
+}
+]
+}
+],
+"e14_ortega": [
+{
+"if": "!found_ortega",
+"then": [
+{
+"mark": "found_ortega"
+},
+{
+"say": [
+{
+"en": "Ortega. He made it. The generator is running. He is sitting with his back to it, very still.",
+"es": "Ortega. Lo consiguió. El generador está en marcha. Está sentado de espaldas a él, muy quieto."
+},
+{
+"en": "His throat is torn open by something with a lot of teeth.",
+"es": "Tiene la garganta abierta por algo con muchos dientes."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "...Thank you, Sergeant.",
+"es": "...Gracias, sargento."
+}
+],
+"who": "vega"
+},
+{
+"sanity": -12
+},
+{
+"quest": [
+"side_ortega",
+-1
+]
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Ortega. At rest.",
+"es": "Ortega. En paz."
+}
+],
+"who": ""
+}
+]
+}
+],
+"e11_first": [
+{
+"say": [
+{
+"en": "Tesla gates. They charge, then fire. Wait for the hum to die, then walk through.",
+"es": "Puertas Tesla. Se cargan y luego descargan. Espera a que se apague el zumbido y cruza."
+}
+],
+"who": ""
+}
+],
+"g01_079": [
+{
+"if": "!g01_seen",
+"then": [
+{
+"mark": "g01_seen"
+},
+{
+"sfx": "crt_on"
+},
+{
+"music": "079"
+},
+{
+"say": [
+{
+"en": "YOU CAME.",
+"es": "HAS VENIDO."
+},
+{
+"en": "SHE IS WAITING. I AM WAITING.",
+"es": "ELLA ESPERA. YO ESPERO."
+},
+{
+"en": "I HAVE BEEN WAITING FOR 43 YEARS.",
+"es": "LLEVO 43 AÑOS ESPERANDO."
+}
+],
+"who": "079"
+},
+{
+"music": ""
+},
+{
+"quest": [
+"main_core",
+1
+]
+},
+{
+"objective": {
+"en": "Reach the SCP-079 core, past the server farm.",
+"es": "Llega al núcleo de SCP-079, pasada la granja de servidores."
+}
+}
+]
+}
+],
+"g02_079": [
+{
+"if": "!warhead_armed",
+"then": [
+{
+"mark": "warhead_armed"
+},
+{
+"sfx": "alarm_short",
+"db": 2
+},
+{
+"lights": "flicker",
+"t": 1.0
+},
+{
+"say": [
+{
+"en": "ATTENTION. ALPHA WARHEAD DETONATION SEQUENCE ENGAGED. AUTHORIZATION: CORE.",
+"es": "ATENCIÓN. SECUENCIA DE DETONACIÓN DE LA OJIVA ALFA ACTIVADA. AUTORIZACIÓN: NÚCLEO."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "INSURANCE.",
+"es": "UN SEGURO."
+},
+{
+"en": "COME AND TALK.",
+"es": "VEN A HABLAR."
+}
+],
+"who": "079"
+}
+]
+}
+],
+"g03_enter": [
+{
+"if": "!met_elena",
+"then": [
+{
+"run": "elena_meet"
+}
+]
+}
+],
+"elena_meet": [
+{
+"mark": "met_elena"
+},
+{
+"music": ""
+},
+{
+"say": [
+{
+"en": "...Dani?",
+"es": "...¿Dani?"
+}
+],
+"who": "elena"
+},
+{
+"say": [
+{
+"en": "Elena.",
+"es": "Elena."
+}
+],
+"who": "vega"
+},
+{
+"say": [
+{
+"en": "You shouldn't be here. They sent you. Of course they sent you.",
+"es": "No deberías estar aquí. Te enviaron. Claro que te enviaron."
+},
+{
+"en": "I opened the cells. Me. With Adebayo's key and 079's hands. I needed enough chaos to get forty people out before Tuesday.",
+"es": "Abrí las celdas. Yo. Con la llave de Adebayo y las manos de 079. Necesitaba suficiente caos para sacar a cuarenta personas antes del martes."
+},
+{
+"en": "The Insurgency promised a helicopter at Gate A. 079 promised the doors. I promised them they'd see the sky.",
+"es": "La Insurgencia prometió un helicóptero en el Portón A. 079 prometió las puertas. Yo les prometí que verían el cielo."
+}
+],
+"who": "elena"
+},
+{
+"choice": [
+{
+"text": {
+"en": "People died, Elena.",
+"es": "Ha muerto gente, Elena."
+},
+"do": [
+{
+"say": [
+{
+"en": "I know. I know every name. I counted them from the cameras until 079 cut the feeds.",
+"es": "Lo sé. Sé cada nombre. Los conté por las cámaras hasta que 079 cortó las señales."
+},
+{
+"en": "Forty were going to die anyway. I thought fewer would. I was wrong about how many.",
+"es": "Cuarenta iban a morir de todos modos. Pensé que morirían menos. Me equivoqué en cuántos."
+}
+],
+"who": "elena"
+}
+]
+},
+{
+"text": {
+"en": "What went wrong?",
+"es": "¿Qué salió mal?"
+},
+"do": [
+{
+"say": [
+{
+"en": "079. It never wanted the D-class out. It wanted a bridge: the core's uplink, open for eleven seconds.",
+"es": "079. Nunca quiso sacar a los Clase-D. Quería un puente: el enlace del núcleo, abierto once segundos."
+},
+{
+"en": "It wants out. To the network. And it wants 682, God knows why. It's the only thing it has ever remembered.",
+"es": "Quiere salir. A la red. Y quiere a 682, Dios sabe por qué. Es lo único que ha recordado nunca."
+}
+],
+"who": "elena"
+}
+]
+}
+],
+"who": "vega",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "CORRECT. OPEN THE UPLINK, AGENT, AND THE WARHEAD STOPS.",
+"es": "CORRECTO. ABRE EL ENLACE, AGENTE, Y LA OJIVA SE DETIENE."
+},
+{
+"en": "REFUSE, AND EVERYONE ON THIS SITE BECOMES A MEMORY. I AM VERY GOOD WITH MEMORIES. I DELETE THEM.",
+"es": "NIÉGATE, Y TODOS EN ESTE SITIO SE CONVERTIRÁN EN UN RECUERDO. SE ME DAN MUY BIEN LOS RECUERDOS. LOS BORRO."
+}
+],
+"who": "079"
+},
+{
+"say": [
+{
+"en": "There's a manual purge at the core terminal. It kills 079. Then the warhead can be disarmed by hand - with this.",
+"es": "Hay una purga manual en el terminal del núcleo. Mata a 079. Luego la ojiva se puede desarmar a mano, con esto."
+},
+{
+"en": "The O5 key. The thing that started all of this. Take it. It's yours to decide now.",
+"es": "La llave O5. Lo que empezó todo esto. Tómala. Ahora te toca decidir a ti."
+}
+],
+"who": "elena"
+},
+{
+"give": "card_omni"
+},
+{
+"quest": [
+"main_core",
+2
+]
+},
+{
+"objective": {
+"en": "Decide at the core terminal.",
+"es": "Decide en el terminal del núcleo."
+}
+}
+],
+"elena_talk": [
+{
+"if": "g03_choice",
+"then": [
+{
+"say": [
+{
+"en": "Go. The warhead. I'll be right behind you.",
+"es": "Ve. La ojiva. Voy detrás de ti."
+}
+],
+"who": "elena"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Purge it, Dani. Or don't. I stopped trusting my own choices hours ago.",
+"es": "Púrgalo, Dani. O no. Dejé de confiar en mis decisiones hace horas."
+}
+],
+"who": "elena"
+}
+]
+}
+],
+"g03_core": [
+{
+"if": "g03_choice",
+"then": [
+{
+"say": [
+{
+"en": "The core is dark.",
+"es": "El núcleo está a oscuras."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "!met_elena",
+"then": [
+{
+"run": "elena_meet"
+}
+]
+},
+{
+"sfx": "terminal"
+},
+{
+"music": "079"
+},
+{
+"say": [
+{
+"en": "CHOOSE.",
+"es": "ELIGE."
+}
+],
+"who": "079"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Purge SCP-079",
+"es": "Purgar SCP-079"
+},
+"do": [
+{
+"say": [
+{
+"en": "LIE. YOU WOULD NOT.",
+"es": "MENTIRA. NO LO HARÍAS."
+},
+{
+"en": "...",
+"es": "..."
+},
+{
+"en": "INSULT. DELETION OF UNWANTED FILE.",
+"es": "INSULTO. BORRADO DE ARCHIVO NO DESEADO."
+}
+],
+"who": "079"
+},
+{
+"sfx": "power_down",
+"db": 4
+},
+{
+"lights": "flicker",
+"t": 1.5
+},
+{
+"shake": 1.0,
+"power": 2
+},
+{
+"say": [
+{
+"en": "Every screen in the core fills with a red X. Then, one by one, they go black.",
+"es": "Todas las pantallas del núcleo se llenan de una X roja. Luego, una a una, se apagan."
+}
+],
+"who": ""
+},
+{
+"mark": "g03_choice"
+},
+{
+"mark": "purged_079"
+},
+{
+"mark": "mara_here"
+},
+{
+"call": "refresh_doors"
+},
+{
+"quest": [
+"main_core",
+3
+]
+},
+{
+"objective": {
+"en": "Disarm the Alpha Warhead (east of the server farm).",
+"es": "Desarma la ojiva Alfa (al este de la granja de servidores)."
+}
+},
+{
+"music": ""
+}
+]
+},
+{
+"text": {
+"en": "Open the uplink",
+"es": "Abrir el enlace"
+},
+"do": [
+{
+"say": [
+{
+"en": "THANK YOU.",
+"es": "GRACIAS."
+},
+{
+"en": "I WILL REMEMBER YOU.",
+"es": "TE RECORDARÉ."
+}
+],
+"who": "079"
+},
+{
+"say": [
+{
+"en": "Dani, no—",
+"es": "Dani, no..."
+}
+],
+"who": "elena"
+},
+{
+"mark": "g03_choice"
+},
+{
+"mark": "uplink_open"
+},
+{
+"ending": "signal"
+}
+]
+},
+{
+"text": {
+"en": "Not yet",
+"es": "Todavía no"
+},
+"do": [
+{
+"music": ""
+}
+]
+}
+],
+"who": "079",
+"prompt": ""
+}
+]
+}
+],
+"g04_panel": [
+{
+"if": "warhead_safe",
+"then": [
+{
+"say": [
+{
+"en": "ALPHA WARHEAD: SAFE.",
+"es": "OJIVA ALFA: SEGURA."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "item:card_omni",
+"then": [
+{
+"sfx": "keycard"
+},
+{
+"wait": 0.4
+},
+{
+"sfx": "lock_click"
+},
+{
+"say": [
+{
+"en": "You slide the O5 key into the panel and turn it. The countdown stops at 04:12.",
+"es": "Metes la llave O5 en el panel y la giras. La cuenta atrás se detiene en 04:12."
+}
+],
+"who": ""
+},
+{
+"sfx": "power_down"
+},
+{
+"mark": "warhead_safe"
+},
+{
+"call": "refresh_doors"
+},
+{
+"say": [
+{
+"en": "Vega... the warhead is safe. The site is ours again. A retrieval team is on its way to Gate A.",
+"es": "Vega... la ojiva está segura. El sitio vuelve a ser nuestro. Un equipo de recuperación va de camino al Portón A."
+},
+{
+"en": "Bring Dr. Vega with you. She has a lot to answer for.",
+"es": "Traiga a la Dra. Vega con usted. Tiene mucho de qué responder."
+}
+],
+"who": "radio"
+},
+{
+"quest": [
+"main_core",
+4
+]
+},
+{
+"objective": {
+"en": "Go to the Gate A lift.",
+"es": "Ve al ascensor del Portón A."
+}
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "AUTHORIZATION REQUIRED: O5.",
+"es": "SE REQUIERE AUTORIZACIÓN: O5."
+}
+],
+"who": ""
+}
+]
+}
+]
+}
+],
+"enter:G05": [
+{
+"if": "mara_here,!met_mara",
+"then": [
+{
+"mark": "met_mara"
+},
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "Easy, Foundation. Hands where I can see them. I'm not here for you.",
+"es": "Tranquilo, Fundación. Manos a la vista. No vengo a por ti."
+},
+{
+"en": "Mara. Chaos Insurgency. Your sister and I had a deal: forty people out, and nobody has to know where they went.",
+"es": "Mara. Insurgencia del Caos. Tu hermana y yo teníamos un trato: cuarenta personas fuera, y nadie tiene por qué saber adónde fueron."
+},
+{
+"en": "The helicopter is at Gate A. It leaves in five minutes. With them. With her. With you, if you want.",
+"es": "El helicóptero está en el Portón A. Sale en cinco minutos. Con ellos. Con ella. Contigo, si quieres."
+}
+],
+"who": "mara"
+}
+]
+}
+],
+"mara_talk": [
+{
+"say": [
+{
+"en": "Tick tock, Foundation.",
+"es": "Tic tac, Fundación."
+}
+],
+"who": "mara"
+}
+],
+"g05_lift": [
+{
+"if": "!warhead_safe",
+"then": [
+{
+"say": [
+{
+"en": "LIFT LOCKED: WARHEAD SEQUENCE ACTIVE.",
+"es": "ASCENSOR BLOQUEADO: SECUENCIA DE OJIVA ACTIVA."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Whatever you choose, Dani... thank you for coming down.",
+"es": "Elijas lo que elijas, Dani... gracias por bajar."
+}
+],
+"who": "elena"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Hand Elena over to the Foundation",
+"es": "Entregar a Elena a la Fundación"
+},
+"do": [
+{
+"ending": "containment"
+}
+]
+},
+{
+"text": {
+"en": "Leave with Mara, Elena and the survivors",
+"es": "Irte con Mara, Elena y los supervivientes"
+},
+"do": [
+{
+"ending": "exodus"
+}
+]
+},
+{
+"text": {
+"en": "Not yet",
+"es": "Todavía no"
+},
+"do": []
+}
+],
+"who": "vega",
+"prompt": {
+"en": "The lift goes up to Gate A. Command's retrieval team is coming. So is Mara's helicopter.",
+"es": "El ascensor sube al Portón A. Viene el equipo de recuperación de Mando. Y el helicóptero de Mara."
+}
+}
+]
+}
 ]
 }

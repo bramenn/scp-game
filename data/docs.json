@@ -303,5 +303,103 @@
 "en": "Pages of elegant handwriting in old French. You understand one line, underlined twice: 'La Pestilence est dans les murs de ce lieu, et ceux qui le gouvernent en sont la source.'\n(The Pestilence is in the walls of this place, and those who govern it are its source.)",
 "es": "Páginas de letra elegante en francés antiguo. Entiendes una línea, subrayada dos veces: 'La Pestilence est dans les murs de ce lieu, et ceux qui le gouvernent en sont la source.'\n(La Pestilencia está en los muros de este lugar, y quienes lo gobiernan son su origen.)"
 }
+},
+"doc_ntf_orders": {
+"title": {
+"en": "Epsilon-11 orders",
+"es": "Órdenes de Épsilon-11"
+},
+"body": {
+"en": "PRIORITY 1: Secure SCP-079 core. PRIORITY 2: Recontain Keter-class entities. PRIORITY 3: Personnel.\nAddendum, 03:40, O5 channel: 'D-Block assets are to be considered expended. Do not escort.'\nSomeone has written under it in marker: NO. - REYES",
+"es": "PRIORIDAD 1: Asegurar el núcleo de SCP-079. PRIORIDAD 2: Recontener entidades Keter. PRIORIDAD 3: Personal.\nAnexo, 03:40, canal O5: 'Los recursos del Bloque D se consideran gastados. No escoltar.'\nAlguien ha escrito debajo con rotulador: NO. - REYES"
+}
+},
+"doc_939_file": {
+"title": {
+"en": "SCP-939 - With Many Voices",
+"es": "SCP-939 - Con Muchas Voces"
+},
+"body": {
+"en": "Keter. Pack predators, around 2.2 m long, 250 kg, translucent red skin, no eyes. They hunt by heat and sound. They mimic human speech, most often the voices of their previous victims, to lure new prey.\n\nThey exhale AMN-C227, a Class-C amnestic: exposure prevents new memories from forming. If you don't remember how you got here, walk away.",
+"es": "Keter. Depredadores en manada, unos 2,2 m, 250 kg, piel roja translúcida, sin ojos. Cazan por calor y sonido. Imitan el habla humana, casi siempre con las voces de sus víctimas anteriores, para atraer presas nuevas.\n\nExhalan AMN-C227, un amnésico de clase C: la exposición impide formar recuerdos nuevos. Si no recuerdas cómo llegaste aquí, aléjate."
+},
+"source": "SCP-939 by Adam Smascher & EchoFourDelta · scp-wiki.wikidot.com/scp-939 · CC BY-SA 3.0"
+},
+"doc_096_file": {
+"title": {
+"en": "SCP-096 - Containment",
+"es": "SCP-096 - Contención"
+},
+"body": {
+"en": "Euclid. Held in a 5x5x5 m airtight steel cube. No cameras: pressure sensors and lasers only. A pale humanoid, 2.38 m, long arms, a jaw that opens four times wider than a human's. Docile. It paces. It cries.\n\nViewing its face - directly, on video, in a photograph - triggers it. It covers its face, screams, and then comes for the viewer, wherever they are. Nothing has stopped it. Nothing but a bag over its head.",
+"es": "Euclid. Contenido en un cubo de acero hermético de 5x5x5 m. Sin cámaras: solo sensores de presión y láseres. Un humanoide pálido de 2,38 m, brazos largos, una mandíbula que se abre cuatro veces más que la humana. Dócil. Camina. Llora.\n\nVer su cara - en persona, en vídeo, en foto - lo activa. Se tapa la cara, grita y luego va a por quien la vio, esté donde esté. Nada lo ha detenido. Nada salvo una bolsa sobre la cabeza."
+},
+"source": "SCP-096 by Dr Dan · scp-wiki.wikidot.com/scp-096 · CC BY-SA 3.0"
+},
+"doc_096_bag_note": {
+"title": {
+"en": "Retrieval note 096-1-A",
+"es": "Nota de recuperación 096-1-A"
+},
+"body": {
+"en": "Anti-tank rounds did nothing. The hood worked. Approach from BEHIND. Never walk around it. Never let it turn.",
+"es": "Las balas antitanque no hicieron nada. La capucha funcionó. Acercarse por DETRÁS. Nunca rodearlo. Nunca dejar que se gire."
+}
+},
+"doc_106_file": {
+"title": {
+"en": "SCP-106 - The Old Man",
+"es": "SCP-106 - El Viejo"
+},
+"body": {
+"en": "Keter. An elderly, decomposed humanoid. Whatever it touches corrodes: a black mucus that keeps rotting matter for hours. It walks through solid walls into a pocket dimension of its own, and comes out anywhere connected to where it went in. It keeps its prey there. It plays with them.\n\nSudden direct light makes it retreat.",
+"es": "Keter. Un humanoide anciano y descompuesto. Todo lo que toca se corroe: un moco negro que sigue pudriendo la materia durante horas. Atraviesa paredes hacia una dimensión de bolsillo propia y sale por cualquier punto conectado con el de entrada. Guarda allí a sus presas. Juega con ellas.\n\nLa luz directa y repentina lo hace retroceder."
+},
+"source": "SCP-106 by Dr Gears · scp-wiki.wikidot.com/scp-106 · CC BY-SA 3.0"
+},
+"doc_femur_procedure": {
+"title": {
+"en": "Recall Protocol 106",
+"es": "Protocolo de reclamo 106"
+},
+"body": {
+"en": "When breached: select a human subject aged 10-25. Fracture a major bone. Place the subject in the recall chamber. Broadcast. SCP-106 will gravitate toward the lure within 10-15 minutes. Repeat trauma every 20 minutes if needed.\n\n(Reyes' squad carried a recording of a previous procedure. Played at full volume, it works. Nobody likes to talk about where the recording came from.)",
+"es": "En caso de brecha: seleccionar un sujeto humano de 10 a 25 años. Fracturarle un hueso largo. Colocarlo en la cámara de reclamo. Emitir. SCP-106 se dirigirá al señuelo en 10-15 minutos. Repetir el trauma cada 20 minutos si es necesario.\n\n(La escuadra de Reyes llevaba la grabación de un procedimiento anterior. A todo volumen, funciona. A nadie le gusta hablar de dónde salió la grabación.)"
+},
+"source": "SCP-106 by Dr Gears · scp-wiki.wikidot.com/scp-106 · CC BY-SA 3.0",
+"sanity": -5
+},
+"doc_682_file": {
+"title": {
+"en": "SCP-682 - Hard-to-Destroy Reptile",
+"es": "SCP-682 - Reptil Difícil de Destruir"
+},
+"body": {
+"en": "Keter. Large, reptile-like, extremely intelligent, and hateful of all life. It regenerates from 87% destruction. It adapts to whatever hurts it. Kept in a 5x5x5 m chamber lined with 25 cm of acid-resistant steel, submerged in hydrochloric acid. It has described humans as 'disgusting'. Termination has been attempted many times. It is still here.",
+"es": "Keter. Grande, parecido a un reptil, extremadamente inteligente y lleno de odio hacia toda forma de vida. Se regenera tras un 87% de destrucción. Se adapta a lo que le hace daño. Contenido en una cámara de 5x5x5 m revestida con 25 cm de acero resistente al ácido, sumergido en ácido clorhídrico. Ha descrito a los humanos como 'repugnantes'. Se ha intentado terminarlo muchas veces. Sigue aquí."
+},
+"source": "SCP-682 by Dr Gears & Epic Phail Spy · scp-wiki.wikidot.com/scp-682 · CC BY-SA 3.0"
+},
+"doc_black_tide_final": {
+"title": {
+"en": "O5 memo - Black Tide, phase 2",
+"es": "Memorándum O5 - Marea Negra, fase 2"
+},
+"body": {
+"en": "If SCP-682 adapts to acid during Phase 1, Phase 2 authorizes the Alpha Warhead with the D-Block inside the chamber. Site staff to be evacuated first. Site Director Aldana to confirm.\n\nIn the margin, in Elena's handwriting: 'They were going to nuke forty people to kill one lizard. And it wouldn't even have worked.'",
+"es": "Si SCP-682 se adapta al ácido durante la Fase 1, la Fase 2 autoriza la ojiva Alfa con el Bloque D dentro de la cámara. El personal del sitio será evacuado primero. La directora Aldana confirmará.\n\nEn el margen, con la letra de Elena: 'Iban a volar a cuarenta personas para matar a un lagarto. Y ni siquiera habría funcionado.'"
+},
+"sanity": -4
+},
+"doc_ortega_last": {
+"title": {
+"en": "Ortega's notebook",
+"es": "La libreta de Ortega"
+},
+"body": {
+"en": "Generator's running. Lift will hold. Something in the dark keeps saying my name in my wife's voice. Carmen's been dead eight years. I'm not going out there.\n\nIf Vega reads this: the kid has a sister in Guadalajara. Her name is in my wallet. Tell her he was brave.",
+"es": "El generador funciona. El ascensor aguantará. Algo en la oscuridad repite mi nombre con la voz de mi mujer. Carmen murió hace ocho años. No voy a salir.\n\nSi Vega lee esto: el chico tiene una hermana en Guadalajara. Su nombre está en mi cartera. Dile que fue valiente."
+},
+"sanity": -6
 }
 }

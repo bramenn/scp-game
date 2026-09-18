@@ -146,7 +146,7 @@ func _process(dt: float) -> void:
 		if world:
 			world.on_bump(tile + DIRS[d])
 		return
-	noise.emit(tile, 8 if sprinting else 3)
+	noise.emit(tile, 8 if sprinting else 2)
 	if world:
 		var surf: String = world.surface_at(tile)
 		Sfx.play("step_" + surf, -10.0 if not sprinting else -6.0, randf_range(0.9, 1.1))

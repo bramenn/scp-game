@@ -207,7 +207,7 @@ class Map:
         return {
             "id": self.id, "name": self.name, "sector": self.sector, "size": [self.w, self.h],
             "grid": ["".join(r) for r in self.g], "mat": ["".join(r) for r in self.m],
-            "mats": {c: list(MATS[c]) for c in used},
+            "mats": {c: list(MATS[c]) for c in sorted(used)},
             "env": self.env, "traces": self.traces, "walldecor": self.walldecor, "props": self.props,
             "lights": self.lights, "doors": self.doors, "exits": self.exits, "spawns": self.spawns,
             "npcs": self.npcs, "items": self.items, "triggers": self.triggers, "interact": self.interact,

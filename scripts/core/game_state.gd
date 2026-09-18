@@ -37,6 +37,9 @@ func has(flag: String) -> bool:
 		return s == -1 or s >= int(p[2])
 	if flag.begins_with("done:"):
 		return quests.get(flag.substr(5), 0) == -1
+	if flag.begins_with("count:"):   # count:<item>:<n>
+		var q := flag.split(":")
+		return inv.get(q[1], 0) >= int(q[2])
 	if flag.begins_with("card:"):
 		return card_level() >= int(flag.substr(5))
 	return flags.get(flag, false) != false

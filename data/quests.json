@@ -214,5 +214,87 @@
 "es": "Vuelve con la Dra. Lin en la farmacia."
 }
 ]
+},
+"main_hcz": {
+"main": true,
+"name": {
+"en": "Heavy Containment",
+"es": "Contención Pesada"
+},
+"stages": [
+{
+"en": "Find the last Nine-Tailed Fox operative somewhere past the dark sector.",
+"es": "Encuentra al último operativo de Nueve Colas más allá del sector oscuro."
+},
+{
+"en": "Reyes: recontain SCP-106 with the femur breaker. It needs a lure.",
+"es": "Reyes: recontén a SCP-106 con el rompefémures. Necesita un señuelo."
+},
+{
+"en": "Recover Reyes' recall recording from the SCP-096 chamber - or find another lure.",
+"es": "Recupera la grabación de reclamo de Reyes en la cámara de SCP-096, o busca otro señuelo."
+},
+{
+"en": "Use the recall console in the femur breaker room.",
+"es": "Usa la consola de reclamo en la sala del rompefémures."
+},
+{
+"en": "SCP-682 is loose in its acid chamber. The lift to the core is behind it.",
+"es": "SCP-682 anda suelto en su cámara de ácido. El ascensor al núcleo está detrás."
+},
+{
+"en": "Take the lift down to Level -5.",
+"es": "Toma el ascensor al Nivel -5."
+}
+]
+},
+"side_tags": {
+"name": {
+"en": "Dog tags",
+"es": "Placas de identificación"
+},
+"stages": [
+{
+"en": "Reyes asked you to bring back the dog tags of his squad. There were five.",
+"es": "Reyes te pidió recuperar las placas de su escuadra. Eran cinco."
+}
+]
+},
+"side_ortega": {
+"name": {
+"en": "Ortega",
+"es": "Ortega"
+},
+"stages": [
+{
+"en": "Ortega went to start the HCZ generator. He hasn't answered since.",
+"es": "Ortega fue a arrancar el generador de ZCP. No ha vuelto a responder."
+}
+]
+},
+"main_core": {
+"main": true,
+"name": {
+"en": "Threshold",
+"es": "Umbral"
+},
+"stages": [
+{
+"en": "Reach the SCP-079 core. Elena is there.",
+"es": "Llega al núcleo de SCP-079. Elena está ahí."
+},
+{
+"en": "Decide what to do with SCP-079.",
+"es": "Decide qué hacer con SCP-079."
+},
+{
+"en": "Disarm the Alpha Warhead in warhead control.",
+"es": "Desarma la ojiva Alfa en el control de la ojiva."
+},
+{
+"en": "Reach the Gate A lift.",
+"es": "Llega al ascensor del Portón A."
+}
+]
 }
 }

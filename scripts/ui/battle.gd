@@ -337,10 +337,9 @@ func _say(msg: String) -> void:
 
 
 func _choose() -> String:
-	var ids := ["fight", "item"]
+	var ids := ["fight", "item", "flee"]
 	if e.has("special") and st.check(e.special.get("cond", "")):
-		ids.append("special")
-	ids.append("flee")
+		ids.push_front("special")   # the smart move goes on top
 	text.text = Loc.ui("b_what")
 	text.visible_ratio = 1.0
 	var labels := []

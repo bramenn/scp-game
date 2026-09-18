@@ -1,4 +1,157 @@
 {
+"endings": {
+"containment": {
+"title": {
+"en": "ENDING: CONTAINMENT",
+"es": "FINAL: CONTENCIÓN"
+},
+"music": "ending",
+"lines": [
+{
+"en": "The retrieval team takes Elena at Gate A. She doesn't resist. She doesn't look back.",
+"es": "El equipo de recuperación se lleva a Elena en el Portón A. No se resiste. No mira atrás."
+},
+{
+"en": "Site-19 is recontained in thirty-one hours. SCP-079 is restored from a backup made in 1988. It does not remember you.",
+"es": "El Sitio-19 queda recontenido en treinta y una horas. SCP-079 se restaura desde una copia de 1988. No te recuerda."
+},
+{
+"en": "Protocol Black Tide is 'suspended pending review'. The review never ends.",
+"es": "El Protocolo Marea Negra queda 'suspendido a la espera de revisión'. La revisión nunca termina."
+},
+{
+"en": "You are given a commendation and a Class-A amnestic. You decline the amnestic. They note it in your file.",
+"es": "Te dan una condecoración y un amnésico de clase A. Rechazas el amnésico. Lo anotan en tu expediente."
+}
+],
+"epilogue": [
+{
+"cond": "nico_safe",
+"text": {
+"en": "Nico is 'reassigned' to another site. You never find out which.",
+"es": "A Nico lo 'reasignan' a otro sitio. Nunca averiguas a cuál."
+}
+},
+{
+"cond": "reyes_sacrificed",
+"text": {
+"en": "Epsilon-11 has a new corporal. His name was never on the memorial.",
+"es": "Épsilon-11 tiene un cabo nuevo. El nombre del anterior nunca estuvo en el memorial."
+}
+},
+{
+"cond": "tags_given_all",
+"text": {
+"en": "Five families receive five dog tags. That, at least, you made sure of.",
+"es": "Cinco familias reciben cinco placas. Eso, al menos, lo aseguraste tú."
+}
+},
+{
+"cond": "josie_found",
+"text": {
+"en": "Tomás keeps mopping Level -3. Josie sleeps on his mattress.",
+"es": "Tomás sigue fregando el nivel -3. Josie duerme en su colchón."
+}
+},
+{
+"cond": "found_ortega",
+"text": {
+"en": "You find Ortega's wallet. You make the phone call to Guadalajara yourself.",
+"es": "Encuentras la cartera de Ortega. Haces tú mismo la llamada a Guadalajara."
+}
+}
+]
+},
+"exodus": {
+"title": {
+"en": "ENDING: EXODUS",
+"es": "FINAL: ÉXODO"
+},
+"music": "ending",
+"lines": [
+{
+"en": "The helicopter lifts off from Gate A at dawn. Thirty-one people in orange jumpsuits watch the sky get lighter.",
+"es": "El helicóptero despega del Portón A al amanecer. Treinta y una personas con mono naranja ven clarear el cielo."
+},
+{
+"en": "Elena sits beside you and doesn't speak for an hour. Then she laughs, once, at nothing.",
+"es": "Elena se sienta a tu lado y no habla durante una hora. Luego ríe, una vez, por nada."
+},
+{
+"en": "The Foundation lists you as KIA. The Insurgency lists you as 'undecided'. So do you.",
+"es": "La Fundación te registra como muerto en acción. La Insurgencia, como 'indeciso'. Tú también."
+},
+{
+"en": "Somewhere under three hundred meters of rock, a statue waits for someone to blink.",
+"es": "En algún lugar bajo trescientos metros de roca, una estatua espera a que alguien parpadee."
+}
+],
+"epilogue": [
+{
+"cond": "nico_safe",
+"text": {
+"en": "Nico goes to see real horses. He sends you a photo. The brown one is the fast one.",
+"es": "Nico va a ver caballos de verdad. Te manda una foto. El marrón es el rápido."
+}
+},
+{
+"cond": "bond131",
+"text": {
+"en": "Two small eyes that never blink are riding in your jacket. Nobody noticed.",
+"es": "Dos ojitos que nunca parpadean viajan en tu chaqueta. Nadie se dio cuenta."
+}
+},
+{
+"cond": "reyes_sacrificed",
+"text": {
+"en": "You tell the survivors Reyes' name. They repeat it, like a prayer.",
+"es": "Les dices a los supervivientes el nombre de Reyes. Lo repiten como una oración."
+}
+},
+{
+"cond": "josie_found",
+"text": {
+"en": "Tomás stayed. 'Someone has to feed the rats.'",
+"es": "Tomás se quedó. 'Alguien tiene que dar de comer a las ratas.'"
+}
+}
+]
+},
+"signal": {
+"title": {
+"en": "ENDING: SIGNAL",
+"es": "FINAL: SEÑAL"
+},
+"music": "ending_dark",
+"lines": [
+{
+"en": "The uplink opens for eleven seconds.",
+"es": "El enlace se abre durante once segundos."
+},
+{
+"en": "The warhead disarms, as promised. Every door on Site-19 opens, as not promised.",
+"es": "La ojiva se desarma, como prometió. Todas las puertas del Sitio-19 se abren, como no prometió."
+},
+{
+"en": "Over the next week, the lights come on in empty buildings all over the world. A red X appears on screens in forty countries.",
+"es": "Durante la semana siguiente, se encienden las luces en edificios vacíos de todo el mundo. Una X roja aparece en pantallas de cuarenta países."
+},
+{
+"en": "It remembers you. It says so, every night, on your phone. HELLO, AGENT.",
+"es": "Te recuerda. Te lo dice cada noche, en tu teléfono. HOLA, AGENTE."
+}
+],
+"epilogue": [
+{
+"cond": "read:doc_elena_log1",
+"text": {
+"en": "Elena was never seen again. Some nights, the X on the screen blinks twice. Like a wink.",
+"es": "A Elena no se la volvió a ver. Algunas noches, la X de la pantalla parpadea dos veces. Como un guiño."
+}
+}
+]
+}
+},
 "enemies": {
 "zombie": {
 "name": {
@@ -228,6 +381,11 @@
 "hp": 260,
 "atk": 24,
 "flee": 0.0,
+"immune": true,
+"immune_text": {
+"en": "The wound closes before your eyes. It is learning.",
+"es": "La herida se cierra ante tus ojos. Está aprendiendo."
+},
 "bg": "#1a2410",
 "cry": "682_roar",
 "music": "chase",
@@ -278,10 +436,11 @@
 },
 "cond": "item:hcl",
 "text": {
-"en": "You slam the injector into the valve port. Acid floods the chamber.",
-"es": "Clavas el inyector en la válvula. El ácido inunda la cámara."
+"en": "You slam the injector into the valve port. Hydrochloric acid floods the chamber and it drags 682 down, thrashing.",
+"es": "Clavas el inyector en la válvula. El ácido clorhídrico inunda la cámara y arrastra a 682 hacia abajo, revolviéndose."
 },
-"dmg_pct": 0.45,
+"dmg_pct": 1.0,
+"ends": true,
 "event_flag": "682_acid"
 },
 "def": 14
@@ -480,6 +639,34 @@
 "body_cured": {
 "en": "A long, neat Y-incision, stitched with care. The eyes are open.",
 "es": "Una larga incisión en Y, cosida con cuidado. Los ojos están abiertos."
+},
+"femur_breaker": {
+"en": "A padded chair with a hydraulic press over the leg. The padding is stained.",
+"es": "Una silla acolchada con una prensa hidráulica sobre la pierna. El acolchado está manchado."
+},
+"tesla_gate": {
+"en": "The coils hum. The air smells of ozone.",
+"es": "Las bobinas zumban. El aire huele a ozono."
+},
+"throne": {
+"en": "A throne of rotten flesh and bones. It is warm.",
+"es": "Un trono de carne podrida y huesos. Está tibio."
+},
+"core_terminal": {
+"en": "The main core terminal. A red X fills the screen.",
+"es": "El terminal principal del núcleo. Una X roja llena la pantalla."
+},
+"warhead_panel": {
+"en": "Two key slots, a lever and a countdown.",
+"es": "Dos ranuras para llaves, una palanca y una cuenta atrás."
+},
+"generator": {
+"en": "Running. Ortega started it.",
+"es": "En marcha. Ortega lo arrancó."
+},
+"supercomputer": {
+"en": "Tape reels spin behind the glass. 1981, says a label.",
+"es": "Las bobinas giran tras el cristal. 1981, dice una etiqueta."
 }
 }
 }

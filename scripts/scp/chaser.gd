@@ -95,6 +95,7 @@ func _attack() -> void:
 	await world.hud.flash(2, Color(0.5, 0, 0))
 	world.busy -= 1
 	var res: String = await world.battle(String(spec.get("battle", "zombie")))
+	_grace = 3.0   # time to get away before it can bite again
 	if res == "win":
 		world.st.mark(key)
 		var tw := create_tween()

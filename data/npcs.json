@@ -89,7 +89,16 @@
 "sprite": "reyes",
 "portrait": "res://art/portraits/p_reyes.png",
 "voice": 0.9,
-"talk": []
+"talk": [
+[
+"met_reyes",
+"reyes_again"
+],
+[
+"",
+"reyes_first"
+]
+]
 },
 "tomas": {
 "name": {
@@ -137,7 +146,16 @@
 "sprite": "elena",
 "portrait": "res://art/portraits/p_elena.png",
 "voice": 1.1,
-"talk": []
+"talk": [
+[
+"met_elena",
+"elena_talk"
+],
+[
+"",
+"elena_meet"
+]
+]
 },
 "mara": {
 "name": {
@@ -147,7 +165,12 @@
 "sprite": "mara",
 "portrait": "res://art/portraits/p_mara.png",
 "voice": 1.0,
-"talk": []
+"talk": [
+[
+"",
+"mara_talk"
+]
+]
 },
 "scp049": {
 "name": {

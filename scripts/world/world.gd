@@ -740,7 +740,10 @@ func ending(id: String) -> void:
 	await e.run(id, st)
 	st.mark("ending_" + id)
 	st.save()
-	get_tree().reload_current_scene()
+	if get_tree().current_scene:
+		get_tree().reload_current_scene()
+	else:   # test harness (no main scene): just return control
+		busy -= 1
 
 
 # ------------------------------------------------------------ sight & blinking

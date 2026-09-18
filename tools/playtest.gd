@@ -157,6 +157,11 @@ func _process(dt: float) -> bool:
 				failures += 1
 				quit(1)
 				return true
+			for a in world.actors:   # wait out live tesla gates
+				if a.has_method("live_on") and (a.live_on(path[1]) or a.live_on(world.player.tile + (path[1] - world.player.tile) * 2)):
+					_hold("")
+					_stuck = 0.0
+					return false
 			var d: Vector2i = path[1] - world.player.tile
 			_hold({Vector2i.UP: "ui_up", Vector2i.DOWN: "ui_down", Vector2i.LEFT: "ui_left", Vector2i.RIGHT: "ui_right"}[d])
 			if world.player.tile == _last_tile:

@@ -428,6 +428,7 @@ def a13():
     m.door(15, 16, "h", style="heavy", lock="gate_a_open", did="A13_gate")
     m.room(15, 18, 2, 2, "h")
     m.exit(15, 19, 2, 1, "G05", "from_A13")
+    m.spawn("from_G05", 15, 14, "north")
     m.prop("sandbags", 6, 12); m.prop("sandbags", 22, 12); m.prop("turret", 10, 7); m.prop("turret", 20, 7)
     m.prop("body_ntf", 8, 10, walk=True); m.prop("body_guard", 23, 9, walk=True)
     m.scatter(["casings", "casings", "blood_drops", "scorch"], 3, 5, 26, 11, 26, seed=20)

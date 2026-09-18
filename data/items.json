@@ -590,5 +590,77 @@
 "en": "A journal in French",
 "es": "Un diario en francés"
 }
+},
+"doc_ntf_orders": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Epsilon-11 orders",
+"es": "Órdenes de Épsilon-11"
+}
+},
+"doc_939_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-939 - With Many Voices",
+"es": "SCP-939 - Con Muchas Voces"
+}
+},
+"doc_096_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-096 - Containment",
+"es": "SCP-096 - Contención"
+}
+},
+"doc_096_bag_note": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Retrieval note 096-1-A",
+"es": "Nota de recuperación 096-1-A"
+}
+},
+"doc_106_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-106 - The Old Man",
+"es": "SCP-106 - El Viejo"
+}
+},
+"doc_femur_procedure": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Recall Protocol 106",
+"es": "Protocolo de reclamo 106"
+}
+},
+"doc_682_file": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "SCP-682 - Hard-to-Destroy Reptile",
+"es": "SCP-682 - Reptil Difícil de Destruir"
+}
+},
+"doc_black_tide_final": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "O5 memo - Black Tide, phase 2",
+"es": "Memorándum O5 - Marea Negra, fase 2"
+}
+},
+"doc_ortega_last": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Ortega's notebook",
+"es": "La libreta de Ortega"
+}
 }
 }
