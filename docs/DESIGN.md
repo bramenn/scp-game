@@ -200,11 +200,11 @@ Legend: [x] done · [~] in progress · [ ] pending
 
 - [x] Research lore + licensing, PixelLab API
 - [x] Git repo, design doc
-- [ ] P1 Asset generation batch 1 (characters, SCPs, vermin, portraits, props)
-- [ ] P2 Engine: i18n (Loc), zone loader (multi-theme tiles, occluders), doors, exits
-- [ ] P3 Engine: flashlight cone + shadows, fog shader, particles, ambient life
-- [ ] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap
-- [ ] P5 Engine: HUD meters (hp, battery, sanity, stamina, blink), pause menu, options
+- [~] P1 Asset generation batch 1 (characters, SCPs, vermin, portraits, props) — chars running; props need fix: map-objects min 32px + outline 'single color outline'; small props via create-1-direction-object (16px)
+- [x] P2 Engine: i18n (Loc), map loader (multi-material tiles, occluders), doors, exits
+- [x] P3 Engine: flashlight cone + shadows, fog shader, particles, ambient life
+- [x] P4 Engine: dialogue w/ portraits+choices, events runner, quests, docs, automap (needs data)
+- [~] P5 Engine: HUD meters (hp, battery, sanity, stamina), pause menu, options — blink meter pending (173)
 - [ ] P6 SCP behaviours: 173, 131, 096, 106 (+pocket), 049 (+049-2), 939, 682, 999, 529
 - [ ] P7 Maps content (≈60 maps, sectors A-G)
 - [ ] P8 Story data EN+ES: dialogues, docs, quests, events, endings
@@ -214,4 +214,4 @@ Legend: [x] done · [~] in progress · [ ] pending
 - [ ] P11 CREDITS.md, README, final push
 
 ### Log
-- (append one line per work session here)
+- 2026-09-18 00:00-01:30 research, design, git, asset pipeline, new engine core (commit 82ab3b7). Tools: tools/shot.gd (SCP_MAP=<id> in-game screenshot), tools/render_map.gd (full map PNG), tools/build_maps.py. Tests must use SCP_SAVE=user://test_save.json.

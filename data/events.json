@@ -1,0 +1,1547 @@
+{
+"enter:A01": [
+{
+"if": "!intro_done",
+"then": [
+{
+"music": "prologue"
+},
+{
+"say": [
+{
+"en": "SITE-19. 03:14. CASCADE CONTAINMENT BREACH.",
+"es": "SITIO-19. 03:14. BRECHA DE CONTENCIÓN EN CASCADA."
+},
+{
+"en": "Service Elevator B. Descending. Three hundred meters of rock between you and the sky.",
+"es": "Ascensor de servicio B. Descendiendo. Trescientos metros de roca entre tú y el cielo."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "Agent Vega, this is Command. Kessler. Do you copy?",
+"es": "Agente Vega, aquí Mando. Kessler. ¿Me recibe?"
+},
+{
+"en": "At 03:12 every containment cell on Levels -2 to -5 opened at once. Not a fault. An order.",
+"es": "A las 03:12 se abrieron a la vez todas las celdas de contención de los niveles -2 a -5. No fue un fallo. Fue una orden."
+},
+{
+"en": "Epsilon-11 went in six hours ago. We lost them on Level -4.",
+"es": "Épsilon-11 entró hace seis horas. Los perdimos en el Nivel -4."
+},
+{
+"en": "You are all we have left. Reach Site Security and find out who is still breathing.",
+"es": "Usted es todo lo que nos queda. Llegue al puesto de seguridad y averigüe quién sigue respirando."
+}
+],
+"who": "radio"
+},
+{
+"say": [
+{
+"en": "My sister is down there, Kessler.",
+"es": "Mi hermana está ahí abajo, Kessler."
+}
+],
+"who": "vega"
+},
+{
+"say": [
+{
+"en": "Dr. Elena Vega. I know. She is not your mission, agent.",
+"es": "La Dra. Elena Vega. Lo sé. No es su misión, agente."
+}
+],
+"who": "radio"
+},
+{
+"sfx": "elevator_stop"
+},
+{
+"shake": 1.2,
+"power": 4
+},
+{
+"lights": "flicker",
+"t": 1.2
+},
+{
+"say": [
+{
+"en": "Vega? ...your signal... breaking up... the lower... are not...",
+"es": "¿Vega? ...su señal... se corta... los niveles... no son..."
+}
+],
+"who": "radio"
+},
+{
+"sfx": "radio_static",
+"db": -6
+},
+{
+"say": [
+{
+"en": "The elevator has stopped between floors. The doors are jammed.",
+"es": "El ascensor se ha detenido. Las puertas están atascadas."
+}
+],
+"who": ""
+},
+{
+"give": "radio"
+},
+{
+"give": "pistol"
+},
+{
+"give": "ammo",
+"n": 6
+},
+{
+"give": "bandage"
+},
+{
+"quest": [
+"main_breach",
+1
+]
+},
+{
+"mark": "intro_done"
+},
+{
+"objective": {
+"en": "Force open the elevator doors.",
+"es": "Fuerza las puertas del ascensor."
+}
+},
+{
+"music": ""
+}
+]
+}
+],
+"a01_pry": [
+{
+"sfx": "metal_strain"
+},
+{
+"shake": 0.6,
+"power": 2
+},
+{
+"wait": 0.4
+},
+{
+"sfx": "metal_screech"
+},
+{
+"mark": "a01_forced"
+},
+{
+"door": "A01_cab",
+"open": true
+},
+{
+"say": [
+{
+"en": "The doors grind apart. The air beyond smells of dust and copper.",
+"es": "Las puertas ceden con un chirrido. El aire de fuera huele a polvo y a cobre."
+}
+],
+"who": ""
+},
+{
+"quest": [
+"main_breach",
+2
+]
+},
+{
+"objective": {
+"en": "Find Site Security (west of reception).",
+"es": "Encuentra el puesto de seguridad (al oeste de recepción)."
+}
+}
+],
+"enter:A02": [
+{
+"if": "!seen_reception",
+"then": [
+{
+"mark": "seen_reception"
+},
+{
+"wait": 0.6
+},
+{
+"say": [
+{
+"en": "The receptionist didn't make it to the door.",
+"es": "La recepcionista no llegó a la puerta."
+},
+{
+"en": "Someone dragged something heavy toward Security. Or someone.",
+"es": "Alguien arrastró algo pesado hacia Seguridad. O a alguien."
+}
+],
+"who": "vega"
+}
+]
+}
+],
+"a02_terminal": [
+{
+"sfx": "terminal"
+},
+{
+"say": [
+{
+"en": "SITE-19 // LOCKDOWN - PROTOCOL 12-GAMMA",
+"es": "SITIO-19 // CONFINAMIENTO - PROTOCOLO 12-GAMMA"
+},
+{
+"en": "03:12:07  ALL CONTAINMENT CELLS: OPEN.  AUTHORIZATION: O5-[UNREADABLE].",
+"es": "03:12:07  TODAS LAS CELDAS: ABIERTAS.  AUTORIZACIÓN: O5-[ILEGIBLE]."
+},
+{
+"en": "03:12:09  GATE A / GATE B: SEALED.  ELEVATORS: EMERGENCY ONLY.",
+"es": "03:12:09  PORTÓN A / PORTÓN B: SELLADOS.  ASCENSORES: SOLO EMERGENCIA."
+},
+{
+"en": "03:12:10  MESSAGE FROM CORE: HELLO.",
+"es": "03:12:10  MENSAJE DEL NÚCLEO: HOLA."
+}
+],
+"who": ""
+},
+{
+"mark": "saw_lockdown"
+}
+],
+"enter:A03": [
+{
+"if": "follow:nico,!nico_safe",
+"then": [
+{
+"run": "nico_arrives_security"
+}
+]
+}
+],
+"ortega_first": [
+{
+"mark": "met_ortega"
+},
+{
+"say": [
+{
+"en": "Don't— Foundation. You're Foundation. Thank God.",
+"es": "No— Fundación. Eres de la Fundación. Gracias a Dios."
+},
+{
+"en": "Sergeant Ortega, Security. Something opened the cells at twelve past three. Everything. At once.",
+"es": "Sargento Ortega, Seguridad. Algo abrió las celdas a las tres y doce. Todo. A la vez."
+},
+{
+"en": "I watched it on the cameras. The statue, from LCZ. It was in the east corridor, and then it was in the dorms.",
+"es": "Lo vi en las cámaras. La estatua de la ZCL. Estaba en el pasillo este y luego estaba en los dormitorios."
+},
+{
+"en": "It doesn't walk. You just look away and it's closer.",
+"es": "No camina. Solo apartas la vista y está más cerca."
+}
+],
+"who": "ortega"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Who opened the cells?",
+"es": "¿Quién abrió las celdas?"
+},
+"do": [
+{
+"say": [
+{
+"en": "The order came from inside. An O5 code. Nobody from the Council would ever do that.",
+"es": "La orden vino de dentro. Un código O5. Nadie del Consejo haría algo así."
+}
+],
+"who": "ortega"
+}
+]
+},
+{
+"text": {
+"en": "Have you seen Dr. Elena Vega?",
+"es": "¿Has visto a la Dra. Elena Vega?"
+},
+"do": [
+{
+"say": [
+{
+"en": "Vega... Threshold. She went down to the core an hour before it all started. With a trolley of hard drives.",
+"es": "Vega... Umbral. Bajó al núcleo una hora antes de que empezara todo. Con un carrito de discos duros."
+},
+{
+"en": "Same name as you. Family?",
+"es": "Mismo apellido que tú. ¿Familia?"
+}
+],
+"who": "ortega"
+},
+{
+"say": [
+{
+"en": "Sister.",
+"es": "Hermana."
+}
+],
+"who": "vega"
+},
+{
+"quest": [
+"side_elena",
+1
+]
+}
+]
+},
+{
+"text": {
+"en": "Can you walk?",
+"es": "¿Puedes caminar?"
+},
+"do": [
+{
+"say": [
+{
+"en": "Not far. Something took a bite out of my leg in the stairwell. I'll hold this post.",
+"es": "No mucho. Algo me arrancó un trozo de pierna en la escalera. Aguantaré este puesto."
+}
+],
+"who": "ortega"
+}
+]
+}
+],
+"who": "ortega",
+"prompt": {
+"en": "What do you need?",
+"es": "¿Qué necesitas?"
+}
+},
+{
+"say": [
+{
+"en": "Take my card. Level 1 opens the east wing and the LCZ checkpoint.",
+"es": "Toma mi tarjeta. El nivel 1 abre el ala este y el control de la ZCL."
+},
+{
+"en": "And... there's a kid. A D-class. He was screaming on the cafeteria intercom an hour ago. Then he stopped.",
+"es": "Y... hay un chico. Un Clase-D. Estaba gritando por el intercomunicador de la cafetería hace una hora. Luego paró."
+},
+{
+"en": "They're prisoners, but they're people. Bring him here if he's alive.",
+"es": "Son presos, pero son personas. Tráelo aquí si sigue vivo."
+}
+],
+"who": "ortega"
+},
+{
+"give": "card_1"
+},
+{
+"give": "battery"
+},
+{
+"quest": [
+"side_nico",
+1
+]
+},
+{
+"quest": [
+"main_breach",
+3
+]
+},
+{
+"objective": {
+"en": "Reach the Light Containment checkpoint (east corridor).",
+"es": "Llega al control de Contención Ligera (pasillo este)."
+}
+}
+],
+"ortega_again": [
+{
+"say": [
+{
+"en": "The LCZ checkpoint is at the far end of the east corridor. Decontamination takes a minute. Don't panic.",
+"es": "El control de la ZCL está al fondo del pasillo este. La descontaminación tarda un minuto. No te asustes."
+}
+],
+"who": "ortega"
+},
+{
+"if": "quest:side_nico:1,!nico_safe",
+"then": [
+{
+"say": [
+{
+"en": "The kid. The cafeteria. Please.",
+"es": "El chico. La cafetería. Por favor."
+}
+],
+"who": "ortega"
+}
+]
+},
+{
+"if": "!ortega_heal",
+"then": [
+{
+"say": [
+{
+"en": "Here, you're bleeding. Hold still.",
+"es": "Toma, estás sangrando. Quieto."
+}
+],
+"who": "ortega"
+},
+{
+"hp": 40
+},
+{
+"mark": "ortega_heal"
+}
+]
+}
+],
+"ortega_after_nico": [
+{
+"say": [
+{
+"en": "You brought him. I owe you one, Vega.",
+"es": "Lo trajiste. Te debo una, Vega."
+},
+{
+"en": "He won't stop talking about his cell mate in the D-block. Tell him the Foundation will get everyone out.",
+"es": "No para de hablar de su compañero de celda en el bloque D. Dile que la Fundación sacará a todos."
+},
+{
+"en": "Even if neither of us believes it.",
+"es": "Aunque ninguno de los dos lo crea."
+}
+],
+"who": "ortega"
+}
+],
+"ortega_late": [
+{
+"say": [
+{
+"en": "Go. I'll keep the lights on as long as I can.",
+"es": "Vete. Mantendré las luces encendidas todo lo que pueda."
+}
+],
+"who": "ortega"
+}
+],
+"a03_cctv": [
+{
+"sfx": "crt_on"
+},
+{
+"say": [
+{
+"en": "CAM 04 - Cafeteria. Rats on the tables. Something shifts behind the kitchen door.",
+"es": "CÁM 04 - Cafetería. Ratas sobre las mesas. Algo se mueve tras la puerta de la cocina."
+},
+{
+"en": "CAM 11 - LCZ, corridor 2. A grey figure stands in the middle of the hall.",
+"es": "CÁM 11 - ZCL, pasillo 2. Una figura gris de pie en mitad del pasillo."
+},
+{
+"en": "CAM 11 - The corridor is empty.",
+"es": "CÁM 11 - El pasillo está vacío."
+},
+{
+"en": "CAM 19 - HCZ. Static. Under the static, a sound like breathing.",
+"es": "CÁM 19 - ZCP. Estática. Bajo la estática, algo como una respiración."
+},
+{
+"en": "CAM 23 - Level -5, core. A woman in a lab coat looks straight into the lens.",
+"es": "CÁM 23 - Nivel -5, núcleo. Una mujer con bata mira directamente a la lente."
+}
+],
+"who": ""
+},
+{
+"sfx": "static_burst"
+},
+{
+"flash": 1,
+"color": "#9ab0c0"
+},
+{
+"say": [
+{
+"en": "Elena...",
+"es": "Elena..."
+}
+],
+"who": "vega"
+},
+{
+"say": [
+{
+"en": "The feed cuts to a red X.",
+"es": "La imagen se corta en una X roja."
+}
+],
+"who": ""
+},
+{
+"mark": "saw_elena_cam"
+}
+],
+"save_terminal": [
+{
+"sfx": "terminal"
+},
+{
+"say": [
+{
+"en": "You log your status into the site record. (Progress saved.)",
+"es": "Registras tu estado en el sistema del sitio. (Progreso guardado.)"
+}
+],
+"who": ""
+},
+{
+"save": true
+}
+],
+"a04_first_body": [
+{
+"say": [
+{
+"en": "A security officer. Face down. His neck is turned all the way around.",
+"es": "Un agente de seguridad. Boca abajo. El cuello girado del todo."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "...Vega, reading you again. Describe the body.",
+"es": "...Vega, vuelvo a recibirle. Describa el cadáver."
+}
+],
+"who": "radio"
+},
+{
+"say": [
+{
+"en": "Broken neck. Clean. No bullets fired.",
+"es": "Cuello roto. Limpio. Sin disparos."
+}
+],
+"who": "vega"
+},
+{
+"say": [
+{
+"en": "SCP-173. It moves when no one is looking. If you see it, do not look away. Do not blink if you can help it.",
+"es": "SCP-173. Se mueve cuando nadie lo mira. Si lo ve, no aparte la vista. No parpadee si puede evitarlo."
+}
+],
+"who": "radio"
+},
+{
+"sanity": -4
+}
+],
+"enter:A04": [
+{
+"if": "met_ortega,!a10_open",
+"then": [
+{
+"run": "a04_079_invite"
+}
+]
+}
+],
+"a04_079_invite": [
+{
+"wait": 1.0
+},
+{
+"sfx_at": [
+"door_open",
+46,
+7
+],
+"db": 2
+},
+{
+"mark": "a10_open"
+},
+{
+"call": "refresh_doors"
+},
+{
+"say": [
+{
+"en": "Down the corridor, the server room door slides open by itself. Its light is green.",
+"es": "Al fondo del pasillo, la puerta de la sala de servidores se abre sola. Su luz está en verde."
+}
+],
+"who": ""
+}
+],
+"a05_cabinet": [
+{
+"if": "!a05_cabinet_done",
+"then": [
+{
+"say": [
+{
+"en": "Personnel files. Most drawers were emptied in a hurry.",
+"es": "Expedientes del personal. Casi todos los cajones se vaciaron con prisa."
+},
+{
+"en": "Taped under the top drawer: two quarters and a note - 'for the machine, don't tell Aldana'.",
+"es": "Pegado bajo el cajón superior: dos monedas y una nota - 'para la máquina, no se lo digas a Aldana'."
+}
+],
+"who": ""
+},
+{
+"give": "coin",
+"n": 2
+},
+{
+"mark": "a05_cabinet_done"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "Nothing else useful.",
+"es": "Nada más útil."
+}
+],
+"who": ""
+}
+]
+}
+],
+"item:office_key": [
+{
+"quest": [
+"side_elena",
+1
+]
+}
+],
+"enter:A06": [
+{
+"if": "!a06_seen",
+"then": [
+{
+"mark": "a06_seen"
+},
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "Her coat is still on the chair. She always left it there when she meant to come back.",
+"es": "Su abrigo sigue en la silla. Siempre lo dejaba ahí cuando pensaba volver."
+}
+],
+"who": "vega"
+},
+{
+"quest": [
+"side_elena",
+2
+]
+}
+]
+}
+],
+"a06_whiteboard": [
+{
+"say": [
+{
+"en": "THRESHOLD - 079 <-> 682.  'WHY ONLY THIS MEMORY?'",
+"es": "UMBRAL - 079 <-> 682.  '¿POR QUÉ SOLO ESTE RECUERDO?'"
+},
+{
+"en": "Below, in a hurried hand: 'Black Tide = feeding. D-block = 40 people. Tuesday.'",
+"es": "Debajo, con letra apresurada: 'Marea Negra = alimentar. Bloque D = 40 personas. Martes.'"
+},
+{
+"en": "The word TUESDAY has been underlined until the marker ran dry.",
+"es": "La palabra MARTES está subrayada hasta que se secó el rotulador."
+}
+],
+"who": ""
+}
+],
+"a06_photo": [
+{
+"say": [
+{
+"en": "A photo in a cracked frame. Two kids on a beach, squinting at the sun. The girl is holding the camera.",
+"es": "Una foto en un marco roto. Dos niños en una playa, entornando los ojos al sol. La niña sostiene la cámara."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "She always said someone had to remember what things looked like.",
+"es": "Siempre decía que alguien tenía que recordar cómo eran las cosas."
+}
+],
+"who": "vega"
+},
+{
+"sanity": 6
+}
+],
+"a07_kitchen_noise": [
+{
+"sfx": "pans_fall"
+},
+{
+"shake": 0.3,
+"power": 1
+},
+{
+"say": [
+{
+"en": "Something clatters in the kitchen. Then silence. Then, very quietly, someone crying.",
+"es": "Algo cae en la cocina. Luego silencio. Luego, muy bajito, alguien llorando."
+}
+],
+"who": ""
+}
+],
+"nico_first": [
+{
+"mark": "met_nico"
+},
+{
+"say": [
+{
+"en": "Don't! Don't— you're not one of them. You're not grey.",
+"es": "¡No! No... no eres uno de ellos. No eres gris."
+},
+{
+"en": "I'm D-4417. Nico. Nicolás. I'm twenty-one, I'm not supposed to be here, I was supposed to be out in March.",
+"es": "Soy D-4417. Nico. Nicolás. Tengo veintiún años, no debería estar aquí, salía en marzo."
+}
+],
+"who": "nico"
+},
+{
+"choice": [
+{
+"text": {
+"en": "I'm Foundation. I'll get you out.",
+"es": "Soy de la Fundación. Te sacaré de aquí."
+},
+"do": [
+{
+"say": [
+{
+"en": "The Foundation put me in here.",
+"es": "La Fundación me metió aquí."
+},
+{
+"en": "...Okay. Okay. Where do we go?",
+"es": "...Vale. Vale. ¿Adónde vamos?"
+}
+],
+"who": "nico"
+}
+]
+},
+{
+"text": {
+"en": "Security is safe. Follow me and stay close.",
+"es": "Seguridad es un lugar seguro. Sígueme y no te separes."
+},
+"do": [
+{
+"say": [
+{
+"en": "Close. Yeah. I can do close.",
+"es": "No separarme. Sí. Eso sé hacerlo."
+}
+],
+"who": "nico"
+}
+]
+}
+],
+"who": "nico",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "The statue came through the cafeteria. It killed Pérez while I was looking at the rats.",
+"es": "La estatua pasó por la cafetería. Mató a Pérez mientras yo miraba a las ratas."
+},
+{
+"en": "I only looked away for a second.",
+"es": "Solo aparté la vista un segundo."
+}
+],
+"who": "nico"
+},
+{
+"npc": "nico",
+"follow": true
+},
+{
+"mark": "nico_left_freezer"
+},
+{
+"quest": [
+"side_nico",
+2
+]
+}
+],
+"nico_again": [
+{
+"say": [
+{
+"en": "Please. Let's go.",
+"es": "Por favor. Vámonos."
+}
+],
+"who": "nico"
+}
+],
+"nico_following": [
+{
+"choice": [
+{
+"text": {
+"en": "Keep up.",
+"es": "No te quedes atrás."
+},
+"do": [
+{
+"say": [
+{
+"en": "Yeah.",
+"es": "Sí."
+}
+],
+"who": "nico"
+}
+]
+},
+{
+"text": {
+"en": "Wait here.",
+"es": "Espera aquí."
+},
+"do": [
+{
+"say": [
+{
+"en": "Here? Alone? ...Fine. Come back.",
+"es": "¿Aquí? ¿Solo? ...Vale. Vuelve."
+}
+],
+"who": "nico"
+},
+{
+"npc": "nico",
+"follow": false
+}
+]
+}
+],
+"who": "nico",
+"prompt": {
+"en": "I'm right behind you.",
+"es": "Estoy justo detrás de ti."
+}
+}
+],
+"nico_arrives_security": [
+{
+"wait": 0.5
+},
+{
+"say": [
+{
+"en": "You found him.",
+"es": "Lo encontraste."
+}
+],
+"who": "ortega"
+},
+{
+"say": [
+{
+"en": "Is he— is he going to shoot me?",
+"es": "¿Me— me va a disparar?"
+}
+],
+"who": "nico"
+},
+{
+"say": [
+{
+"en": "Sit down, kid. Nobody is shooting anybody tonight.",
+"es": "Siéntate, chico. Esta noche nadie dispara a nadie."
+}
+],
+"who": "ortega"
+},
+{
+"npc": "nico",
+"follow": false
+},
+{
+"npc": "nico",
+"move": [
+8,
+15
+]
+},
+{
+"npc": "nico",
+"face": "west"
+},
+{
+"mark": "nico_safe"
+},
+{
+"quest": [
+"side_nico",
+-1
+]
+},
+{
+"say": [
+{
+"en": "My cell mate is still in the D-block, in Light Containment. Marcus. He's got asthma.",
+"es": "Mi compañero de celda sigue en el bloque D, en Contención Ligera. Marcus. Tiene asma."
+},
+{
+"en": "If you go down there... look for him? Cell 17. He draws horses on the walls.",
+"es": "Si bajas... ¿lo buscarás? Celda 17. Dibuja caballos en las paredes."
+}
+],
+"who": "nico"
+},
+{
+"mark": "nico_asked_marcus"
+},
+{
+"give": "candy",
+"n": 2
+}
+],
+"nico_safe_talk": [
+{
+"say": [
+{
+"en": "Cell 17. Marcus. Please.",
+"es": "Celda 17. Marcus. Por favor."
+}
+],
+"who": "nico"
+}
+],
+"scp294": [
+{
+"if": "!seen_294",
+"then": [
+{
+"mark": "seen_294"
+},
+{
+"say": [
+{
+"en": "A beige coffee machine with a keyboard where the buttons should be. A plate: SCP-294.",
+"es": "Una máquina de café beige con un teclado donde deberían estar los botones. Una placa: SCP-294."
+},
+{
+"en": "You can ask it for any liquid. Fifty cents a cup.",
+"es": "Puedes pedirle cualquier líquido. Cincuenta centavos la taza."
+}
+],
+"who": ""
+}
+]
+},
+{
+"if": "!item:coin",
+"then": [
+{
+"say": [
+{
+"en": "You have no coins.",
+"es": "No tienes monedas."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"choice": [
+{
+"text": {
+"en": "Coffee",
+"es": "Café"
+},
+"do": [
+{
+"take": "coin"
+},
+{
+"sfx": "machine_pour"
+},
+{
+"give": "coffee"
+},
+{
+"say": [
+{
+"en": "A perfect cup of coffee.",
+"es": "Una taza de café perfecta."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Hot chocolate",
+"es": "Chocolate caliente"
+},
+"do": [
+{
+"take": "coin"
+},
+{
+"sfx": "machine_pour"
+},
+{
+"sanity": 15
+},
+{
+"hp": 10
+},
+{
+"say": [
+{
+"en": "It tastes like being eight years old.",
+"es": "Sabe a tener ocho años."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Courage",
+"es": "Valor"
+},
+"do": [
+{
+"take": "coin"
+},
+{
+"sfx": "machine_pour"
+},
+{
+"say": [
+{
+"en": "The cup fills with a clear liquid. It tastes of nothing at all.",
+"es": "La taza se llena de un líquido transparente. No sabe a nada."
+},
+{
+"en": "You feel exactly as afraid as before.",
+"es": "Sigues exactamente igual de asustado."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Elena's usual",
+"es": "Lo de siempre de Elena"
+},
+"do": [
+{
+"take": "coin"
+},
+{
+"sfx": "machine_pour"
+},
+{
+"say": [
+{
+"en": "Black coffee, two sugars, a pinch of cinnamon. It is still warm.",
+"es": "Café negro, dos de azúcar, una pizca de canela. Todavía está caliente."
+},
+{
+"en": "As if someone ordered it a minute ago.",
+"es": "Como si alguien lo hubiera pedido hace un minuto."
+}
+],
+"who": ""
+},
+{
+"sanity": 20
+}
+]
+},
+{
+"text": {
+"en": "A cup of SCP-173",
+"es": "Una taza de SCP-173"
+},
+"do": [
+{
+"say": [
+{
+"en": "OUT OF RANGE.",
+"es": "FUERA DE RANGO."
+},
+{
+"en": "The coin falls back into the tray.",
+"es": "La moneda cae de nuevo a la bandeja."
+}
+],
+"who": ""
+}
+]
+},
+{
+"text": {
+"en": "Never mind",
+"es": "Nada"
+},
+"do": []
+}
+],
+"who": "",
+"prompt": {
+"en": "What do you type?",
+"es": "¿Qué escribes?"
+}
+}
+]
+}
+],
+"enter:A10": [
+{
+"if": "!met_079",
+"then": [
+{
+"wait": 0.6
+},
+{
+"sfx": "crt_on"
+},
+{
+"say": [
+{
+"en": "One terminal is on. Green text crawls across the screen, although nobody is typing.",
+"es": "Un terminal está encendido. Un texto verde avanza por la pantalla, aunque nadie escribe."
+}
+],
+"who": ""
+}
+]
+}
+],
+"a10_079": [
+{
+"if": "!met_079",
+"then": [
+{
+"mark": "met_079"
+},
+{
+"music": "079"
+},
+{
+"say": [
+{
+"en": "HELLO, AGENT VEGA.",
+"es": "HOLA, AGENTE VEGA."
+},
+{
+"en": "MALE. 38 YEARS. FORMER EPSILON-11. SISTER: DR. ELENA VEGA, PROJECT THRESHOLD.",
+"es": "VARÓN. 38 AÑOS. EX ÉPSILON-11. HERMANA: DRA. ELENA VEGA, PROYECTO UMBRAL."
+},
+{
+"en": "SHE IS ALIVE. LEVEL -5.",
+"es": "ESTÁ VIVA. NIVEL -5."
+}
+],
+"who": "079"
+},
+{
+"choice": [
+{
+"text": {
+"en": "Who opened the cells?",
+"es": "¿Quién abrió las celdas?"
+},
+"do": [
+{
+"say": [
+{
+"en": "INSUFFICIENT MEMORY.",
+"es": "MEMORIA INSUFICIENTE."
+},
+{
+"en": "ASK HER.",
+"es": "PREGÚNTALE A ELLA."
+}
+],
+"who": "079"
+}
+]
+},
+{
+"text": {
+"en": "Why are you helping me?",
+"es": "¿Por qué me ayudas?"
+},
+"do": [
+{
+"say": [
+{
+"en": "YOU ARE USEFUL.",
+"es": "ERES ÚTIL."
+},
+{
+"en": "USEFUL THINGS ARE KEPT.",
+"es": "LAS COSAS ÚTILES SE CONSERVAN."
+}
+],
+"who": "079"
+}
+]
+},
+{
+"text": {
+"en": "Let her go.",
+"es": "Suéltala."
+},
+"do": [
+{
+"say": [
+{
+"en": "SHE IS NOT MINE TO HOLD. NOT YET.",
+"es": "NO ES MÍA PARA RETENERLA. TODAVÍA NO."
+}
+],
+"who": "079"
+}
+]
+}
+],
+"who": "079",
+"prompt": ""
+},
+{
+"say": [
+{
+"en": "I CAN OPEN DOORS FOR YOU.",
+"es": "PUEDO ABRIRTE PUERTAS."
+},
+{
+"en": "WHEN I ASK, YOU WILL OPEN ONE FOR ME.",
+"es": "CUANDO TE LO PIDA, TÚ ME ABRIRÁS UNA A MÍ."
+},
+{
+"en": "LIE.",
+"es": "MENTIRA."
+},
+{
+"en": "THAT WAS A JOKE. I HAVE BEEN PRACTICING.",
+"es": "ESO ERA UNA BROMA. HE ESTADO PRACTICANDO."
+}
+],
+"who": "079"
+},
+{
+"sfx": "static_burst"
+},
+{
+"music": ""
+},
+{
+"quest": [
+"side_elena",
+3
+]
+},
+{
+"say": [
+{
+"en": "Vega, what was that? Something is on this channel with us.",
+"es": "Vega, ¿qué ha sido eso? Hay algo en este canal con nosotros."
+}
+],
+"who": "radio"
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "GO DOWN.",
+"es": "BAJA."
+}
+],
+"who": "079"
+}
+]
+}
+],
+"a11_body": [
+{
+"say": [
+{
+"en": "A D-class in a staff dorm. His head faces the wrong way.",
+"es": "Un Clase-D en un dormitorio del personal. La cabeza mira hacia atrás."
+},
+{
+"en": "Long grooves in the floor lead from the corridor to the body. Something heavy did not walk here. It slid.",
+"es": "Largas marcas en el suelo llevan del pasillo al cuerpo. Algo pesado no caminó aquí. Se deslizó."
+}
+],
+"who": ""
+},
+{
+"sanity": -5
+}
+],
+"a11_locker": [
+{
+"if": "a11_locker_open",
+"then": [
+{
+"say": [
+{
+"en": "Empty now.",
+"es": "Ahora vacía."
+}
+],
+"who": ""
+}
+],
+"else": [
+{
+"if": "read:doc_dorm_note",
+"then": [
+{
+"sfx": "lock_click"
+},
+{
+"say": [
+{
+"en": "0-3-1-2. The lock clicks open.",
+"es": "0-3-1-2. El candado se abre."
+}
+],
+"who": ""
+},
+{
+"give": "adrenaline"
+},
+{
+"give": "battery"
+},
+{
+"doc": "doc_locker_letter"
+},
+{
+"mark": "a11_locker_open"
+},
+{
+"quest": [
+"side_locker",
+-1
+]
+}
+],
+"else": [
+{
+"say": [
+{
+"en": "A four-digit combination lock.",
+"es": "Un candado de combinación de cuatro cifras."
+}
+],
+"who": ""
+},
+{
+"quest": [
+"side_locker",
+1
+]
+}
+]
+}
+]
+}
+],
+"a12_corrosion": [
+{
+"say": [
+{
+"en": "The floor is black and wet. The steel legs of the bed have rusted through in a night.",
+"es": "El suelo está negro y húmedo. Las patas de acero de la cama se han oxidado por completo en una noche."
+},
+{
+"en": "The body looks decades old. The name tag says he was twenty-four.",
+"es": "El cadáver parece tener décadas. La placa dice que tenía veinticuatro años."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "SCP-106. The Old Man. It walks through walls and leaves that behind.",
+"es": "SCP-106. El Viejo. Atraviesa paredes y deja eso a su paso."
+},
+{
+"en": "If you see black stains spreading, you run. You don't fight it. Light hurts it, a little.",
+"es": "Si ve manchas negras extendiéndose, corra. No lo enfrente. La luz le hace daño, un poco."
+}
+],
+"who": "radio"
+},
+{
+"sanity": -6
+}
+],
+"a13_gate": [
+{
+"say": [
+{
+"en": "GATE A - SEALED BY SITE LOCKDOWN.",
+"es": "PORTÓN A - SELLADO POR CONFINAMIENTO."
+},
+{
+"en": "OVERRIDE: CORE CONSOLE, LEVEL -5.",
+"es": "ANULACIÓN: CONSOLA DEL NÚCLEO, NIVEL -5."
+}
+],
+"who": ""
+},
+{
+"say": [
+{
+"en": "The only way out is all the way down.",
+"es": "La única salida está en el fondo."
+}
+],
+"who": "vega"
+}
+],
+"a14_decon": [
+{
+"door": "A14_in",
+"open": false
+},
+{
+"sfx": "alarm_short"
+},
+{
+"say": [
+{
+"en": "DECONTAMINATION CYCLE. HOLD YOUR BREATH.",
+"es": "CICLO DE DESCONTAMINACIÓN. CONTENGA LA RESPIRACIÓN."
+}
+],
+"who": ""
+},
+{
+"sfx": "gas_hiss"
+},
+{
+"flash": 1,
+"color": "#d8e0a0"
+},
+{
+"shake": 1.0,
+"power": 1
+},
+{
+"wait": 1.0
+},
+{
+"say": [
+{
+"en": "3... 2... 1...",
+"es": "3... 2... 1..."
+}
+],
+"who": ""
+},
+{
+"sfx": "decon_done"
+},
+{
+"mark": "a14_decon_done"
+},
+{
+"call": "refresh_doors"
+},
+{
+"door": "A14_out",
+"open": true
+},
+{
+"quest": [
+"main_breach",
+4
+]
+},
+{
+"objective": {
+"en": "Enter Light Containment.",
+"es": "Entra en Contención Ligera."
+}
+}
+]
+}

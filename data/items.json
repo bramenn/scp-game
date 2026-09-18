@@ -1,117 +1,418 @@
 {
-  "tarjeta_1": {
-    "nombre": "Tarjeta Nivel 1",
-    "tipo": "llave",
-    "desc": "Acceso a la Celda 173."
-  },
-  "tarjeta_2": {
-    "nombre": "Tarjeta Nivel 2",
-    "tipo": "llave",
-    "desc": "Acceso a la Morgue (Celda 049)."
-  },
-  "tarjeta_3": {
-    "nombre": "Tarjeta Nivel 3",
-    "tipo": "llave",
-    "desc": "Acceso al Aislamiento de 096."
-  },
-  "tarjeta_4": {
-    "nombre": "Tarjeta Nivel 4",
-    "tipo": "llave",
-    "desc": "Acceso al Foso de 106."
-  },
-  "tarjeta_5": {
-    "nombre": "Tarjeta Nivel 5",
-    "tipo": "llave",
-    "desc": "Acceso al Tanque de 682. Solo personal Omni."
-  },
-  "botiquin": {
-    "nombre": "Botiquín",
-    "tipo": "consumible",
-    "cura": 35,
-    "desc": "Vendas y antiséptico. Recupera 35 de vida."
-  },
-  "adrenalina": {
-    "nombre": "Adrenalina",
-    "tipo": "consumible",
-    "cura": 70,
-    "desc": "Autoinyector militar. Recupera 70 de vida."
-  },
-  "scp_500": {
-    "nombre": "Píldora SCP-500",
-    "tipo": "consumible",
-    "cura": 999,
-    "desc": "Una píldora roja que cura cualquier dolencia. Vida al máximo."
-  },
-  "chaleco": {
-    "nombre": "Chaleco balístico",
-    "tipo": "mejora",
-    "def": 6,
-    "desc": "Placas de cerámica de Nueve Colas. Defensa +6."
-  },
-  "municion": {
-    "nombre": "Munición perforante",
-    "tipo": "mejora",
-    "atk": 6,
-    "desc": "Cargadores de punta de tungsteno. Ataque +6."
-  },
-  "linterna": {
-    "nombre": "Linterna táctica",
-    "tipo": "debilidad",
-    "desc": "Luz intensa. Ideal contra SCP-173."
-  },
-  "sedante": {
-    "nombre": "Sedante de uso animal",
-    "tipo": "debilidad",
-    "desc": "Dosis para un rinoceronte. Útil contra SCP-049."
-  },
-  "capucha": {
-    "nombre": "Capucha opaca",
-    "tipo": "debilidad",
-    "desc": "Tela que no deja ver nada. Para cubrir el rostro de SCP-096."
-  },
-  "senuelo": {
-    "nombre": "Señuelo de audio",
-    "tipo": "debilidad",
-    "desc": "Grabadora con el procedimiento de recontención de SCP-106."
-  },
-  "hcl": {
-    "nombre": "Inyector de HCl",
-    "tipo": "debilidad",
-    "desc": "Ácido clorhídrico concentrado. Lo único que frena a SCP-682."
-  },
-  "doc_brecha": {
-    "nombre": "Registro 03:12",
-    "tipo": "doc",
-    "desc": "REGISTRO DEL SITIO-19 · 03:12 h. Orden remota de apertura de cierres emitida con credencial O5. Firma: NO VERIFICABLE. Nadie del Consejo reconoce la orden."
-  },
-  "doc_173": {
-    "nombre": "Protocolo 173",
-    "tipo": "doc",
-    "desc": "PROCEDIMIENTO 173: Mínimo tres personas en la celda. Contacto visual constante. Anunciar cada parpadeo. Si se va la luz... que Dios te ayude."
-  },
-  "doc_049": {
-    "nombre": "Entrevista 049-B",
-    "tipo": "doc",
-    "desc": "ENTREVISTA 049-B. Investigador: '¿Qué es la pestilencia?' SCP-049: 'Está en todos ustedes. Yo solo quiero curarlos.' [Fin del registro. El investigador no volvió a su puesto.]"
-  },
-  "doc_096": {
-    "nombre": "Incidente 096-1",
-    "tipo": "doc",
-    "desc": "INCIDENTE 096-1: Una fotografía de su rostro bastó. Recorrió 40 km en 3 horas. No existe distancia segura. Solo la capucha lo calma."
-  },
-  "doc_106": {
-    "nombre": "Nota manuscrita",
-    "tipo": "doc",
-    "desc": "'Se mete en las paredes. El suelo se pudre donde pisa. Reyes lleva la grabación del procedimiento. Si lo oyes, viene hacia ti.'"
-  },
-  "doc_682": {
-    "nombre": "Memorándum Omni",
-    "tipo": "doc",
-    "desc": "MEMORÁNDUM: 682 debe permanecer sumergido en ácido clorhídrico. Todos los intentos de terminación han fallado. Se adapta. Recuerda. Odia."
-  },
-  "doc_insurgencia": {
-    "nombre": "Orden cifrada",
-    "tipo": "doc",
-    "desc": "Papel quemado con un símbolo: tres flechas en un círculo. 'Fase 1: abrir Sitio-19. Fase 2: recoger lo que quede.' Es la marca de la Insurgencia del Caos."
-  }
+"card_1": {
+"type": "key",
+"icon": "card_1",
+"name": {
+"en": "Keycard L1",
+"es": "Tarjeta N1"
+},
+"desc": {
+"en": "Level 1 access. Janitorial, cafeteria, offices.",
+"es": "Acceso nivel 1. Limpieza, cafetería, oficinas."
+}
+},
+"card_2": {
+"type": "key",
+"icon": "card_2",
+"name": {
+"en": "Keycard L2",
+"es": "Tarjeta N2"
+},
+"desc": {
+"en": "Level 2 access. Light containment labs.",
+"es": "Acceso nivel 2. Laboratorios de contención ligera."
+}
+},
+"card_3": {
+"type": "key",
+"icon": "card_3",
+"name": {
+"en": "Keycard L3",
+"es": "Tarjeta N3"
+},
+"desc": {
+"en": "Level 3 access. Medical wing, maintenance control.",
+"es": "Acceso nivel 3. Ala médica, control de mantenimiento."
+}
+},
+"card_4": {
+"type": "key",
+"icon": "card_4",
+"name": {
+"en": "Keycard L4",
+"es": "Tarjeta N4"
+},
+"desc": {
+"en": "Level 4 access. Heavy containment.",
+"es": "Acceso nivel 4. Contención pesada."
+}
+},
+"card_5": {
+"type": "key",
+"icon": "card_5",
+"name": {
+"en": "Keycard L5",
+"es": "Tarjeta N5"
+},
+"desc": {
+"en": "Level 5 access. Site command, the 079 core.",
+"es": "Acceso nivel 5. Mando del sitio, núcleo de 079."
+}
+},
+"card_omni": {
+"type": "key",
+"icon": "card_omni",
+"name": {
+"en": "O5 Keycard",
+"es": "Tarjeta O5"
+},
+"desc": {
+"en": "A forged Overseer credential. Every door answers to it.",
+"es": "Una credencial de Supervisor falsificada. Todas las puertas le obedecen."
+}
+},
+"office_key": {
+"type": "key",
+"icon": "key",
+"name": {
+"en": "Office key 2-B",
+"es": "Llave de la oficina 2-B"
+},
+"desc": {
+"en": "A brass key with a paper tag: 'E. VEGA'.",
+"es": "Una llave de latón con una etiqueta de papel: 'E. VEGA'."
+}
+},
+"janitor_keys": {
+"type": "key",
+"icon": "key",
+"name": {
+"en": "Tomás' key ring",
+"es": "Llavero de Tomás"
+},
+"desc": {
+"en": "Heavy. Every maintenance hatch on Level -3.",
+"es": "Pesado. Todas las escotillas de mantenimiento del Nivel -3."
+}
+},
+"fuse": {
+"type": "key",
+"icon": "fuse",
+"name": {
+"en": "Breaker fuse",
+"es": "Fusible"
+},
+"desc": {
+"en": "A 400 A cartridge fuse for the substation.",
+"es": "Un fusible de cartucho de 400 A para la subestación."
+}
+},
+"pistol": {
+"type": "weapon",
+"icon": "pistol",
+"name": {
+"en": "Service pistol",
+"es": "Pistola reglamentaria"
+},
+"desc": {
+"en": "9 mm. Useless against most of what is loose in here.",
+"es": "9 mm. Inútil contra casi todo lo que anda suelto aquí."
+}
+},
+"ammo": {
+"type": "weapon",
+"icon": "ammo",
+"name": {
+"en": "9 mm rounds",
+"es": "Balas 9 mm"
+},
+"desc": {
+"en": "Loose rounds. Count them.",
+"es": "Balas sueltas. Cuéntalas."
+}
+},
+"baton": {
+"type": "weapon",
+"icon": "baton",
+"name": {
+"en": "Telescopic baton",
+"es": "Porra extensible"
+},
+"desc": {
+"en": "Better than bare hands.",
+"es": "Mejor que las manos desnudas."
+}
+},
+"vest": {
+"type": "tool",
+"icon": "vest",
+"name": {
+"en": "Nine-Tailed Fox vest",
+"es": "Chaleco de Nueve Colas"
+},
+"desc": {
+"en": "Ceramic plates. Takes the edge off anything with claws.",
+"es": "Placas cerámicas. Suaviza cualquier cosa con garras."
+}
+},
+"medkit": {
+"type": "consumable",
+"icon": "medkit",
+"use": "heal",
+"amount": 45,
+"name": {
+"en": "Medkit",
+"es": "Botiquín"
+},
+"desc": {
+"en": "Gauze, antiseptic, a suture kit. Restores 45 health.",
+"es": "Gasas, antiséptico, sutura. Recupera 45 de salud."
+}
+},
+"bandage": {
+"type": "consumable",
+"icon": "bandage",
+"use": "heal",
+"amount": 18,
+"name": {
+"en": "Bandage",
+"es": "Venda"
+},
+"desc": {
+"en": "Stops the bleeding for now. Restores 18 health.",
+"es": "Detiene la hemorragia por ahora. Recupera 18 de salud."
+}
+},
+"adrenaline": {
+"type": "consumable",
+"icon": "adrenaline",
+"use": "heal",
+"amount": 70,
+"name": {
+"en": "Adrenaline",
+"es": "Adrenalina"
+},
+"desc": {
+"en": "Military auto-injector. Restores 70 health.",
+"es": "Autoinyector militar. Recupera 70 de salud."
+}
+},
+"scp500": {
+"type": "consumable",
+"icon": "scp500",
+"use": "full",
+"name": {
+"en": "SCP-500 pill",
+"es": "Píldora SCP-500"
+},
+"desc": {
+"en": "Panacea. One pill cures every disease within two hours. There were 47 left.",
+"es": "Panacea. Una píldora cura toda enfermedad en dos horas. Quedaban 47."
+}
+},
+"battery": {
+"type": "consumable",
+"icon": "battery",
+"use": "battery",
+"name": {
+"en": "Battery",
+"es": "Pila"
+},
+"desc": {
+"en": "Fresh cells for the flashlight.",
+"es": "Pilas nuevas para la linterna."
+}
+},
+"coffee": {
+"type": "consumable",
+"icon": "coffee",
+"use": "sanity",
+"amount": 30,
+"name": {
+"en": "Coffee",
+"es": "Café"
+},
+"desc": {
+"en": "Hot, bitter, real. Steadies the nerves (+30 sanity).",
+"es": "Caliente, amargo, real. Calma los nervios (+30 cordura)."
+}
+},
+"candy": {
+"type": "consumable",
+"icon": "candy",
+"use": "sanity",
+"amount": 12,
+"name": {
+"en": "Candy",
+"es": "Caramelo"
+},
+"desc": {
+"en": "Sugar and a memory of the surface (+12 sanity). Someone else here loves these.",
+"es": "Azúcar y un recuerdo de la superficie (+12 cordura). Alguien más aquí los adora."
+}
+},
+"coin": {
+"type": "tool",
+"icon": "coin",
+"name": {
+"en": "Quarter",
+"es": "Moneda"
+},
+"desc": {
+"en": "Fifty cents buys one cup from SCP-294.",
+"es": "Dos monedas compran una taza de SCP-294."
+}
+},
+"radio": {
+"type": "tool",
+"icon": "radio",
+"name": {
+"en": "Radio",
+"es": "Radio"
+},
+"desc": {
+"en": "Channel 4. Command listens. Something else might too.",
+"es": "Canal 4. Mando escucha. Quizá algo más también."
+}
+},
+"bag096": {
+"type": "scp",
+"icon": "bag096",
+"name": {
+"en": "Containment hood",
+"es": "Capucha de contención"
+},
+"desc": {
+"en": "Opaque canvas with a drawstring. Once, it calmed SCP-096.",
+"es": "Lona opaca con cordón. Una vez calmó a SCP-096."
+}
+},
+"lavender": {
+"type": "scp",
+"icon": "lavender",
+"name": {
+"en": "Lavender",
+"es": "Lavanda"
+},
+"desc": {
+"en": "Fresh sprigs. The file says it calms SCP-049's outbursts.",
+"es": "Ramitas frescas. El expediente dice que calma los arrebatos de SCP-049."
+}
+},
+"recorder": {
+"type": "scp",
+"icon": "recorder",
+"name": {
+"en": "Recall recording",
+"es": "Grabación de llamada"
+},
+"desc": {
+"en": "Reyes' tape of a recontainment procedure. You don't want to know what is on it.",
+"es": "La cinta de Reyes con un procedimiento de recontención. No quieres saber qué contiene."
+}
+},
+"hcl": {
+"type": "scp",
+"icon": "hcl",
+"name": {
+"en": "HCl injector",
+"es": "Inyector de HCl"
+},
+"desc": {
+"en": "Concentrated hydrochloric acid. The only thing that keeps SCP-682 down.",
+"es": "Ácido clorhídrico concentrado. Lo único que mantiene a SCP-682 en el suelo."
+}
+},
+"dogtag": {
+"type": "tool",
+"icon": "dogtag",
+"name": {
+"en": "Dog tag",
+"es": "Placa de identificación"
+},
+"desc": {
+"en": "Nine-Tailed Fox. Reyes wants them back.",
+"es": "Nueve Colas. Reyes las quiere de vuelta."
+}
+},
+"tape": {
+"type": "tool",
+"icon": "tape",
+"name": {
+"en": "Cassette tape",
+"es": "Cinta de casete"
+},
+"desc": {
+"en": "Unlabelled. Play it on a terminal.",
+"es": "Sin etiqueta. Reprodúcela en un terminal."
+}
+},
+"cheese": {
+"type": "tool",
+"icon": "candy",
+"name": {
+"en": "Cheese",
+"es": "Queso"
+},
+"desc": {
+"en": "Cheddar from the cafeteria. Someone small would like it.",
+"es": "Cheddar de la cafetería. A alguien pequeño le gustaría."
+}
+},
+"doc_welcome": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Welcome to Site-19",
+"es": "Bienvenido al Sitio-19"
+}
+},
+"doc_memo_threshold": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Memo: Project Threshold",
+"es": "Memorándum: Proyecto Umbral"
+}
+},
+"doc_black_tide_redacted": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Order: Protocol Black Tide",
+"es": "Orden: Protocolo Marea Negra"
+}
+},
+"doc_elena_log1": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Elena's notebook, page 1",
+"es": "Cuaderno de Elena, página 1"
+}
+},
+"doc_dorm_note": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Note under a pillow",
+"es": "Nota bajo una almohada"
+}
+},
+"doc_infirmary_log": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Infirmary log",
+"es": "Registro de enfermería"
+}
+},
+"doc_locker_letter": {
+"type": "doc",
+"icon": "doc",
+"name": {
+"en": "Letter in locker 7",
+"es": "Carta en la taquilla 7"
+}
+}
 }

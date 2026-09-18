@@ -169,8 +169,8 @@ def obj_submit(key, spec, st):
         log(key, "pixflux saved")
         return st
     r = req("POST", "/map-objects", {
-        "description": spec["desc"], "image_size": {"width": size, "height": spec.get("h", size)},
-        "view": spec.get("view", "low top-down"), "outline": "single color black outline",
+        "description": spec["desc"], "image_size": {"width": max(32, size), "height": max(32, spec.get("h", size))},
+        "view": spec.get("view", "low top-down"), "outline": "single color outline",
         "shading": "detailed shading", "detail": "high detail"})
     st["object_id"] = r.get("object_id") or r.get("id")
     log(key, "map-object submitted", st["object_id"])
@@ -259,7 +259,39 @@ def portrait_step(key, spec, st):
     return True
 
 
-KIND = {"char": (char_submit, char_step), "obj": (obj_submit, obj_step), "portrait": (portrait_submit, portrait_step)}
+# ------------------------------------------------------ object batches (Pro)
+# One /create-1-direction-object call renders many different small objects in one style:
+# size 16 -> up to 64 objects, size 32 -> up to 16. Frame i matches item_descriptions[i].
+
+def batch_submit(key, spec, st):
+    if "object_id" in st:
+        return st
+    names = list(spec["items"].keys())
+    r = req("POST", "/create-1-direction-object", {
+        "description": spec["desc"], "size": spec["size"], "view": "top-down",
+        "item_descriptions": [spec["items"][n] for n in names]})
+    st["object_id"] = r.get("object_id")
+    st["names"] = names
+    log(key, "batch submitted", st["object_id"], len(names), "items")
+    return st
+
+
+def batch_step(key, spec, st):
+    d = req("GET", f"/objects/{st['object_id']}")
+    urls = d.get("storage_urls") or {}
+    if not urls:
+        return False
+    for i, name in enumerate(st["names"]):
+        u = urls.get(f"frame_{i}")
+        if u:
+            fetch(u, ROOT / spec.get("dir", "art/props") / f"{name}.png")
+    st["done"] = True
+    log(key, "batch downloaded", len(st["names"]))
+    return True
+
+
+KIND = {"char": (char_submit, char_step), "obj": (obj_submit, obj_step), "portrait": (portrait_submit, portrait_step),
+        "batch": (batch_submit, batch_step)}
 
 
 def run(keys):
@@ -283,8 +315,8 @@ def run(keys):
             try:
                 if spec["kind"] == "portrait" and "job_id" not in m.get(k, {}):
                     m[k] = portrait_submit(k, spec, m.get(k, {}))
-                elif spec["kind"] == "obj" and not m.get(k, {}).get("object_id") and not m.get(k, {}).get("done"):
-                    m[k] = obj_submit(k, spec, m.get(k, {}))
+                elif spec["kind"] in ("obj", "batch") and not m.get(k, {}).get("object_id") and not m.get(k, {}).get("done"):
+                    m[k] = KIND[spec["kind"]][0](k, spec, m.get(k, {}))
                 else:
                     KIND[spec["kind"]][1](k, spec, m[k])
             except Exception as e:

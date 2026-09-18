@@ -43,11 +43,16 @@ static func _add_seq(sf: SpriteFrames, anim: String, dir: String, fps: float) ->
 
 
 ## Pixel row of the feet inside the frame (bottom of the south idle sprite).
+static func _south(id: String) -> Texture2D:
+	var p := "res://art/chars/%s/south.png" % id
+	return load(p) if ResourceLoader.exists(p) else null
+
+
 static func feet_y(id: String) -> int:
-	var tex := load("res://art/chars/%s/south.png" % id) as Texture2D
+	var tex := _south(id)
 	return MapView.used_rect(tex).end.y if tex else 44
 
 
 static func frame_size(id: String) -> Vector2:
-	var tex := load("res://art/chars/%s/south.png" % id) as Texture2D
+	var tex := _south(id)
 	return tex.get_size() if tex else Vector2(48, 48)

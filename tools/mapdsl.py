@@ -162,15 +162,19 @@ class Map:
             t = rnd.choice(tiles)
             self.trace(rnd.choice(names), *t)
 
+    VARIANTS = {"blood_drag_h": ["", "2", "3"], "blood_drag_v": ["", "2", "3"], "scrape_h": ["", "2"], "scrape_v": ["", "2"]}
+
     def trail(self, name_h, name_v, points):
-        """Draw a trace trail through a list of tile points (axis-aligned segments)."""
+        """Draw a trace trail through tile points (axis-aligned segments); alternates variants."""
+        def pick(n):
+            return n + self.rnd.choice(self.VARIANTS.get(n, [""]))
         for (x0, y0), (x1, y1) in zip(points, points[1:]):
             if y0 == y1:
                 for x in range(min(x0, x1), max(x0, x1) + 1):
-                    self.trace(name_h, x, y0)
+                    self.trace(pick(name_h), x, y0)
             else:
                 for y in range(min(y0, y1), max(y0, y1) + 1):
-                    self.trace(name_v, x0, y)
+                    self.trace(pick(name_v), x0, y)
 
     def face_row_decor(self, names, x0, x1, y, every=3, seed=0):
         """Wall decor along a wall face row, skipping door gaps."""

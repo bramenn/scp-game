@@ -24,10 +24,11 @@ func load_all() -> void:
 			if m is Dictionary:
 				maps[m.id] = m
 	scps.clear()
-	for f in DirAccess.get_files_at("res://data/scps"):
-		if f.ends_with(".json"):
-			var s = _read("res://data/scps/" + f)
-			scps[s.id] = s
+	if DirAccess.dir_exists_absolute("res://data/scps"):
+		for f in DirAccess.get_files_at("res://data/scps"):
+			if f.ends_with(".json"):
+				var s = _read("res://data/scps/" + f)
+				scps[s.id] = s
 	for pair in [["items", "items"], ["npcs", "npcs"], ["dialogues", "dialogues"], ["quests", "quests"],
 			["docs", "docs"], ["events", "events"], ["story", "story"]]:
 		var d = _read("res://data/%s.json" % pair[0])

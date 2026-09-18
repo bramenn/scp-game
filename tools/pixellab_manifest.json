@@ -3,7 +3,12 @@
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "2755c4aa-b5eb-40eb-9109-9c5128fff3d7"
+  "character_id": "2755c4aa-b5eb-40eb-9109-9c5128fff3d7",
+  "done": true
+ },
+ "bench": {
+  "done": true,
+  "object_id": "2c33ff6e-4913-4dbc-9f4c-38ef58d17821"
  },
  "body_aged": {
   "done": true,
@@ -37,11 +42,36 @@
   "done": true,
   "image": "art/props/body_scientist.png"
  },
+ "boiler": {
+  "done": true,
+  "object_id": "81e65d20-6f0b-4f0b-9ea7-7d3691d1fc6f"
+ },
+ "cafe_table": {
+  "done": true,
+  "object_id": "7044c680-9cec-4265-a3ab-9aa0f19e4f1d"
+ },
+ "cctv_wall": {
+  "done": true,
+  "object_id": "f4d9e950-f9e0-46b0-b45f-43b373e90348"
+ },
+ "conf_table": {
+  "done": true,
+  "object_id": "f0715434-d5a9-468d-a6f2-cda7b95a75cf"
+ },
+ "control_console": {
+  "done": true,
+  "object_id": "528dcc74-ab84-4816-938b-f466c247dcfa"
+ },
+ "core_terminal": {
+  "done": true,
+  "object_id": "dfb6e03f-220a-4724-a870-5cebab67a0d3"
+ },
  "dclass": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "9ac78e60-4063-43b7-a363-d249b21663bb"
+  "character_id": "9ac78e60-4063-43b7-a363-d249b21663bb",
+  "done": true
  },
  "desk_pc": {
   "done": true,
@@ -51,31 +81,68 @@
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "f9122cb7-673d-4e44-b6db-f62b4d742634"
+  "character_id": "f9122cb7-673d-4e44-b6db-f62b4d742634",
+  "done": true
+ },
+ "femur_breaker": {
+  "done": true,
+  "object_id": "35bc4fe4-dcae-4d27-ae11-54431982175d"
+ },
+ "floating_door": {
+  "done": true,
+  "object_id": "e90d68c3-e701-4965-8991-cf08ae8d3d4c"
+ },
+ "forklift": {
+  "done": true,
+  "object_id": "3968a2fb-e766-4278-91b2-b14e0443255e"
+ },
+ "generator": {
+  "done": true,
+  "object_id": "4f506029-8a87-47c2-b9d3-7a08d90f59ff"
  },
  "guard": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "cb559d6f-3649-4b24-b860-fc51902a2267"
+  "character_id": "cb559d6f-3649-4b24-b860-fc51902a2267",
+  "done": true
+ },
+ "kitchen_counter": {
+  "done": true,
+  "object_id": "dd078b4a-2af9-4891-812b-d9d753fe8588"
+ },
+ "lab_bench": {
+  "done": true,
+  "object_id": "f0585def-aa1c-4170-8638-fb86a7e72a08"
  },
  "lin": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "c1186b96-b095-4e24-be60-937575a5bcf3"
+  "character_id": "c1186b96-b095-4e24-be60-937575a5bcf3",
+  "done": true
+ },
+ "locker_row": {
+  "done": true,
+  "object_id": "80b48820-b384-4c2f-bfe5-cc658d273320"
  },
  "mara": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "f1b7fcae-3b59-4858-828f-4524a61dae6e"
+  "character_id": "f1b7fcae-3b59-4858-828f-4524a61dae6e",
+  "done": true
+ },
+ "morgue_drawers": {
+  "done": true,
+  "object_id": "d82dbcaf-990e-4f49-9445-2c1f05efd103"
  },
  "nico": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "6cbe9d62-2c20-466d-96b2-ba7423df54e9"
+  "character_id": "6cbe9d62-2c20-466d-96b2-ba7423df54e9",
+  "done": true
  },
  "ortega": {
   "anims_queued": [
@@ -95,33 +162,219 @@
   "done": true,
   "job_id": "26910cb5-142c-424e-a548-99093fd3fbb1"
  },
+ "pillar_rot": {
+  "done": true,
+  "object_id": "f26b9716-9921-44bc-a2b0-b85d3340b7d2"
+ },
+ "pipes_floor": {
+  "done": true,
+  "object_id": "f250dbd2-6150-472f-b590-676c08e8c9da"
+ },
+ "props16": {
+  "done": true,
+  "names": [
+   "trash_can",
+   "extinguisher_floor",
+   "cone",
+   "caution_sign",
+   "mop_bucket",
+   "toolbox",
+   "cat_bed",
+   "candy_bowl",
+   "autopsy_tray",
+   "pressure_pad",
+   "wheelchair",
+   "tray_spill",
+   "chair_fallen",
+   "toilet",
+   "prison_toilet",
+   "helmet",
+   "gas_mask",
+   "rifle",
+   "clipboard",
+   "laptop",
+   "phone",
+   "teddy",
+   "ball",
+   "bottles",
+   "pizza",
+   "skull",
+   "lantern",
+   "candles",
+   "flashlight",
+   "cardboard",
+   "bucket",
+   "bag_trash",
+   "shoes",
+   "books",
+   "mug",
+   "first_aid",
+   "chair_plastic",
+   "stool",
+   "sign_stand",
+   "vent_floor",
+   "drain",
+   "pipe_valve",
+   "gas_can",
+   "sprayer",
+   "bone",
+   "rat_trap",
+   "radio_small",
+   "cassette",
+   "blood_bucket",
+   "syringes",
+   "specimen_jar",
+   "plant_small",
+   "wet_floor_towel",
+   "keys",
+   "dogtags",
+   "microscope",
+   "beaker",
+   "cheese_block",
+   "cup",
+   "gloves"
+  ],
+  "object_id": "171e7d48-899e-41b9-9239-27aa88207caf"
+ },
+ "props32a": {
+  "done": true,
+  "names": [
+   "filing_cabinet",
+   "water_cooler",
+   "plant_dead",
+   "server_rack",
+   "server_rack_broken",
+   "iv_stand",
+   "bookshelf",
+   "vending",
+   "scp294",
+   "fridge",
+   "stove",
+   "med_cabinet",
+   "locker",
+   "specimen_shelf",
+   "cryo_tank",
+   "chem_shelf"
+  ],
+  "object_id": "8cebd466-6e1f-4b0f-a71d-46b455333633"
+ },
+ "props32b": {
+  "done": true,
+  "names": [
+   "fume_hood",
+   "gun_rack",
+   "ammo_crates",
+   "boxes",
+   "bunk_bed",
+   "bed_unmade",
+   "med_bed",
+   "shower",
+   "whiteboard",
+   "printer",
+   "crt_terminal",
+   "transformer",
+   "valve_big",
+   "pump",
+   "breaker",
+   "burn_barrel"
+  ],
+  "object_id": "245d9efc-f529-4037-847e-b7e5ef3e21b0"
+ },
+ "props32c": {
+  "done": true,
+  "names": [
+   "ladder",
+   "spider_web",
+   "rat_nest",
+   "mattress",
+   "janitor_cart",
+   "scp_crate",
+   "iron_box",
+   "toy_pile",
+   "pill_case",
+   "restraint_chair",
+   "turret",
+   "radio_station",
+   "table_flipped",
+   "pallet",
+   "debris_pile",
+   "metal_detector"
+  ],
+  "object_id": "7ebb1612-4a11-411a-9e1a-e0d11b7b9fd1"
+ },
+ "props32d": {
+  "done": true,
+  "names": [
+   "ceiling_panel",
+   "glass_panel",
+   "body_sheet",
+   "gurney_body",
+   "surgical_table",
+   "lavender_bed",
+   "grow_rack",
+   "bone_pile",
+   "stretcher",
+   "cell_bunk",
+   "acid_railing",
+   "footlocker",
+   "sink_stand",
+   "barrel",
+   "crate",
+   "gurney"
+  ],
+  "object_id": "aee61b17-94ff-417d-887c-d356798df10f"
+ },
  "rat": {
+  "anims_queued": [],
   "character_id": "9b5ddea0-dcdb-47e4-adc3-1e2eb3481546"
+ },
+ "reception_desk": {
+  "done": true,
+  "object_id": "4eaabf30-9c23-4e70-9c85-b4d16c801c12"
  },
  "reyes": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "9a0754e2-7bd9-4000-85d2-5eccfc24ce65"
+  "character_id": "9a0754e2-7bd9-4000-85d2-5eccfc24ce65",
+  "done": true
+ },
+ "sandbags": {
+  "done": true,
+  "object_id": "7961454e-2c7f-4978-b3fb-5ba4f4a57f5c"
  },
  "scientist": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "67339ac1-f555-4874-914c-6c414f53781f"
+  "character_id": "67339ac1-f555-4874-914c-6c414f53781f",
+  "done": true
  },
  "scp049": {
-  "character_id": "6acf5898-383f-4bed-8ff1-4e1185020ed6"
+  "anims_queued": [
+   "walking-6-frames"
+  ],
+  "character_id": "6acf5898-383f-4bed-8ff1-4e1185020ed6",
+  "done": true
  },
  "scp087_face": {
   "done": true,
   "image": "art/props/scp087_face.png"
  },
  "scp096": {
-  "character_id": "ab698228-6958-41b0-a3fc-f7a2723b19e2"
+  "anims_queued": [
+   "scary-walk",
+   "running-6-frames"
+  ],
+  "character_id": "ab698228-6958-41b0-a3fc-f7a2723b19e2",
+  "done": true
  },
  "scp106": {
-  "character_id": "68f86c63-2b05-4bcd-b76c-bef3d2df1552"
+  "anims_queued": [
+   "scary-walk"
+  ],
+  "character_id": "68f86c63-2b05-4bcd-b76c-bef3d2df1552",
+  "done": true
  },
  "scp131a": {
   "done": true,
@@ -137,23 +390,47 @@
   "done": true
  },
  "scp529": {
+  "anims_queued": [],
   "character_id": "cf7c6c6a-e1f9-4275-b2f0-00d6c0a6e750"
  },
  "scp682": {
+  "anims_queued": [],
   "character_id": "6c782e12-d7a7-4824-967c-ffa6cc89c022"
  },
+ "scp914": {
+  "done": true,
+  "object_id": "1a1e5d27-1b2f-4003-9983-bd494329c107"
+ },
+ "scp914_booth": {
+  "done": true,
+  "object_id": "80d9e618-429d-4d4c-a50c-fe86c77804f4"
+ },
  "scp939": {
+  "anims_queued": [],
   "character_id": "3a88f412-109c-47a3-a41d-5efcb94668eb"
  },
  "scp999": {
   "done": true,
   "image": "art/props/scp999.png"
  },
+ "supercomputer": {
+  "done": true,
+  "object_id": "9d2db36f-aff9-41a6-97d7-46330ff92da7"
+ },
+ "tesla_gate": {
+  "done": true,
+  "object_id": "cffff6bf-af4d-4b74-a01d-f4aa237f6178"
+ },
+ "throne": {
+  "done": true,
+  "object_id": "11b118f7-30b4-41b0-b1c2-6d7a3f1837d9"
+ },
  "tomas": {
   "anims_queued": [
    "walking-6-frames"
   ],
-  "character_id": "e8f513b5-35b1-40fa-92fa-4f623585d2f4"
+  "character_id": "e8f513b5-35b1-40fa-92fa-4f623585d2f4",
+  "done": true
  },
  "vega": {
   "anims_queued": [
@@ -162,16 +439,30 @@
   "character_id": "6a840a14-d859-4050-9c39-7ba027548c62",
   "done": true
  },
+ "warhead_panel": {
+  "done": true,
+  "object_id": "16868301-2263-4679-89a3-b5d65474dbdf"
+ },
+ "workbench": {
+  "done": true,
+  "object_id": "5f81a1c8-099a-46f0-9d02-fab2321f61b5"
+ },
+ "xray": {
+  "done": true,
+  "object_id": "f3fb6184-3e17-4165-849a-f3ab4fe5c20c"
+ },
  "zombie": {
   "anims_queued": [
    "scary-walk"
   ],
-  "character_id": "61e12149-b1e5-49b7-9f74-9441a2080f17"
+  "character_id": "61e12149-b1e5-49b7-9f74-9441a2080f17",
+  "done": true
  },
  "zombie_guard": {
   "anims_queued": [
    "scary-walk"
   ],
-  "character_id": "17e88867-85ea-46c6-a5a3-0bd166c67d5b"
+  "character_id": "17e88867-85ea-46c6-a5a3-0bd166c67d5b",
+  "done": true
  }
 }

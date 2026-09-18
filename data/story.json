@@ -1,0 +1,64 @@
+{
+"props": {
+"body_scientist": {
+"en": "A receptionist. Her badge reads 'H. Park - Front Desk'.",
+"es": "Una recepcionista. Su tarjeta dice 'H. Park - Recepción'."
+},
+"body_guard": {
+"en": "A security officer. Still holding his radio.",
+"es": "Un agente de seguridad. Todavía agarra su radio."
+},
+"body_dclass": {
+"en": "A D-class prisoner. Orange jumpsuit, no shoes.",
+"es": "Un preso Clase-D. Mono naranja, sin zapatos."
+},
+"body_ntf": {
+"en": "A Nine-Tailed Fox operative. The fox patch is torn.",
+"es": "Un operativo de Nueve Colas. El parche del zorro está arrancado."
+},
+"body_aged": {
+"en": "Skin like paper. Black stains on the hands.",
+"es": "Piel como papel. Manchas negras en las manos."
+},
+"vending": {
+"en": "Out of order. The rats got here first.",
+"es": "Fuera de servicio. Las ratas llegaron antes."
+},
+"cctv_wall": {
+"en": "A wall of monitors. Most show static.",
+"es": "Una pared de monitores. La mayoría muestra estática."
+},
+"reception_desk": {
+"en": "A half-written visitor log. The last entry: 03:09, 'D. Aldana - core'.",
+"es": "Un registro de visitas a medias. La última entrada: 03:09, 'D. Aldana - núcleo'."
+},
+"desk_pc": {
+"en": "The screen is frozen on the lockdown message.",
+"es": "La pantalla está congelada en el mensaje de confinamiento."
+},
+"bunk_bed": {
+"en": "Blankets thrown aside. Whoever slept here left in a hurry.",
+"es": "Mantas apartadas. Quien dormía aquí salió con prisa."
+},
+"server_rack": {
+"en": "Warm. Humming. Every LED blinks in the same rhythm, like a pulse.",
+"es": "Caliente. Zumbando. Todos los LED parpadean al mismo ritmo, como un pulso."
+},
+"fridge": {
+"en": "The fridge is humming. Someone wrote 'DON'T EAT MY YOGURT - K.' on the door.",
+"es": "El frigorífico zumba. Alguien escribió 'NO TE COMAS MI YOGUR - K.' en la puerta."
+},
+"gun_rack": {
+"en": "Empty slots. Someone armed up in a hurry.",
+"es": "Huecos vacíos. Alguien se armó a toda prisa."
+},
+"whiteboard": {
+"en": "Equations, then a single word circled twice: THRESHOLD.",
+"es": "Ecuaciones, y luego una palabra rodeada dos veces: UMBRAL."
+},
+"scp294": {
+"en": "SCP-294. It waits for a request.",
+"es": "SCP-294. Espera una petición."
+}
+}
+}

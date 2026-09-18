@@ -193,7 +193,7 @@ FLOORS = [
     ("lino", slab_tiles("c3", None, "c2", "c4", cell=16), ("c2", "c1")),
     ("carpet", slab_carpet("b2", "b1", "b3"), ("b1", "k3")),
     ("whitetile", slab_tiles("g6", None, "g4", "w"), ("g4", "g3")),
-    ("kitchen", slab_tiles("e3", "c5", "c2", "w"), ("c2", "r3")),
+    ("kitchen", slab_tiles("e2", "c4", "c2", "c5"), ("c2", "r3")),
     ("metal", slab_metal("g2", "k4", "g4"), ("k4", "k3")),
     ("grate", slab_grate("g1", "k0", "g3"), ("k1", "k0")),
     ("sewer", slab_brick("r3", "r2", "r4", "k3"), ("r2", "k2")),
@@ -348,6 +348,8 @@ TRACES = [
     "rust", "acid", "acid2", "scorch", "gouge", "dissolved", "claw_floor", "pocket_eye", "chalk",
     # row 4: ambient occlusion under/next to walls
     "shade_n", "shade_w", "shade_e", "shade_nw", "shade_ne",
+    # trail variants (alternated by the map DSL so trails don't look stamped)
+    "blood_drag_h2", "blood_drag_v2", "blood_drag_h3", "blood_drag_v3", "scrape_h2", "scrape_v2",
 ]
 
 
@@ -408,12 +410,19 @@ def trace(name, rnd):
             px(im, 8 + math.cos(a) * r, 8 + math.sin(a) * r, "e3")
     elif name == "blood_pool":
         blob(im, rnd, 8, 9, 6.5, "e2", jag=0.12); blob(im, rnd, 7, 8, 4, "e1", jag=0.1); px(im, 5, 6, "e4")
-    elif name in ("blood_drag_h", "blood_drag_v"):
+    elif name.startswith("blood_drag_"):
+        horiz = name[len("blood_drag_")] == "h"
+        off = rnd.uniform(0, 6.28)
         for i in range(16):
-            for j in range(-2, 3):
-                if rnd.random() < 0.75 - abs(j) * 0.2:
-                    x, y = (i, 8 + j) if name.endswith("h") else (8 + j, i)
-                    px(im, x, y, A(rnd.choice(["e2", "e3"]), 220))
+            half = 1.6 + 1.2 * math.sin(i / 2.7 + off) + rnd.uniform(-0.4, 0.4)
+            center = 8 + math.sin(i / 4.0 + off) * 1.2
+            for j in range(-4, 5):
+                if abs(j) <= half and rnd.random() < 0.92 - abs(j) / (half + 1) * 0.5:
+                    x, y = (i, center + j) if horiz else (center + j, i)
+                    px(im, x, y, A(rnd.choice(["e2", "e2", "e3", "e1"]), rnd.randint(170, 235)))
+            if rnd.random() < 0.15:
+                x, y = (i, center + rnd.choice((-4, 4))) if horiz else (center + rnd.choice((-4, 4)), i)
+                px(im, x, y, A("e3", 200))
     elif name == "handprint":
         blob(im, rnd, 8, 10, 3, "e3", jag=0.1)
         for i, fx in enumerate((5, 7, 9, 11)):
@@ -486,12 +495,15 @@ def trace(name, rnd):
         d.ellipse([4, 8, 11, 13], C["k0"]); d.arc([4, 7, 11, 13], 180, 360, C["k3"])
     elif name == "scp173_stain":
         blob(im, rnd, 8, 9, 6, A("r1", 220), jag=0.4); blob(im, rnd, 9, 8, 3, A("e1", 230)); speckle(im, rnd, ["r2", "e2"], 10, (3, 4, 13, 13))
-    elif name in ("scrape_h", "scrape_v"):
+    elif name.startswith("scrape_"):
+        horiz = name[len("scrape_")] == "h"
+        off = rnd.randint(0, 5)
         for k in (-2, 0, 2):
             for i in range(16):
                 if rnd.random() < 0.85:
-                    x, y = (i, 8 + k + (i // 6) % 2) if name.endswith("h") else (8 + k + (i // 6) % 2, i)
-                    px(im, x, y, A("k2", 150)); px(im, x + (0 if name.endswith("h") else 1), y + (1 if name.endswith("h") else 0), A("g4", 90))
+                    wob = ((i + off) // 6) % 2
+                    x, y = (i, 8 + k + wob) if horiz else (8 + k + wob, i)
+                    px(im, x, y, A("k2", 150)); px(im, x + (0 if horiz else 1), y + (1 if horiz else 0), A("g4", 90))
     elif name == "cracked_radial":
         for a in range(0, 360, 60):
             x, y = 8.0, 8.0

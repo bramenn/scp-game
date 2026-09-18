@@ -96,7 +96,13 @@
   "shade_w",
   "shade_e",
   "shade_nw",
-  "shade_ne"
+  "shade_ne",
+  "blood_drag_h2",
+  "blood_drag_v2",
+  "blood_drag_h3",
+  "blood_drag_v3",
+  "scrape_h2",
+  "scrape_v2"
  ],
  "walldecor": [
   "logo",

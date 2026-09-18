@@ -21,6 +21,7 @@ var _cursor := 0
 var _opts: Array = []
 var _voice := 1.0
 var _style := ""
+const CPS := 55.0   # typewriter speed, characters per second
 
 
 func _ready() -> void:
@@ -102,15 +103,28 @@ func say(lines: Array, who := "") -> void:
 		arrow.hide()
 		_waiting = true
 		var n := s.length()
-		var i := 0
-		while i < n and _waiting:
-			i += 1
-			text_l.visible_characters = i
-			if i % 2 == 0 and s[i - 1] != " ":
-				Sfx.play("blip_079" if _style == "079" else ("blip_radio" if _style == "radio" else "blip"),
-					-14.0, _voice * randf_range(0.94, 1.06))
-			var ch := s[i - 1]
-			await get_tree().create_timer(0.09 if ch in ".!?" else (0.04 if ch == "," else 0.018)).timeout
+		var shown := 0.0
+		var pause := 0.0
+		var last := 0
+		while shown < n and _waiting:
+			await get_tree().process_frame
+			var dt := get_process_delta_time()
+			if pause > 0.0:
+				pause -= dt
+				continue
+			shown = minf(n, shown + dt * CPS)
+			var i := int(shown)
+			if i > last:
+				text_l.visible_characters = i
+				var ch := s[i - 1]
+				if i / 3 != last / 3 and ch != " ":
+					Sfx.play("blip_079" if _style == "079" else ("blip_radio" if _style == "radio" else "blip"),
+						-14.0, _voice * randf_range(0.94, 1.06))
+				if ch in ".!?":
+					pause = 0.18
+				elif ch == ",":
+					pause = 0.07
+				last = i
 		text_l.visible_characters = -1
 		arrow.show()
 		_waiting = true

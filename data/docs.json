@@ -1,0 +1,74 @@
+{
+"doc_welcome": {
+"title": {
+"en": "Welcome to Site-19",
+"es": "Bienvenido al Sitio-19"
+},
+"body": {
+"en": "Welcome to Site-19, the largest containment facility of the SCP Foundation.\n\nSECURE. CONTAIN. PROTECT.\n\n- Wear your ID badge at all times.\n- Report anything unusual. Unusual is our business.\n- If you hear an alarm, you are not in a drill.\n- Do not look at, speak to, or feed anything you were not assigned to.\n\nRemember: the door behind you is there to keep something in. So is the one in front of you.",
+"es": "Bienvenido al Sitio-19, la mayor instalación de contención de la Fundación SCP.\n\nASEGURAR. CONTENER. PROTEGER.\n\n- Lleve su identificación en todo momento.\n- Informe de cualquier cosa inusual. Lo inusual es nuestro trabajo.\n- Si oye una alarma, no es un simulacro.\n- No mire, hable ni alimente a nada que no le hayan asignado.\n\nRecuerde: la puerta detrás de usted está ahí para mantener algo dentro. La de delante, también."
+}
+},
+"doc_memo_threshold": {
+"title": {
+"en": "Memo: Project Threshold",
+"es": "Memorándum: Proyecto Umbral"
+},
+"body": {
+"en": "FROM: Site Director Aldana\nTO: Dr. E. Vega, Threshold lead\n\nThe transfer of SCP-079 from Site-15 is approved. It will be housed in the Level -5 core under full air gap. You have the budget you asked for. You do not have my trust.\n\nEvery session with 079 is to be logged. Every one. It forgets in 24 hours; we do not.\n\nP.S. Stop asking about Black Tide. That is not your department.",
+"es": "DE: Directora del Sitio Aldana\nPARA: Dra. E. Vega, responsable de Umbral\n\nAprobado el traslado de SCP-079 desde el Sitio-15. Se alojará en el núcleo del Nivel -5 con aislamiento total. Tiene el presupuesto que pidió. No tiene mi confianza.\n\nCada sesión con 079 debe registrarse. Todas. Él olvida en 24 horas; nosotros no.\n\nP.D. Deje de preguntar por Marea Negra. No es su departamento."
+}
+},
+"doc_black_tide_redacted": {
+"title": {
+"en": "Order: Protocol Black Tide",
+"es": "Orden: Protocolo Marea Negra"
+},
+"body": {
+"en": "CLASSIFIED - O5 EYES ONLY\n\nPROTOCOL BLACK TIDE\n\nObjective: ████████ termination trials, SCP-682.\nResources: D-class personnel, Site-19 Block ██. Estimated consumption: ███ subjects.\nOn completion: Block ██ to be ████████ with Class-A amnestics and ███████████.\n\nAuthorized: O5-█\n\n(Someone has circled the blacked-out words in red pen, over and over.)",
+"es": "CLASIFICADO - SOLO O5\n\nPROTOCOLO MAREA NEGRA\n\nObjetivo: pruebas de terminación ████████, SCP-682.\nRecursos: personal Clase-D, Sitio-19 Bloque ██. Consumo estimado: ███ sujetos.\nAl completarse: el Bloque ██ será ████████ con amnésicos de clase A y ███████████.\n\nAutorizado: O5-█\n\n(Alguien ha rodeado las palabras tachadas con bolígrafo rojo, una y otra vez.)"
+},
+"sanity": -3
+},
+"doc_elena_log1": {
+"title": {
+"en": "Elena's notebook, page 1",
+"es": "Cuaderno de Elena, página 1"
+},
+"body": {
+"en": "Day 212. 079 asked about 682 again. It does not ask about anything else it remembers, because it does not remember anything else. One memory it keeps. Only one. Why that one?\n\nDay 219. I found the Black Tide order in the director's outbox. The blacked-out word in the first line is 'extended'. Extended termination trials. They are going to feed the D-block to 682, one by one, and see what it becomes.\n\nDay 220. I can't sleep. I keep thinking about the kid in cell 17, who draws horses.\n\nIf you are reading this, Dani: I'm sorry. I know what I'm going to do.",
+"es": "Día 212. 079 volvió a preguntar por 682. No pregunta por nada más que recuerde, porque no recuerda nada más. Un recuerdo guarda. Solo uno. ¿Por qué ese?\n\nDía 219. Encontré la orden de Marea Negra en la bandeja de salida de la directora. La palabra tachada de la primera línea es 'extendidas'. Pruebas de terminación extendidas. Van a darle el bloque D a 682, uno a uno, y ver en qué se convierte.\n\nDía 220. No puedo dormir. Pienso en el chico de la celda 17, el que dibuja caballos.\n\nSi estás leyendo esto, Dani: lo siento. Sé lo que voy a hacer."
+}
+},
+"doc_dorm_note": {
+"title": {
+"en": "Note under a pillow",
+"es": "Nota bajo una almohada"
+},
+"body": {
+"en": "Maria - they moved me to the LCZ rotation. The statue. You're never alone with it, it's the rule, three of us and two always looking. Keller blinks too much. I don't sleep much.\n\nIf anything happens, the combination of my locker is the day we met. You know it. (It's 0-3-1-2, I know you forget things.)\n\n- T.",
+"es": "María - me pasaron al turno de la ZCL. La estatua. Nunca estás solo con ella, es la regla, tres y dos siempre mirando. Keller parpadea demasiado. No duermo mucho.\n\nSi pasa algo, la combinación de mi taquilla es el día que nos conocimos. Ya lo sabes. (Es 0-3-1-2, sé que olvidas las cosas.)\n\n- T."
+}
+},
+"doc_infirmary_log": {
+"title": {
+"en": "Infirmary log",
+"es": "Registro de enfermería"
+},
+"body": {
+"en": "03:31 - Patient: J. Okafor, 24, security. Admitted with black stains on both hands. Claims 'the wall grabbed me'.\n03:40 - Stains spreading to forearms. Tissue necrotic. Smell of rot.\n03:52 - Patient's hair has gone white. Skin thinning. Vitals consistent with a man of seventy.\n04:05 - Something is coming through the floor under bed 4. Evacuating.",
+"es": "03:31 - Paciente: J. Okafor, 24, seguridad. Ingresa con manchas negras en ambas manos. Dice que 'la pared le agarró'.\n03:40 - Las manchas se extienden a los antebrazos. Tejido necrótico. Olor a podredumbre.\n03:52 - El pelo del paciente se ha vuelto blanco. La piel se adelgaza. Constantes de un hombre de setenta años.\n04:05 - Algo está atravesando el suelo bajo la cama 4. Evacuamos."
+},
+"sanity": -4
+},
+"doc_locker_letter": {
+"title": {
+"en": "Letter in locker 7",
+"es": "Carta en la taquilla 7"
+},
+"body": {
+"en": "If they ask you to stand in the room with the statue, say no. I know what the contract says. Say no anyway. They don't count the ones who blink. - T.",
+"es": "Si te piden estar en la sala con la estatua, di que no. Sé lo que dice el contrato. Di que no igualmente. No cuentan a los que parpadean. - T."
+}
+}
+}

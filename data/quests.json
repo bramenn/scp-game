@@ -1,0 +1,75 @@
+{
+"main_breach": {
+"main": true,
+"name": {
+"en": "Containment Breach",
+"es": "Brecha de contención"
+},
+"stages": [
+{
+"en": "Force open the doors of Elevator B.",
+"es": "Fuerza las puertas del ascensor B."
+},
+{
+"en": "Find Site Security, west of reception.",
+"es": "Encuentra el puesto de seguridad, al oeste de recepción."
+},
+{
+"en": "Reach the Light Containment checkpoint at the end of the east corridor.",
+"es": "Llega al control de Contención Ligera al final del pasillo este."
+},
+{
+"en": "Go through decontamination into Light Containment.",
+"es": "Pasa la descontaminación hacia Contención Ligera."
+}
+]
+},
+"side_nico": {
+"name": {
+"en": "D-4417",
+"es": "D-4417"
+},
+"stages": [
+{
+"en": "Ortega heard a D-class on the cafeteria intercom. Find him.",
+"es": "Ortega oyó a un Clase-D por el intercomunicador de la cafetería. Encuéntralo."
+},
+{
+"en": "Take Nico to the security checkpoint.",
+"es": "Lleva a Nico al puesto de seguridad."
+}
+]
+},
+"side_elena": {
+"name": {
+"en": "Elena",
+"es": "Elena"
+},
+"stages": [
+{
+"en": "Your sister's office is 2-B, in Administration. The door needs her key.",
+"es": "La oficina de tu hermana es la 2-B, en Administración. La puerta necesita su llave."
+},
+{
+"en": "Elena worked on something called Project Threshold. Find out what it is.",
+"es": "Elena trabajaba en algo llamado Proyecto Umbral. Averigua qué es."
+},
+{
+"en": "079 says Elena is alive on Level -5. Keep going down.",
+"es": "079 dice que Elena está viva en el Nivel -5. Sigue bajando."
+}
+]
+},
+"side_locker": {
+"name": {
+"en": "Locker 7",
+"es": "Taquilla 7"
+},
+"stages": [
+{
+"en": "Locker 7 in the dormitories has a 4-digit lock. Someone must have written it down.",
+"es": "La taquilla 7 de los dormitorios tiene un candado de 4 cifras. Alguien lo habrá apuntado."
+}
+]
+}
+}

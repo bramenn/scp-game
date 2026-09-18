@@ -103,7 +103,7 @@ func _start(map_id: String, spawn: String, at := Vector2i(-1, -1)) -> void:
 	cam.add_child(dust)
 	hud.bind(st)
 	await load_map(map_id, spawn, at, false)
-	busy = 0
+	busy -= 1   # release the lock taken in _ready (events started by the map keep their own)
 	await hud.fade(false, 1.2)
 
 
@@ -176,6 +176,7 @@ func load_map(map_id: String, spawn: String, at := Vector2i(-1, -1), fade := tru
 	cam.limit_bottom = int(h + pad.y)
 	st.tile = t
 	st.see(map_id, view.w, view.h, t)
+	_spawn_followers()
 	hud.location(Loc.t(d.name))
 	if fade:
 		await hud.fade(false, 0.45)
@@ -254,6 +255,8 @@ func _spawn_lights(d: Dictionary) -> void:
 
 ## Small emissive fixture so light sources read as lamps on the ceiling.
 func _fixture(pl: PointLight2D, kind: String) -> void:
+	if kind != "alarm":   # ceiling lamps read through their light alone
+		return
 	var r := ColorRect.new()
 	r.size = Vector2(10, 2) if kind != "alarm" else Vector2(3, 3)
 	r.position = -r.size / 2.0
@@ -325,11 +328,41 @@ func _spawn_npcs(d: Dictionary) -> void:
 		actors.append(a)
 
 
+## NPCs with the flag "follow:<id>" come along to every map, appearing next to the player.
+func _spawn_followers() -> void:
+	for f in st.flags:
+		if not String(f).begins_with("follow:") or not st.has(f):
+			continue
+		var id := String(f).substr(7)
+		if npcs.has(id):
+			continue
+		var spot := player.tile
+		for d in [Vector2i.DOWN, Vector2i.UP, Vector2i.LEFT, Vector2i.RIGHT, Vector2i(1, 1), Vector2i(-1, 1), Vector2i(0, 2)]:
+			var c: Vector2i = player.tile + d
+			if is_free(c) and not view.door_at.has(c) and view.exit_at(c) == null:
+				spot = c
+				break
+		var a := NpcActor.new()
+		a.world = self
+		a.npc_id = id
+		a.info = Db.npcs.get(id, {})
+		a.spot = {"mode": "idle"}
+		view.ents.add_child(a)
+		a.setup(a.info.get("sprite", id), spot, player.facing)
+		npcs[id] = a
+		actors.append(a)
+
+
 # ------------------------------------------------------------ queries
 
 func is_free(t: Vector2i, who = null) -> bool:
 	if not view or view.blocked.has(t):
 		return false
+	if who == player:  # the player may walk into a friendly NPC's tile only through a swap (on_bump)
+		for a in actors:
+			if a.tile == t and a.get("solid") != false:
+				return false
+		return true
 	if who != player and player and player.tile == t:
 		return false
 	for a in actors:
@@ -449,6 +482,14 @@ func on_bump(t: Vector2i) -> void:
 	if _bump_cd > 0.0 or busy > 0:
 		return
 	_bump_cd = 0.4
+	for a in actors:  # friendly NPCs step aside: swap places like in classic RPGs
+		if a is NpcActor and a.tile == t and not a.moving:
+			var old: Vector2i = player.tile
+			a.tile = old
+			a.face(Actor.dir_name(old - t))
+			a.create_tween().tween_property(a, "position", Actor.feet(old), 0.2)
+			_bump_cd = 0.0
+			return
 	if view.door_at.has(t):
 		try_door(view.door_at[t])
 
@@ -490,16 +531,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	get_viewport().set_input_as_handled()
 	var t := player.facing_tile()
+	for tt in [t, player.tile]:
+		if interact_at.has(tt) and st.check(interact_at[tt].get("cond", "")):
+			events.run(String(interact_at[tt].event))
+			return
 	if view.door_at.has(t):
 		try_door(view.door_at[t])
 		return
 	for a in actors:
 		if a.tile == t and a.has_method("talk"):
 			a.talk()
-			return
-	for tt in [t, player.tile]:
-		if interact_at.has(tt) and st.check(interact_at[tt].get("cond", "")):
-			events.run(String(interact_at[tt].event))
 			return
 	if view.solid_props.has(t):
 		var p: Dictionary = view.solid_props[t]
